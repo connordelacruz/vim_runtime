@@ -29,7 +29,10 @@ set guioptions-=L
 
 " Colorscheme
 set background=dark
-colorscheme peaksea
+try
+    colorscheme monokai-phoenix
+catch
+endtry
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

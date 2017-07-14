@@ -111,6 +111,9 @@ set smartcase
 " Highlight search results
 set hlsearch
 
+" Stops previous searches from being immediately highlighted on file open
+nohls
+
 " Makes search act like search in modern browsers
 set incsearch 
 
@@ -137,8 +140,9 @@ if has("gui_macvim")
 endif
 
 
+" TODO: remove
 " Add a bit extra margin to the left
-set foldcolumn=1
+" set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -152,10 +156,11 @@ if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
 
-try
-    colorscheme desert
-catch
-endtry
+" TODO: find a suitable default color scheme?
+"try
+"    colorscheme desert
+"catch
+"endtry
 
 set background=dark
 
@@ -173,6 +178,10 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+" Set what syntax to use with different file extensions
+
+" CFEngine (.cf)
+au BufRead,BufNewFile *.cf set ft=cf3
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
