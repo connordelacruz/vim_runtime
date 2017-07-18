@@ -1,35 +1,36 @@
 [submodule "bundle/vim-monokai-phoenix"]
-	path = bundle/vim-monokai-phoenix
+    path = bundle/vim-monokai-phoenix
     url = https://github.com/connordelacruz/vim-monokai-phoenix.git
     ignore = dirty
 [submodule "bundle/vim-irblack"]
-	path = bundle/vim-irblack
-	url = https://github.com/wesgibbs/vim-irblack.git
+    path = bundle/vim-irblack
+    url = https://github.com/wesgibbs/vim-irblack.git
     ignore = dirty
 [submodule "bundle/goyo.vim"]
-	path = bundle/goyo.vim
-	url = https://github.com/junegunn/goyo.vim.git
+    path = bundle/goyo.vim
+    url = https://github.com/junegunn/goyo.vim.git
     ignore = dirty
 [submodule "bundle/lightline.vim"]
-	path = bundle/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
+    path = bundle/lightline.vim
+    url = https://github.com/itchyny/lightline.vim.git
     ignore = dirty
 [submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
+    path = bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
     ignore = dirty
 [submodule "bundle/tlib"]
-	path = bundle/tlib
-	url = https://github.com/vim-scripts/tlib.git
+    path = bundle/tlib
+    url = https://github.com/vim-scripts/tlib.git
     ignore = dirty
 [submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
+    path = bundle/vim-colors-solarized
+    url = https://github.com/altercation/vim-colors-solarized.git
     ignore = dirty
 [submodule "bundle/vim-commentary"]
-	path = bundle/vim-commentary
-	url = https://github.com/tpope/vim-commentary.git
+    path = bundle/vim-commentary
+    url = https://github.com/tpope/vim-commentary.git
     ignore = dirty
 [submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = https://github.com/tpope/vim-markdown.git
+    path = bundle/vim-markdown
+    url = https://github.com/tpope/vim-markdown.git
+    ignore = dirty
