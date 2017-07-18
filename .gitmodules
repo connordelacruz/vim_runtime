@@ -1,0 +1,3 @@
+[submodule "bundle/vim-monokai-phoenix"]
+	path = bundle/vim-monokai-phoenix
+	url = https://github.com/connordelacruz/vim-monokai-phoenix.git
