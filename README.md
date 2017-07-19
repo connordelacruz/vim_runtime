@@ -1,4 +1,3 @@
-![VIM](https://dnp4pehkvoo6n.cloudfront.net/43c5af597bd5c1a64eb1829f011c208f/as/Ultimate%20Vimrc.svg)
 
 # The Ultimate vimrc
 
@@ -7,8 +6,24 @@ I still need to update the documentation, so this README.md is currently not acc
 
 ## TODO
 - Update URLs
-- Add instructions for initializing submodules
+- Update installation instructions
+- Add instructions for adding new plugins as submodules (and set ignore = dirty) 
 - Add link Amir's original repo (it's a great project and I want to be sure to give him credit)
+- Solution for local plugins (i.e. per-machine, not sync'd to repo)
+
+## Plugins Setup
+Plugins are set up as git submodules in the `bundle` directory. To initialize submodules and download plugins from their respective repositories:
+
+```
+git submodule init
+git submodule update
+```
+
+There are currently still plugins found in `sources_non_forked` which will be removed as this fork gets update. To clean up deleted plugin folders:
+
+```
+git clean -df
+```
 
 There are two versions:
 
