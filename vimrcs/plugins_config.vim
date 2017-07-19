@@ -16,55 +16,12 @@ call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
 call pathogen#infect(s:vim_runtime.'/bundle/{}')
 call pathogen#helptags()
 
-""""""""""""""""""""""""""""""
-" => bufExplorer plugin TODO: remove
-""""""""""""""""""""""""""""""
-"let g:bufExplorerDefaultHelp=0
-"let g:bufExplorerShowRelativePath=1
-"let g:bufExplorerFindActive=1
-"let g:bufExplorerSortBy='name'
-"map <leader>o :BufExplorer<cr>
-
-
-""""""""""""""""""""""""""""""
-" => MRU plugin TODO: remove
-""""""""""""""""""""""""""""""
-"let MRU_Max_Entries = 400
-"map <leader>f :MRU<CR>
-
 
 """"""""""""""""""""""""""""""
 " => YankStack
 """"""""""""""""""""""""""""""
 nmap <c-p> <Plug>yankstack_substitute_older_paste
 nmap <c-P> <Plug>yankstack_substitute_newer_paste
-
-
-""""""""""""""""""""""""""""""
-" => CTRL-P TODO: remove
-""""""""""""""""""""""""""""""
-"let g:ctrlp_working_path_mode = 0
-"
-"let g:ctrlp_map = '<c-f>'
-"map <leader>j :CtrlP<cr>
-"map <c-b> :CtrlPBuffer<cr>
-"
-"let g:ctrlp_max_height = 20
-"let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
-
-
-""""""""""""""""""""""""""""""
-" => ZenCoding TODO: remove
-""""""""""""""""""""""""""""""
-" Enable all functions in all modes
-"let g:user_zen_mode='a'
-
-
-""""""""""""""""""""""""""""""
-" => snipMate (beside <TAB> support <CTRL-j>) TODO: remove
-""""""""""""""""""""""""""""""
-"ino <c-j> <c-r>=snipMate#TriggerSnippet()<cr>
-"snor <c-j> <esc>i<right><c-r>=snipMate#TriggerSnippet()<cr>
 
 
 """"""""""""""""""""""""""""""
@@ -135,35 +92,6 @@ let g:goyo_width=100
 let g:goyo_margin_top = 2
 let g:goyo_margin_bottom = 2
 nnoremap <silent> <leader>z :Goyo<cr>
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-go TODO: remove
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:go_fmt_command = "goimports"
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntastic (syntax checker) TODO: remove?
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"" Python
-"let g:syntastic_python_checkers=['pyflakes']
-"
-"" Javascript
-"let g:syntastic_javascript_checkers = ['jshint']
-"
-"" Go
-"let g:syntastic_auto_loc_list = 1
-"let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
-"
-"" Custom CoffeeScript SyntasticCheck
-"func! SyntasticCheckCoffeescript()
-"    let l:filename = substitute(expand("%:p"), '\(\w\+\)\.coffee', '.coffee.\1.js', '')
-"    execute "tabedit " . l:filename
-"    execute "SyntasticCheck"
-"    execute "Errors"
-"endfunc
-"nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
