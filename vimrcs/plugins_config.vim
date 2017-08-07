@@ -77,3 +77,9 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => base16 colors
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO configure to cooperate with 256 color systems
+
