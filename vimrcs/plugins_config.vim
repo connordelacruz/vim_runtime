@@ -82,4 +82,5 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 " => base16 colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO configure to cooperate with 256 color systems
-
+" TODO set this to base16-builder path:
+"let g:base16_shell_path=
