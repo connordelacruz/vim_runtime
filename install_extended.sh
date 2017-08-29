@@ -16,4 +16,4 @@ source ~/.vim_runtime/my_configs.vim
 catch
 endtry' > ~/.vimrc
 
-echo "Installed extended vim configuration."
+echo "Extended vim configuration installed successfully"
