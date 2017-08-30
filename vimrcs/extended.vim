@@ -14,7 +14,12 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
-" Colorscheme
+" Colors
+" Enable true colors for nvim
+if has('nvim')
+    set termguicolors
+end
+" Set colorscheme
 set background=dark
 try
     colorscheme monokai-phoenix
@@ -104,7 +109,7 @@ autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use the the_silver_searcher if possible (much faster than Ack)
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep --smart-case'
+    let g:ackprg = 'ag --vimgrep --smart-case'
 endif
 
 " When you press gv you Ack after the selected text
