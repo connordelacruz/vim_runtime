@@ -1,8 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important:
-"       This requries that you install https://github.com/amix/vimrc !
-"
-" TODO: change header after forking
+" Plugin configurations
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
