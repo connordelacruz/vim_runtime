@@ -22,10 +22,6 @@
     path = bundle/tlib
     url = https://github.com/vim-scripts/tlib.git
     ignore = dirty
-[submodule "bundle/vim-colors-solarized"]
-    path = bundle/vim-colors-solarized
-    url = https://github.com/altercation/vim-colors-solarized.git
-    ignore = dirty
 [submodule "bundle/vim-commentary"]
     path = bundle/vim-commentary
     url = https://github.com/tpope/vim-commentary.git
