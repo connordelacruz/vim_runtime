@@ -15,8 +15,8 @@ set guioptions-=l
 set guioptions-=L
 
 " Colors
-" Enable true colors for nvim
-if has('nvim')
+" Enable true colors for nvim if $COLORTERM is set to truecolor
+if has('nvim') && $COLORTERM == "truecolor"
     set termguicolors
 end
 " Set colorscheme
