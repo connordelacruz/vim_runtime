@@ -3,4 +3,7 @@
 current_dir="$(pwd)"
 cd ~/.vim_runtime/
 git pull --rebase
+git submodule init
+git submodule update
 cd "$current_dir"
+unset current_dir
