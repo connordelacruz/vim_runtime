@@ -12,9 +12,8 @@ if [ -f ~/.vimrc ]; then
     echo "Backup of .vimrc created ($backup_file)"
 fi
 
-
-cd ~/.vim_runtime
-
+# create new .vimrc
+echo 'Creating new .vimrc...'
 echo 'set runtimepath+=~/.vim_runtime
 
 source ~/.vim_runtime/vimrcs/basic.vim
@@ -26,5 +25,16 @@ try
 source ~/.vim_runtime/my_configs.vim
 catch
 endtry' > ~/.vimrc
+echo 'New .vimrc created.'
+
+# Initialize submodules
+echo 'Initializing plugin submodules...'
+current_dir="$(pwd)"
+cd ~/.vim_runtime
+git submodule init
+git submodule update
+cd "$current_dir"
+unset current_dir
+echo 'Plugin submodules initialized.'
 
 echo "Extended vim configuration installed successfully"
