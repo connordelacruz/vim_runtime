@@ -8,7 +8,9 @@
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
+" Load global plugins
 call pathogen#infect(s:vim_runtime.'/bundle/{}')
+call pathogen#infect(s:vim_runtime.'/bundle/colors/{}')
 call pathogen#infect(s:vim_runtime.'/local/{}')
 call pathogen#helptags()
 
