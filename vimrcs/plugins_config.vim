@@ -36,11 +36,11 @@ map <leader>nf :NERDTreeFind<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'powerline',
+      \ 'colorscheme': 'one',
       \ }
 
 let g:lightline = {
-      \ 'colorscheme': 'powerline',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
@@ -59,6 +59,9 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
+
+" Hide redundant insert/replace/visual mode message
+set noshowmode
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
