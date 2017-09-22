@@ -1,13 +1,11 @@
+# Vim Runtime Configuration
 
-# The Ultimate vimrc
-
-This is a modified version of Amir Salihefendic's ultimate vimrc. I've removed several plugins that I don't use and modified some of the configurations.  
-I still need to update the documentation, so this README.md is currently not accurate to this specific fork.
+Custom runtime configuration for vim.
 
 ## TODO
 - Update URLs
 - Update installation instructions
-- Add instructions for adding new plugins as submodules (and set ignore = dirty) 
+- Add instructions for adding new plugins as submodules (and set ignore = dirty)
 - Add link Amir's original repo (it's a great project and I want to be sure to give him credit)
 - Solution for local plugins (i.e. per-machine, not sync'd to repo)
 
