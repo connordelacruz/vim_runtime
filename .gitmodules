@@ -39,7 +39,7 @@
 	url = https://github.com/dzeban/vim-log-syntax.git
     ignore = dirty
 [submodule "bundle/vim-javascript"]
-	path = bundle/vim-javascript
+	path = bundle/syntax/javascript
 	url = https://github.com/pangloss/vim-javascript
     ignore = dirty
 
