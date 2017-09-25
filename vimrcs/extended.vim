@@ -20,6 +20,7 @@ if has('nvim') && $COLORTERM == "truecolor"
     set termguicolors
     " Set default colorscheme to oceanicnext
     set background=dark
+    let base16colorspace=256
     try
         colorscheme oceanicnext
     catch
