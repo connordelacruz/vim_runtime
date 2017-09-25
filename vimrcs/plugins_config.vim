@@ -40,18 +40,18 @@ map <leader>nf :NERDTreeFind<cr>
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'powerline',
       \ }
 
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
       \   'right': [ [ 'lineinfo' ], ['percent'] ]
       \ },
       \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"[RO]":""}',
       \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
       \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
       \ },

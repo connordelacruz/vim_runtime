@@ -18,13 +18,21 @@ set guioptions-=L
 " Enable true colors for nvim if $COLORTERM is set to truecolor
 if has('nvim') && $COLORTERM == "truecolor"
     set termguicolors
+    " Set default colorscheme to oceanicnext
+    set background=dark
+    try
+        colorscheme oceanicnext
+    catch
+    endtry
+else
+    set background=dark
+    " Set default colorscheme to monokai-phoenix
+    try
+        colorscheme monokai-phoenix
+    catch
+    endtry
+
 end
-" Set colorscheme
-set background=dark
-try
-    colorscheme monokai-phoenix
-catch
-endtry
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
