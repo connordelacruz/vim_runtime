@@ -116,17 +116,18 @@ endif
 syntax enable 
 
 " Enable 256 colors palette in Gnome Terminal
+" https://askubuntu.com/a/126
 if $COLORTERM == 'gnome-terminal'
     set t_Co=256
 endif
+
+set background=dark
 
 " Use desert as the default color scheme
 try
     colorscheme desert
 catch
 endtry
-
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -173,6 +174,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Disable auto-comment on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

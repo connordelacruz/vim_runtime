@@ -8,31 +8,33 @@
 " => GUI related 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Disable scrollbars (real hackers don't use scrollbars for navigation!)
+" Disable scrollbars 
 set guioptions-=r
 set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
-" Enable true colors for nvim if $COLORTERM is set to truecolor
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set background=dark
+
+" Enable termguicolors for nvim if $COLORTERM is set to truecolor
 if has('nvim') && $COLORTERM == "truecolor"
     set termguicolors
-    " Set default colorscheme to oceanicnext
-    set background=dark
     let base16colorspace=256
+    " Set default colorscheme to oceanicnext
     try
         colorscheme oceanicnext
     catch
     endtry
 else
-    set background=dark
     " Set default colorscheme to monokai-phoenix
     try
         colorscheme monokai-phoenix
     catch
     endtry
-
 end
 
 
@@ -102,48 +104,6 @@ iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Omni complete functions
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ack searching and cope displaying
-"    requires ack.vim - it's much better than vimgrep/grep
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use the the_silver_searcher if possible (much faster than Ack)
-if executable('ag')
-    let g:ackprg = 'ag --vimgrep --smart-case'
-endif
-
-" When you press gv you Ack after the selected text
-vnoremap <silent> gv :call VisualSelection('gv', '')<CR>
-
-" Open Ack and put the cursor in the right position
-map <leader>g :Ack 
-
-" When you press <leader>r you can search and replace the selected text
-vnoremap <silent> <leader>r :call VisualSelection('replace', '')<CR>
-
-" Do :help cope if you are unsure what cope is. It's super useful!
-"
-" When you search with Ack, display your results in cope by doing:
-"   <leader>cc
-"
-" To go to the next search result do:
-"   <leader>n
-"
-" To go to the previous search results do:
-"   <leader>p
-"
-map <leader>cc :botright cope<cr>
-map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 func! DeleteTillSlash()
@@ -193,11 +153,4 @@ function! VisualSelection(direction, extra_filter) range
     let @" = l:saved_reg
 endfunction
 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Custom TODO: rename to something better
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Disable auto-comment on newline
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
