@@ -31,10 +31,10 @@ if has('nvim') && $COLORTERM == "truecolor"
     catch
     endtry
 else
-    " Set default colorscheme to monokai-phoenix
+    " Set default colorscheme to onedark
     try
-        colorscheme monokai-phoenix
-        let g:lightline.colorscheme = 'molokai'
+        colorscheme onedark
+        let g:lightline.colorscheme = 'onedark'
     catch
     endtry
 end

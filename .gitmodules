@@ -34,3 +34,7 @@
 	path = bundle/plugin/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
     ignore = dirty
+[submodule "bundle/colors/onedark"]
+	path = bundle/colors/onedark
+	url = https://github.com/joshdick/onedark.vim
+    ignore = dirty
