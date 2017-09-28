@@ -13,6 +13,7 @@ let s:vim_runtime = expand('<sfile>:p:h')."/.."
 call pathogen#infect(s:vim_runtime.'/bundle/{}')
 call pathogen#infect(s:vim_runtime.'/bundle/colors/{}')
 call pathogen#infect(s:vim_runtime.'/bundle/syntax/{}')
+call pathogen#infect(s:vim_runtime.'/bundle/plugin/{}')
 " Load local plugins
 call pathogen#infect(s:vim_runtime.'/local/{}')
 call pathogen#helptags()
