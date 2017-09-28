@@ -42,13 +42,7 @@ map <leader>nf :NERDTreeFind<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO: remove redundant declaration?
 let g:lightline = {
-      \ 'colorscheme': 'one',
-      \ }
-
-let g:lightline = {
-      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
@@ -67,6 +61,8 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
+" lightline colorscheme
+let g:lightline.colorscheme = 'oceanicnext'
 
 " Hide redundant insert/replace/visual mode message
 set noshowmode
