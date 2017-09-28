@@ -11,23 +11,23 @@
     url = https://github.com/scrooloose/nerdtree.git
     ignore = dirty
 [submodule "bundle/tlib"]
-    path = bundle/tlib
+	path = bundle/plugin/tlib
     url = https://github.com/vim-scripts/tlib.git
     ignore = dirty
 [submodule "bundle/vim-commentary"]
-    path = bundle/vim-commentary
+	path = bundle/plugin/commentary
     url = https://github.com/tpope/vim-commentary.git
     ignore = dirty
 [submodule "bundle/vim-markdown"]
-    path = bundle/vim-markdown
+	path = bundle/syntax/markdown
     url = https://github.com/tpope/vim-markdown.git
     ignore = dirty
 [submodule "bundle/vim-gitgutter"]
-	path = bundle/vim-gitgutter
+	path = bundle/plugin/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
     ignore = dirty
 [submodule "bundle/vim-log-syntax"]
-	path = bundle/vim-log-syntax
+	path = bundle/syntax/log-file
 	url = https://github.com/dzeban/vim-log-syntax.git
     ignore = dirty
 [submodule "bundle/vim-javascript"]

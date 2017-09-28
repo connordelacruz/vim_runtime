@@ -8,14 +8,15 @@
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
-" TODO: create colors, syntax directories for bundle and local?
+
 " Load global plugins
-call pathogen#infect(s:vim_runtime.'/bundle/{}')
-call pathogen#infect(s:vim_runtime.'/bundle/colors/{}')
-call pathogen#infect(s:vim_runtime.'/bundle/syntax/{}')
-call pathogen#infect(s:vim_runtime.'/bundle/plugin/{}')
+let s:bundle = s:vim_runtime.'/bundle/'
+call pathogen#infect(s:bundle.'{}', s:bundle.'colors/{}', s:bundle.'syntax/{}', s:bundle.'plugin/{}')
+
 " Load local plugins
-call pathogen#infect(s:vim_runtime.'/local/{}')
+let s:local = s:vim_runtime.'/local/'
+call pathogen#infect(s:local.'{}', s:local.'colors/{}', s:local.'syntax/{}', s:local.'plugin/{}')
+
 call pathogen#helptags()
 
 
