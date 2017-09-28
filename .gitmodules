@@ -2,10 +2,6 @@
 	path = bundle/colors/monokai-phoenix
     url = https://github.com/connordelacruz/vim-monokai-phoenix.git
     ignore = dirty
-[submodule "bundle/goyo.vim"]
-    path = bundle/goyo.vim
-    url = https://github.com/junegunn/goyo.vim.git
-    ignore = dirty
 [submodule "bundle/lightline.vim"]
 	path = bundle/plugin/lightline
     url = https://github.com/itchyny/lightline.vim.git

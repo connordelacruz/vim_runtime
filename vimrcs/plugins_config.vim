@@ -70,14 +70,6 @@ let g:lightline = {
 " Hide redundant insert/replace/visual mode message
 set noshowmode
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vimroom
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:goyo_width=100
-let g:goyo_margin_top = 2
-let g:goyo_margin_bottom = 2
-nnoremap <silent> <leader>z :Goyo<cr>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Git gutter (Git diff)
