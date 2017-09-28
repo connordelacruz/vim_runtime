@@ -61,8 +61,12 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
-" lightline colorscheme
-let g:lightline.colorscheme = 'oceanicnext'
+
+" lightline colorscheme gets overwritten in extended.vim based
+" one what default colorscheme is set. If the terminal emulator
+" doesn't support true color or 256 color, default the scheme
+" to wombat.
+let g:lightline.colorscheme = 'wombat'
 
 " Hide redundant insert/replace/visual mode message
 set noshowmode
