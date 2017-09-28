@@ -23,23 +23,6 @@ au FileType python set indentkeys-=0#
 
 
 """"""""""""""""""""""""""""""
-" => JavaScript section
-"""""""""""""""""""""""""""""""
-
-
-""""""""""""""""""""""""""""""
-" => CoffeeScript section
-"""""""""""""""""""""""""""""""
-function! CoffeeScriptFold()
-    setl foldmethod=indent
-    setl foldlevelstart=1
-endfunction
-au FileType coffee call CoffeeScriptFold()
-
-au FileType gitcommit call setpos('.', [0, 1, 1, 0])
-
-
-""""""""""""""""""""""""""""""
 " => Shell section
 """"""""""""""""""""""""""""""
 if exists('$TMUX') 
@@ -51,7 +34,3 @@ if exists('$TMUX')
 endif
 
 
-""""""""""""""""""""""""""""""
-" => Twig section
-""""""""""""""""""""""""""""""
-autocmd BufRead *.twig set syntax=html filetype=html
