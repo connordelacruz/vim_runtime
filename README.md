@@ -39,7 +39,7 @@ If you use [neovim](https://neovim.io/), run the following script in addition to
 sh ~/.vim_runtime/install/install_nvim.sh
 ```
 
-The install scripts first check for existing config files and create a backup before overwriting them. A unix timestamp is appended to their name so other backups aren't overwritten.
+The install scripts first check for existing config files and create a backup before overwriting them. A unix timestamp is appended to their name so other backups aren't overwritten.  
 - `~/.vimrc.bak.<timestamp>` for `.vimrc`
 - `~/.config/nvim/init.vim.bak.<timestamp>` for neovim configs (if applicable)
 
@@ -60,17 +60,17 @@ Additional plugins can be included in the `local/` directory that aren't tracked
 Running `update.sh` will pull the latest changes from the repository and update plugin submodules.
 
 ## Included Color Schemes
-vim colorschemes:
+vim colorschemes:  
 - [onedark](https://github.com/joshdick/onedark.vim) (default for non-truecolor terminals)
 - A selection of [base16](https://github.com/chriskempson/base16-vim) color schemes  
-  - oceanicnext (default for nvim on truecolor terminals)
-  - eighties
-  - materia
-  - monokai
-  - solar-flare
-  - solarized-dark
+    - oceanicnext (default for nvim on truecolor terminals)
+    - eighties
+    - materia
+    - monokai
+    - solar-flare
+    - solarized-dark
 
-lightline colorschemes:
+lightline colorschemes:  
 - An [oceanic-next](https://github.com/mhartington/oceanic-next) scheme to match the base16 scheme listed above
 
 ## Included Plugins
