@@ -60,9 +60,10 @@ Additional plugins can be included in the `local/` directory that aren't tracked
 Running `update.sh` will pull the latest changes from the repository and update plugin submodules.
 
 ## Included Color Schemes
-vim colorschemes:  
+vim colorschemes:
+
 - [onedark](https://github.com/joshdick/onedark.vim) (default for non-truecolor terminals)
-- A selection of [base16](https://github.com/chriskempson/base16-vim) color schemes  
+- A selection of [base16](https://github.com/chriskempson/base16-vim) color schemes:  
     - oceanicnext (default for nvim on truecolor terminals)
     - eighties
     - materia
@@ -70,7 +71,8 @@ vim colorschemes:
     - solar-flare
     - solarized-dark
 
-lightline colorschemes:  
+lightline colorschemes:
+
 - An [oceanic-next](https://github.com/mhartington/oceanic-next) scheme to match the base16 scheme listed above
 
 ## Included Plugins
