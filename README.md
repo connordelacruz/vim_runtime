@@ -35,11 +35,13 @@ The extended version includes the configurations from the basic version as well 
 
 
 If you use [neovim](https://neovim.io/), run the following script in addition to one of the above:
+
 ```
 sh ~/.vim_runtime/install/install_nvim.sh
 ```
 
 The install scripts first check for existing config files and create a backup before overwriting them. A unix timestamp is appended to their name so other backups aren't overwritten.  
+
 - `~/.vimrc.bak.<timestamp>` for `.vimrc`
 - `~/.config/nvim/init.vim.bak.<timestamp>` for neovim configs (if applicable)
 
