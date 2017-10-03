@@ -19,23 +19,24 @@ The extended version includes the configurations from the basic version as well 
 ```
 git clone https://connordelacruz@bitbucket.org/connordelacruz/vim_runtime.git ~/.vim_runtime
 ```
-
 2. Run the install script:
-```
-sh ~/.vim_runtime/install/install_extended.sh
-```
-
+  ```
+  sh ~/.vim_runtime/install/install_extended.sh
+  ```
 3. Initialize submodules to install plugins:
-```
-cd ~/.vim_runtime
-git submodule update --init --recursive
-```
+  ```
+  cd ~/.vim_runtime
+  git submodule update --init --recursive
+  ```
 
-If you use neovim, run the following script in addition to one of the above:
-```
-sh ~/.vim_runtime/install/install_nvim.sh
-```
+If you use [neovim](https://neovim.io/), run the following script in addition to one of the above:
+  ```
+  sh ~/.vim_runtime/install/install_nvim.sh
+  ```
 
+The install scripts first check for existing config files and create a backup before overwriting them. A unix timestamp is appended to their name so other backups aren't overwritten.
+- `~/.vimrc.bak.<timestamp>` for `.vimrc`
+- `~/.config/nvim/init.vim.bak.<timestamp>` for neovim configs (if applicable)
 
 ## Plugins Setup
 Plugins are set up as git submodules in the `bundle/` directory. To initialize submodules and download plugins from their respective repositories:
@@ -57,7 +58,18 @@ Running `update.sh` will pull the latest changes from the repository and update 
 // TODO: list plugins and link repos
 
 ## Included Color Schemes
-// TODO: list default color schemes and link base16-vim
+vim colorschemes:
+- [onedark](https://github.com/joshdick/onedark.vim) (default for non-truecolor terminals)
+- A selection of [base16](https://github.com/chriskempson/base16-vim) color schemes  
+  - oceanicnext (default for nvim on truecolor terminals)
+  - eighties
+  - materia
+  - monokai
+  - solar-flare
+  - solarized-dark
+
+lightline colorschemes:
+- An [oceanic-next](https://github.com/mhartington/oceanic-next) scheme to match the base16 scheme listed above
 
 ## Customization
 // TODO: explain my_configs.vim and local/
