@@ -39,6 +39,9 @@ else
     endtry
 end
 
+if exists('$TMUX') && !has('nvim')
+    set term=screen-256color 
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs

@@ -159,7 +159,7 @@ set noswapfile
 " Use spaces instead of tabs
 set expandtab
 
-" Be smart when using tabs ;)
+" Increase tab intelligence
 set smarttab
 
 " 1 tab == 4 spaces
@@ -173,9 +173,6 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
-
-" Disable auto-comment on newline
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

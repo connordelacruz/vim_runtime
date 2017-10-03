@@ -1,5 +1,11 @@
 """"""""""""""""""""""""""""""
-" => Python section
+" => Common
+""""""""""""""""""""""""""""""
+" Disable auto-comment on newline
+au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+""""""""""""""""""""""""""""""
+" => Python 
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
@@ -20,17 +26,4 @@ au FileType python map <buffer> <leader>D ?def
 au FileType python set cindent
 au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
-
-
-""""""""""""""""""""""""""""""
-" => Shell section
-""""""""""""""""""""""""""""""
-if exists('$TMUX') 
-    if has('nvim')
-        set termguicolors
-    else
-        set term=screen-256color 
-    endif
-endif
-
 
