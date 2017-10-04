@@ -5,6 +5,12 @@
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """"""""""""""""""""""""""""""
+" => Git
+""""""""""""""""""""""""""""""
+" Start on first line of commit messages
+au FileType gitcommit call setpos('.', [0, 1, 1, 0])
+
+""""""""""""""""""""""""""""""
 " => Python 
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
