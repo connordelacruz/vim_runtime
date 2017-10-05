@@ -78,10 +78,18 @@ lightline colorschemes:
 - An [oceanic-next](https://github.com/mhartington/oceanic-next) scheme to match the base16 scheme listed above
 
 ## Included Plugins
-// TODO: list plugins and link repos
+// TODO: descriptions
+
+- [vim-commentary](https://github.com/tpope/vim-commentary):
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter):
+- [lightline.vim](https://github.com/itchyny/lightline.vim):
+- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors):
+- [nerdtree](https://github.com/scrooloose/nerdtree):
 
 ## Included Syntaxes
-// TODO: list syntax plugins and link repos
+- [vim-javascript](https://github.com/pangloss/vim-javascript)
+- [vim-log-syntax](https://github.com/dzeban/vim-log-syntax)
+- [vim-markdown](https://github.com/tpope/vim-markdown)
 
 ## Customization
 // TODO: explain my_configs.vim and local/

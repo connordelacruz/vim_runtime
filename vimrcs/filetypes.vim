@@ -11,6 +11,11 @@ au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
 """"""""""""""""""""""""""""""
+" => JavaScript
+""""""""""""""""""""""""""""""
+let g:javascript_plugin_jsdoc = 1
+
+""""""""""""""""""""""""""""""
 " => Python 
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
