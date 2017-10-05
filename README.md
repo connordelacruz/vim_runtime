@@ -85,6 +85,7 @@ lightline colorschemes:
 - [lightline.vim](https://github.com/itchyny/lightline.vim):
 - [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors):
 - [nerdtree](https://github.com/scrooloose/nerdtree):
+- [vim-surround](https://github.com/tpope/vim-surround):
 
 ## Included Syntaxes
 - [vim-javascript](https://github.com/pangloss/vim-javascript)

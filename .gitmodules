@@ -38,3 +38,7 @@
 	path = bundle/colors/onedark
 	url = https://github.com/joshdick/onedark.vim
     ignore = dirty
+[submodule "bundle/plugin/surround"]
+	path = bundle/plugin/surround
+	url = https://github.com/tpope/vim-surround.git
+    ignore = dirty
