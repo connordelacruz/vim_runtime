@@ -54,7 +54,7 @@ git submodule update --init --recursive
 
 For organizational purposes, the plugins in `bundle/` are placed in `colors/`, `plugins/`, and `syntax/` so the root of `bundle/` doesn't get cluttered and it's a little clearer at a glance what each plugin does.  
 
-Additional plugins can be included in the `local/` directory that aren't tracked by git.Like `bundle/`, they can be placed in subdirectories `colors/`, `plugins/`, and `syntax/`, but will still be included if you place them at the root of `local/`.
+Additional plugins can be included in the `local/` directory that aren't tracked by git. Like `bundle/`, they can be placed in subdirectories `colors/`, `plugins/`, and `syntax/`, but will still be included if you place them at the root of `local/`.
 
 *Note:* At runtime, pathogen infects `bundle/`, `local/`, and their `colors/`, `plugins/`, and `syntax/` subdirectories. This may add to its overhead. I personally haven't encountered any noticeable impact on performance, but felt it worth mentioning. I'm open to suggestions on a more efficient way of organizing things.
 
@@ -93,7 +93,12 @@ lightline colorschemes:
 - [vim-markdown](https://github.com/tpope/vim-markdown)
 
 ## Customization
-// TODO: explain my_configs.vim and local/
+
+### Adding Configurations
+Configurations can be added and overwritten by putting them in `~/.vim_runtime/my_configs.vim`. 
+
+### Adding Plugins
+Additional plugins can be installed in `local/`. Like `bundle/`, they can be placed in subdirectories `colors/`, `plugins/`, and `syntax/`, but will still be included if you place them at the root of `local/`.
 
 ## Key Mappings
 // TODO: go through mappings and document
