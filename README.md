@@ -104,12 +104,15 @@ Additional plugins can be installed in `local/`. Like `bundle/`, they can be pla
 // TODO: go through mappings and document
 
 ## Uninstalling
+
 To uninstall:
+
 - `rm -rf ~/.vim_runtime` to remove files
 - (Optional) Restore the backup of `~/.vimrc` created by the install script (`~/.vimrc.bak.<timestamp>`)
 - Remove lines in your `~/.vimrc` referencing these files (if applicable)
 
 If you installed for neovim, you'll also need to:
+
 - (Optional) restore backup of `~/.config/nvim/init.vim` (`~/.config/nvim/init.vim.bak.<timestamp>`)
 - Remove lines in `~/.config/nvim/init.vim` referencing these files (if applicable)
 
