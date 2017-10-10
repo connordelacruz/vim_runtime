@@ -62,6 +62,11 @@ let g:lightline = {
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
 
+let g:lightline.tabline = {
+    \ 'left': [ [ 'tabs' ] ],
+    \ 'right': [ [ '' ] ]
+    \ }
+
 " lightline colorscheme gets overwritten in extended.vim based
 " one what default colorscheme is set. If the terminal emulator
 " doesn't support true color or 256 color, default the scheme
