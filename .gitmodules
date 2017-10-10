@@ -42,3 +42,7 @@
 	path = bundle/plugin/surround
 	url = https://github.com/tpope/vim-surround.git
     ignore = dirty
+[submodule "bundle/plugin/fugitive"]
+	path = bundle/plugin/fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+    ignore = dirty
