@@ -46,3 +46,7 @@
 	path = bundle/plugin/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
     ignore = dirty
+[submodule "bundle/plugin/visual-increment"]
+	path = bundle/plugin/visual-increment
+	url = https://github.com/triglav/vim-visual-increment.git
+    ignore = dirty
