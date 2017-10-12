@@ -174,6 +174,9 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Incrementing for alphabet, octal, and hex sequences
+set nrformats=alpha,octal,hex
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
