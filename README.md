@@ -2,9 +2,12 @@
 
 My runtime configuration for vim (and neovim).  
 
+I started this out using Amir Salihefendic's [ultimate vimrc](https://github.com/amix/vimrc), which I highly recommend checking out. The configurations, plugins, and organization has changed, but it's still heavily based on his project.
+
+I wanted a vimrc setup with some sensible defaults and a plugin setup that was reasonably easy to organize and keep up-to-date. I also wanted to make it relatively easy to have plugins and configurations on a per-machine basis.
+
 ## TODO
 
-- Link ultimate vimrc https://github.com/amix/vimrc
 - Directory structure
 - Overview of configurations  
 
@@ -36,6 +39,8 @@ vim colorschemes:
     - monokai
     - solar-flare
     - solarized-dark
+
+**Note:** `vimrcs/extended.vim` checks if you're using neovim and have the environment variable `COLORTERM` set to `truecolor` when determining what color scheme to use. As there is [no reliable means of detecting true color support](https://gist.github.com/XVilka/8346728#detection), I have my bashrc set up to set `COLORTERM` to `truecolor` for various terminal emulators known to support true color. [See the section for platform-specific color prompt configs for an example](https://github.com/connordelacruz/bash_config/blob/master/globalrc.d/bashrc.sh)
 
 lightline colorschemes:
 
