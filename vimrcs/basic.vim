@@ -242,6 +242,7 @@ noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Returns true if paste mode is enabled
+" Used for status line format
 function! HasPaste()
     if &paste
         return 'PASTE MODE  '
