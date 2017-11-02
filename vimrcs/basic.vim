@@ -79,7 +79,6 @@ set smartcase
 
 " Highlight search results
 set hlsearch
-
 " Stops previous searches from being immediately highlighted on file open
 nohls
 
@@ -166,13 +165,15 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Linebreak on 500 characters
+" Wrap lines
+set wrap 
+" Only wrap at a breakat character
 set lbr
-set tw=500
+" Disable list so linebreak works properly (disabled by default but just to be sure)
+set nolist
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
 
 " Incrementing for alphabet, octal, and hex sequences
 set nrformats=alpha,octal,hex
