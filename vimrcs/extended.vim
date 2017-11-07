@@ -49,6 +49,15 @@ endif
 map <leader>e :e! ~/.vim_runtime/my_configs.vim<cr>
 autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Set updatetime
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Apparently, vim has issues with updatetime < 1000 prior to 7.4.427
+if v:version > 704 || (v:version == 704 && has('patch427'))
+    set updatetime=250
+else
+    set updatetime=1000
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
