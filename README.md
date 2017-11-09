@@ -110,7 +110,18 @@ Configurations can be added and overwritten by putting them in `~/.vim_runtime/m
 Additional plugins can be installed in `local/`. Like `bundle/`, they can be placed in subdirectories `colors/`, `plugins/`, and `syntax/`, but will still be included if you place them at the root of `local/`.
 
 ## Key Mappings
+
 // TODO: go through mappings and document
+
+`<leader>` is mapped to `,`
+
+### Normal mode
+
+`*` and `#` search for the word under the cursor
+
+### Visual mode
+
+`*` and `#` search for the current selection
 
 ## Uninstalling
 
