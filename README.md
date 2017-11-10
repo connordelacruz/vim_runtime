@@ -2,9 +2,9 @@
 
 My runtime configuration for vim (and neovim).  
 
-I started this out using Amir Salihefendic's [ultimate vimrc](https://github.com/amix/vimrc), which I highly recommend checking out. The configurations, plugins, and organization has changed, but it's still heavily based on his project.
-
 I wanted a vimrc setup with some sensible defaults and a plugin setup that was reasonably easy to organize and keep up-to-date. I also wanted to make it relatively easy to have plugins and configurations on a per-machine basis.
+
+I started this out using Amir Salihefendic's [ultimate vimrc](https://github.com/amix/vimrc), which I highly recommend checking out. The configurations, plugins, and organization has changed, but it's still heavily based on his project.
 
 ## TODO
 
@@ -12,14 +12,15 @@ I wanted a vimrc setup with some sensible defaults and a plugin setup that was r
 - Overview of configurations  
 
 ## Included Plugins
-// TODO: update list and add descriptions
 
-- [vim-commentary](https://github.com/tpope/vim-commentary):
-- [vim-gitgutter](https://github.com/airblade/vim-gitgutter):
-- [lightline.vim](https://github.com/itchyny/lightline.vim):
-- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors):
-- [nerdtree](https://github.com/scrooloose/nerdtree):
-- [vim-surround](https://github.com/tpope/vim-surround):
+- [vim-commentary](https//github.com/tpope/vim-commentary)
+- [vim-gitgutter](https//github.com/airblade/vim-gitgutter)
+- [lightline.vim](https//github.com/itchyny/lightline.vim)
+- [vim-multiple-cursors](https//github.com/terryma/vim-multiple-cursors)
+- [nerdtree](https//github.com/scrooloose/nerdtree)
+- [vim-surround](https//github.com/tpope/vim-surround)
+- [vim-fugitive](https//github.com/tpope/vim-fugitive.git)
+- [vim-visual-increment](https//github.com/triglav/vim-visual-increment.git)
 
 ## Included Syntaxes
 
@@ -84,6 +85,10 @@ The install scripts first check for existing config files and create a backup be
 
 - `~/.vimrc.bak.<timestamp>` for `.vimrc`
 - `~/.config/nvim/init.vim.bak.<timestamp>` for neovim configs (if applicable)
+
+## Directory Structure
+
+
 
 ## Plugins Setup
 Plugins are set up as git submodules in the `bundle/` directory. To initialize submodules and download plugins from their respective repositories:
