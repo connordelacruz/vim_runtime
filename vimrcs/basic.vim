@@ -73,15 +73,12 @@ set whichwrap+=<,>,h,l
 
 " Ignore case when searching
 set ignorecase
-
 " When searching try to be smart about cases 
 set smartcase
-
 " Highlight search results
 set hlsearch
 " Stops previous searches from being immediately highlighted on file open
 nohls
-
 " Makes search act like search in modern browsers
 set incsearch 
 
@@ -95,6 +92,11 @@ set magic
 set showmatch 
 " How many tenths of a second to blink when matching brackets
 set mat=2
+
+" Open new horizontal splits below current window
+set splitbelow
+" Open new vertical splits to the right of current window
+set splitright
 
 " No annoying sound on errors
 set noerrorbells
