@@ -88,6 +88,22 @@ The install scripts first check for existing config files and create a backup be
 
 ## Directory Structure
 
+```
+.vim_runtime
+├── autoload
+├── bundle
+│   ├── colors
+│   ├── plugin
+│   └── syntax
+├── install
+├── local
+│   ├── colors
+│   ├── plugin
+│   └── syntax
+├── temp_dirs
+│   └── undodir
+└── vimrcs
+```
 
 
 ## Plugins Setup
