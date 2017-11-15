@@ -50,3 +50,7 @@
 	path = bundle/plugin/visual-increment
 	url = https://github.com/triglav/vim-visual-increment.git
     ignore = dirty
+[submodule "bundle/plugin/markdown-toc"]
+	path = bundle/plugin/markdown-toc
+	url = https://github.com/mzlogin/vim-markdown-toc.git
+    ignore = dirty

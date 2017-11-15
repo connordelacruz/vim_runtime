@@ -11,6 +11,29 @@ I started this out using Amir Salihefendic's [ultimate vimrc](https://github.com
 - Directory structure
 - Overview of configurations  
 
+## Contents
+
+<!-- vim-markdown-toc GFM -->
+
+* [Included Plugins](#included-plugins)
+* [Included Syntaxes](#included-syntaxes)
+* [Included Color Schemes](#included-color-schemes)
+* [Installation](#installation)
+    * [Basic Version](#basic-version)
+    * [Extended Version](#extended-version)
+* [Directory Structure](#directory-structure)
+* [Plugins Setup](#plugins-setup)
+* [Updating](#updating)
+* [Customization](#customization)
+    * [Adding Configurations](#adding-configurations)
+    * [Adding Plugins](#adding-plugins)
+* [Key Mappings](#key-mappings)
+    * [Normal mode](#normal-mode)
+    * [Visual mode](#visual-mode)
+* [Uninstalling](#uninstalling)
+
+<!-- vim-markdown-toc -->
+
 ## Included Plugins
 
 - [vim-commentary](https//github.com/tpope/vim-commentary)
