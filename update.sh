@@ -8,6 +8,7 @@ if git remote -v | grep -q 'origin\s*https://connordelacruz@bitbucket.org/connor
     echo 'Updating remote origin url...'
     git remote rm origin
     git remote add origin https://github.com/connordelacruz/vim_runtime.git
+    git branch --set-upstream-to=origin/master master
     echo 'Remote url updated.'
 fi
 
