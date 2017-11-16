@@ -144,7 +144,9 @@ Additional plugins can be included in the `local/` directory that aren't tracked
 *Note:* At runtime, pathogen infects `bundle/`, `local/`, and their `colors/`, `plugins/`, and `syntax/` subdirectories. This may add to its overhead. I personally haven't encountered any noticeable impact on performance, but felt it worth mentioning. I'm open to suggestions on a more efficient way of organizing things.
 
 ## Updating
-Running `update.sh` will pull the latest changes from the repository and update plugin submodules.
+Running `update.sh` will pull the latest changes from the repository and initialize/update plugin submodules.
+
+Running `update_plugins.sh` will go through each of the submodules and pull from each of their remotes. The changes will need to be staged and committed after updating submodules.
 
 ## Customization
 
