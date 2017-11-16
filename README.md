@@ -10,6 +10,7 @@ I started this out using Amir Salihefendic's [ultimate vimrc](https://github.com
 
 - Directory structure
 - Overview of configurations  
+- Screenshots
 
 ## Contents
 
