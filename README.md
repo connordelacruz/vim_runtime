@@ -44,6 +44,7 @@ I started this out using Amir Salihefendic's [ultimate vimrc](https://github.com
 - [vim-surround](https//github.com/tpope/vim-surround)
 - [vim-fugitive](https//github.com/tpope/vim-fugitive.git)
 - [vim-visual-increment](https//github.com/triglav/vim-visual-increment.git)
+- [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc.git)
 
 ## Included Syntaxes
 
