@@ -82,7 +82,7 @@ The extended version includes the configurations from the basic version as well 
 1. Clone repo as `~/.vim_runtime`:
 
     ```
-    git clone https://connordelacruz@bitbucket.org/connordelacruz/vim_runtime.git ~/.vim_runtime
+    git clone https://github.com/connordelacruz/vim_runtime.git ~/.vim_runtime
     ```
 
 2. Run the install script:
