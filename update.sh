@@ -3,6 +3,13 @@
 current_dir="$(pwd)"
 cd ~/.vim_runtime/
 
+# Update remotes (after moving from Bitbucket to GitHub)
+if git remote -v | grep -q 'origin\s*https://connordelacruz@bitbucket.org/connordelacruz/vim_runtime.git'; then
+    echo 'Updating remote origin url...'
+    git remote set-url origin https://github.com/connordelacruz/vim_runtime
+    echo 'Remote url updated.'
+fi
+
 echo 'Pulling recent changes...'
 git pull --rebase
 
