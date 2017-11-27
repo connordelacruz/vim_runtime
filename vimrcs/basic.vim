@@ -52,6 +52,8 @@ source $VIMRUNTIME/menu.vim
 
 " Turn on the WiLd menu (menu at bottom of window for tab completion)
 set wildmenu
+" Ignore case when completing file/directory names
+set wildignorecase
 
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
