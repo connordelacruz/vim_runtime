@@ -37,14 +37,14 @@ I started this out using Amir Salihefendic's [ultimate vimrc](https://github.com
 
 ## Included Plugins
 
-- [vim-commentary](https//github.com/tpope/vim-commentary)
-- [vim-gitgutter](https//github.com/airblade/vim-gitgutter)
-- [lightline.vim](https//github.com/itchyny/lightline.vim)
-- [vim-multiple-cursors](https//github.com/terryma/vim-multiple-cursors)
-- [nerdtree](https//github.com/scrooloose/nerdtree)
-- [vim-surround](https//github.com/tpope/vim-surround)
-- [vim-fugitive](https//github.com/tpope/vim-fugitive.git)
-- [vim-visual-increment](https//github.com/triglav/vim-visual-increment.git)
+- [vim-commentary](https://github.com/tpope/vim-commentary)
+- [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+- [lightline.vim](https://github.com/itchyny/lightline.vim)
+- [vim-multiple-cursors](https://github.com/terryma/vim-multiple-cursors)
+- [nerdtree](https://github.com/scrooloose/nerdtree)
+- [vim-surround](https://github.com/tpope/vim-surround)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive.git)
+- [vim-visual-increment](https://github.com/triglav/vim-visual-increment.git)
 - [vim-markdown-toc](https://github.com/mzlogin/vim-markdown-toc.git)
 
 ## Included Syntaxes
