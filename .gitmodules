@@ -54,3 +54,7 @@
 	path = bundle/plugin/markdown-toc
 	url = https://github.com/mzlogin/vim-markdown-toc.git
     ignore = dirty
+[submodule "bundle/plugin/css-color"]
+	path = bundle/plugin/css-color
+	url = https://github.com/ap/vim-css-color.git
+    ignore = dirty

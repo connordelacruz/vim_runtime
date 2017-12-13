@@ -52,6 +52,7 @@ I started this out using Amir Salihefendic's [ultimate vimrc](https://github.com
 - [vim-javascript](https://github.com/pangloss/vim-javascript)
 - [vim-log-syntax](https://github.com/dzeban/vim-log-syntax)
 - [vim-markdown](https://github.com/tpope/vim-markdown)
+- [vim-css-color](https://github.com/ap/vim-css-color)
 
 ## Included Color Schemes
 
