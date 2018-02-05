@@ -58,3 +58,7 @@
 	path = bundle/syntax/css-color
 	url = https://github.com/ap/vim-css-color.git
     ignore = dirty
+[submodule "bundle/plugin/pydocstring"]
+	path = bundle/plugin/pydocstring
+	url = https://github.com/heavenshell/vim-pydocstring.git
+    ignore = dirty
