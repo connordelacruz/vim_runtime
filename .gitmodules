@@ -62,3 +62,7 @@
 	path = bundle/plugin/pydocstring
 	url = https://github.com/heavenshell/vim-pydocstring.git
     ignore = dirty
+[submodule "bundle/plugin/camelcasemotion"]
+	path = bundle/plugin/camelcasemotion
+	url = https://github.com/bkad/CamelCaseMotion.git
+    ignore = dirty

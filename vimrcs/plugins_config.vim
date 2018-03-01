@@ -83,3 +83,9 @@ set noshowmode
 let g:gitgutter_enabled=1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => CamelCaseMotion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call camelcasemotion#CreateMotionMappings('<leader>')
+
