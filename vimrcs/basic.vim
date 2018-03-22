@@ -219,9 +219,9 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap VIM 0 to first non-blank character
-" TODO: remove?
-" map 0 ^
+" Remap VIM 0 to first non-blank character and <Leader>0 to first character
+nnoremap <Leader>0 0
+nnoremap 0 ^
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
