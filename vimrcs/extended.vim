@@ -90,6 +90,8 @@ cnoremap <C-K>		<C-U>
 cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 
+" Caps lock struggles
+command W echoerr 'Turn CAPS LOCK off my dude.'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket
