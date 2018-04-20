@@ -70,4 +70,7 @@
 	path = bundle/plugin/closetag
 	url = https://github.com/alvan/vim-closetag.git
     ignore = dirty
-
+[submodule "bundle/plugin/abolish"]
+	path = bundle/plugin/abolish
+	url = https://github.com/tpope/vim-abolish.git
+    ignore = dirty
