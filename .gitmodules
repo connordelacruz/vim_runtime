@@ -74,3 +74,7 @@
 	path = bundle/plugin/abolish
 	url = https://github.com/tpope/vim-abolish.git
     ignore = dirty
+[submodule "bundle/syntax/rst-headings"]
+	path = bundle/syntax/rst-headings
+	url = https://github.com/tobyS/rst-headings.vim.git
+    ignore = dirty
