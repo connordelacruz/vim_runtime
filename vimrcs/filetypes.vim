@@ -39,4 +39,4 @@ au FileType python set indentkeys-=0#
 " => RestructuredText
 """"""""""""""""""""""""""""""
 
-au FileType rst set tw=80
+au FileType rst setlocal tw=80 fo+=t fo-=l
