@@ -2,6 +2,9 @@
 RST-Headings for VIM
 ====================
 
+This is a modified version of `rst-headings.vim
+<https://github.com/tobyS/rst-headings.vim>`__.
+
 This VIM plugin maintains RST (ReStructured Text) headings for you
 automatically.
 

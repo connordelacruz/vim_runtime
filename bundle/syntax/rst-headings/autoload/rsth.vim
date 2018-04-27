@@ -63,8 +63,9 @@ func! s:IsOverlined(row)
     return s:StringLength(getline(a:row)) > 0 && s:MatchHeadLine(a:row - 1, 1)
 endfunc
 
+" TODO: allow configurable characters
 func! s:MatchHeadLine(row, minLen)
-    return match(getline(a:row), '^\([=#^-]\)\1\{' . (a:minLen - 1) . ',\}$') > -1
+    return match(getline(a:row), '^\([=#^\~-]\)\1\{' . (a:minLen - 1) . ',\}$') > -1
 endfunc
 
 func! s:StringLength(text)
