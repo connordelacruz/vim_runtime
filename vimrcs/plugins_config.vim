@@ -89,3 +89,12 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call camelcasemotion#CreateMotionMappings('<leader>')
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim Table Mode
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Configure for RST tables by default
+let g:table_mode_corner_corner='+'
+let g:table_mode_header_fillchar='='
+
+
