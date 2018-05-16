@@ -40,3 +40,11 @@ au FileType python set indentkeys-=0#
 """"""""""""""""""""""""""""""
 
 au FileType rst setlocal tw=80 fo+=t fo-=l
+
+""""""""""""""""""""""""""""""
+" => YAML
+""""""""""""""""""""""""""""""
+
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+

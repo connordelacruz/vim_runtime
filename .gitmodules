@@ -82,3 +82,7 @@
 	path = bundle/plugin/colorizer
 	url = https://github.com/chrisbra/Colorizer.git
     ignore = dirty
+[submodule "bundle/plugin/pep8-indent"]
+	path = bundle/plugin/pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent.git
+    ignore = dirty
