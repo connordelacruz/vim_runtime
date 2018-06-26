@@ -36,6 +36,13 @@ au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
 """"""""""""""""""""""""""""""
+" => Markdown
+""""""""""""""""""""""""""""""
+
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+au FileType markdown setlocal tw=80 fo+=t fo-=l
+
+""""""""""""""""""""""""""""""
 " => RestructuredText
 """"""""""""""""""""""""""""""
 
