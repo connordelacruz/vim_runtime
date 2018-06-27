@@ -12,8 +12,9 @@
 " specified the tab to the right of the current tab is merged.  If there
 " is no right tab, the left tab is merged.
 "
-" The location specifies where in the current tab to merge the windows.
-" Defaults to "top".
+" The location specifies where in the current tab to merge the windows.  If
+" the location isn't provided, defaults to the value of g:tm_default_location
+" or "top" if g:tm_default_location is not set
 "
 " Limitations:
 "
@@ -25,7 +26,6 @@ if v:version < 700
 	finish
 endif
 
-" TODO: document
 if !exists("g:tm_default_location")
     let g:tm_default_location = 'top'
 endif
@@ -117,4 +117,3 @@ function! Tabmerge(...)  " {{{1
 	let &switchbuf = save_switchbuf
 endfunction
 
-" vim:fdm=marker:fdc=2:fdl=1:
