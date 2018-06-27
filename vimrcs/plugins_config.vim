@@ -98,3 +98,10 @@ let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Tabmerge
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set default Tabmerge location to bottom
+let g:tm_default_location = 'b'
+
+
