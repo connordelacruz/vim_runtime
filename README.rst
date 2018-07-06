@@ -16,68 +16,14 @@ but it’s still heavily based on his project.
 TODO
 ----
 
--  Directory structure
+-  Directory structure details
 -  Overview of configurations
--  Update plugin lists
+-  Add overridden/non-submodule plugins to list
 -  Screenshots
 
 
 .. contents::
 
-
-Included Plugins
-----------------
-
--  `vim-commentary <https://github.com/tpope/vim-commentary>`__
--  `vim-gitgutter <https://github.com/airblade/vim-gitgutter>`__
--  `lightline.vim <https://github.com/itchyny/lightline.vim>`__
--  `vim-multiple-cursors <https://github.com/terryma/vim-multiple-cursors>`__
--  `nerdtree <https://github.com/scrooloose/nerdtree>`__
--  `vim-surround <https://github.com/tpope/vim-surround>`__
--  `vim-fugitive <https://github.com/tpope/vim-fugitive.git>`__
--  `vim-visual-increment <https://github.com/triglav/vim-visual-increment.git>`__
--  `vim-markdown-toc <https://github.com/mzlogin/vim-markdown-toc.git>`__
-
-Included Syntaxes
------------------
-
--  `vim-javascript <https://github.com/pangloss/vim-javascript>`__
--  `vim-log-syntax <https://github.com/dzeban/vim-log-syntax>`__
--  `vim-markdown <https://github.com/tpope/vim-markdown>`__
--  `vim-css-color <https://github.com/ap/vim-css-color>`__
-
-Included Color Schemes
-----------------------
-
-vim colorschemes:
-
--  `onedark <https://github.com/joshdick/onedark.vim>`__ (default for
-   non-truecolor terminals)
--  A selection of
-   `base16 <https://github.com/chriskempson/base16-vim>`__ color
-   schemes:
-
-   -  oceanicnext (default for nvim on truecolor terminals)
-   -  eighties
-   -  materia
-   -  monokai
-   -  solar-flare
-   -  solarized-dark
-
-**Note:** ``vimrcs/extended.vim`` checks if you’re using neovim and have
-the environment variable ``COLORTERM`` set to ``truecolor`` when
-determining what color scheme to use. As there is `no reliable means of
-detecting true color
-support <https://gist.github.com/XVilka/8346728#detection>`__, I have my
-bashrc set up to set ``COLORTERM`` to ``truecolor`` for various terminal
-emulators known to support true color. `See the section for
-platform-specific color prompt configs for an
-example <https://github.com/connordelacruz/bash_config/blob/master/globalrc.d/bashrc.sh>`__
-
-lightline colorschemes:
-
--  An `oceanic-next <https://github.com/mhartington/oceanic-next>`__
-   scheme to match the base16 scheme listed above
 
 Installation
 ------------
@@ -100,18 +46,11 @@ as well as some plugins and additional configurations. To install:
 
       git clone https://github.com/connordelacruz/vim_runtime.git ~/.vim_runtime
 
-2. Run the install script:
+2. Run the install script to configure ~/.vimrc and initialize plugins:
 
    ::
 
       sh ~/.vim_runtime/install/install_extended.sh
-
-3. Initialize submodules to install plugins:
-
-   ::
-
-      cd ~/.vim_runtime
-      git submodule update --init --recursive
 
 If you use `neovim <https://neovim.io/>`__, run the following script in
 addition to one of the above:
@@ -127,6 +66,71 @@ name so other backups aren’t overwritten.
 -  ``~/.vimrc.bak.<timestamp>`` for ``.vimrc``
 -  ``~/.config/nvim/init.vim.bak.<timestamp>`` for neovim configs (if
    applicable)
+
+
+Included Plugins
+----------------
+
+-  `vim-abolish <https://github.com/tpope/vim-abolish>`__
+-  `CamelCaseMotion <https://github.com/bkad/CamelCaseMotion>`__
+-  `vim-closetag <https://github.com/alvan/vim-closetag>`__
+-  `Colorizer <https://github.com/chrisbra/Colorizer>`__
+-  `vim-commentary <https://github.com/tpope/vim-commentary>`__
+-  `vim-fugitive <https://github.com/tpope/vim-fugitive.git>`__
+-  `vim-gitgutter <https://github.com/airblade/vim-gitgutter>`__
+-  `lightline.vim <https://github.com/itchyny/lightline.vim>`__
+-  `vim-markdown-toc <https://github.com/mzlogin/vim-markdown-toc.git>`__
+-  `vim-multiple-cursors <https://github.com/terryma/vim-multiple-cursors>`__
+-  `nerdtree <https://github.com/scrooloose/nerdtree>`__
+-  `vim-python-pep8-indent <https://github.com/Vimjas/vim-python-pep8-indent>`__
+-  `vim-pydocstring <https://github.com/heavenshell/vim-pydocstring>`__
+-  `vim-surround <https://github.com/tpope/vim-surround>`__
+-  `vim-table-mode <https://github.com/dhruvasagar/vim-table-mode>`__
+-  `vim-visual-increment <https://github.com/triglav/vim-visual-increment.git>`__
+
+Included Syntaxes
+-----------------
+
+-  `vim-javascript <https://github.com/pangloss/vim-javascript>`__
+-  `vim-log-syntax <https://github.com/dzeban/vim-log-syntax>`__
+-  `vim-css-color <https://github.com/ap/vim-css-color>`__
+
+Included Color Schemes
+----------------------
+
+vim colorschemes:
+
+-  `onedark <https://github.com/joshdick/onedark.vim>`__ (default for
+   non-truecolor terminals)
+-  A selection of
+   `base16 <https://github.com/chriskempson/base16-vim>`__ color
+   schemes:
+
+   -  oceanicnext (default for nvim on truecolor terminals)
+   -  eighties
+   -  materia
+   -  material
+   -  material-darker
+   -  monokai
+   -  solar-flare
+   -  solarized-dark
+   -  solarized-light
+
+**Note:** ``vimrcs/extended.vim`` checks if you’re using neovim and have
+the environment variable ``COLORTERM`` set to ``truecolor`` when
+determining what color scheme to use. As there is `no reliable means of
+detecting true color
+support <https://gist.github.com/XVilka/8346728#detection>`__, I have my
+bashrc set up to set ``COLORTERM`` to ``truecolor`` for various terminal
+emulators known to support true color. `See the section for
+platform-specific color prompt configs for an
+example <https://github.com/connordelacruz/bash_config/blob/master/globalrc.d/bashrc.sh>`__
+
+lightline colorschemes:
+
+- A modified `oceanic-next <https://github.com/mhartington/oceanic-next>`__
+  scheme to match the base16 scheme listed above
+   
 
 Directory Structure
 -------------------
@@ -152,9 +156,9 @@ Directory Structure
 Plugins Setup
 -------------
 
-Plugins are set up as git submodules in the ``bundle/`` directory. To
-initialize submodules and download plugins from their respective
-repositories:
+Plugins are set up as git submodules in the ``bundle/`` directory. Plugins are
+initialized in ``install/install_extended.sh``. To manually initialize
+submodules and download plugins from their respective repositories:
 
 ::
 
@@ -176,6 +180,7 @@ to its overhead. I personally haven’t encountered any noticeable impact
 on performance, but felt it worth mentioning. I’m open to suggestions on
 a more efficient way of organizing things.
 
+
 Updating
 --------
 
@@ -185,6 +190,7 @@ and initialize/update plugin submodules.
 Running ``update_plugins.sh`` will go through each of the submodules and
 pull from each of their remotes. The changes will need to be staged and
 committed after updating submodules.
+
 
 Customization
 -------------
@@ -203,6 +209,7 @@ they can be placed in subdirectories ``colors/``, ``plugins/``, and
 ``syntax/``, but will still be included if you place them at the root of
 ``local/``.
 
+
 Key Mappings
 ------------
 
@@ -219,6 +226,7 @@ Visual mode
 ~~~~~~~~~~~
 
 ``*`` and ``#`` search for the current selection
+
 
 Uninstalling
 ------------
