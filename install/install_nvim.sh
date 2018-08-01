@@ -1,4 +1,14 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# ==============================================================================
+# install_nvim.sh
+#
+# Backs up existing ~/.config/nvim/init.vim and configures nvim to source
+# ~/.vimrc for its configurations.
+#
+# Author: Connor de la Cruz
+# Repo: https://github.com/connordelacruz/vim_runtime
+# ==============================================================================
+
 set -e
 
 # Make ~/.config/nvim/ if it doesn't already exist
@@ -14,9 +24,6 @@ if [ -f ~/.config/nvim/init.vim ]; then
     cp init.vim "$backup_file"
     echo "Backup of init.vim created ($backup_file)"
 fi
-
-
-cd ~/.vim_runtime
 
 echo 'source ~/.vimrc' > ~/.config/nvim/init.vim
 

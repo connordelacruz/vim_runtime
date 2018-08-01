@@ -1,17 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# ==============================================================================
+# update.sh
+#
+# Pulls updates from remote repo and initializes any new submodules.
+#
+# Author: Connor de la Cruz
+# Repo: https://github.com/connordelacruz/vim_runtime
+# ==============================================================================
+
+# TODO: Add --help argument
+# TODO: Add --clean argument (run git clean -dff)
+# TODO: Add --check argument (checks for updates, doesn't apply)
+
 # Older versions of git don't have the -C option
 current_dir="$(pwd)"
 cd ~/.vim_runtime/
-
-# Update remotes (after moving from Bitbucket to GitHub)
-if git remote -v | grep -q 'origin\s*https://connordelacruz@bitbucket.org/connordelacruz/vim_runtime.git'; then
-    echo 'Updating remote origin url...'
-    git remote rm origin
-    git remote add origin https://github.com/connordelacruz/vim_runtime.git
-    git fetch
-    git branch --set-upstream-to=origin/master master
-    echo 'Remote url updated.'
-fi
 
 echo 'Pulling recent changes...'
 git pull --rebase

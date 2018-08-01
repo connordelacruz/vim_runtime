@@ -1,5 +1,12 @@
-#!/bin/bash
-# Pull from submodule remotes
+#!/usr/bin/env bash
+# ==============================================================================
+# update_plugins.sh
+#
+# Pulls updates submodules remotes.
+#
+# Author: Connor de la Cruz
+# Repo: https://github.com/connordelacruz/vim_runtime
+# ==============================================================================
 
 # Older versions of git don't have the -C option
 current_dir="$(pwd)"

@@ -1,4 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# ==============================================================================
+# install_extended.sh
+#
+# Backs up existing .vimrc and installs the extended vim configurations.
+#
+# Author: Connor de la Cruz
+# Repo: https://github.com/connordelacruz/vim_runtime
+# ==============================================================================
+
 set -e
 
 # Backup existing vimrc
@@ -30,11 +39,13 @@ echo 'New .vimrc created.'
 # Initialize submodules
 echo 'Initializing plugin submodules...'
 current_dir="$(pwd)"
+
 cd ~/.vim_runtime
-git submodule init
-git submodule update
+
+git submodule update --init --recursive
+
 cd "$current_dir"
 unset current_dir
 echo 'Plugin submodules initialized.'
 
-echo "Extended vim configuration installed successfully"
+echo "Extended vim configuration installed successfully."

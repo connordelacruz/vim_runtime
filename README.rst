@@ -31,37 +31,48 @@ Installation
 Basic Version
 ~~~~~~~~~~~~~
 
-To install just the basic version, you can just copy the contents of
-``vimrcs/basic.vim`` into your ``~/.vimrc``.
+To install just the basic version, run:
+
+::
+
+    git clone https://github.com/connordelacruz/vim_runtime.git ~/.vim_runtime
+    ~/.vim_runtime/install/install_basic.sh
+
+Alternatively, you can just copy the contents of ``vimrcs/basic.vim`` into your
+``~/.vimrc``.
 
 Extended Version
 ~~~~~~~~~~~~~~~~
 
 The extended version includes the configurations from the basic version
-as well as some plugins and additional configurations. To install:
-
-1. Clone repo as ``~/.vim_runtime``:
-
-   ::
-
-      git clone https://github.com/connordelacruz/vim_runtime.git ~/.vim_runtime
-
-2. Run the install script to configure ~/.vimrc and initialize plugins:
-
-   ::
-
-      sh ~/.vim_runtime/install/install_extended.sh
-
-If you use `neovim <https://neovim.io/>`__, run the following script in
-addition to one of the above:
+as well as some plugins and additional configurations. To install the extended
+version, run:
 
 ::
 
-   sh ~/.vim_runtime/install/install_nvim.sh
+    git clone https://github.com/connordelacruz/vim_runtime.git ~/.vim_runtime
+    ~/.vim_runtime/install/install_extended.sh
 
-The install scripts first check for existing config files and create a
-backup before overwriting them. A unix timestamp is appended to their
+Using With Neovim
+~~~~~~~~~~~~~~~~~
+
+If you use `neovim <https://neovim.io/>`__, you'll need to run the following
+script after installing either version:
+
+::
+
+   ~/.vim_runtime/install/install_nvim.sh
+
+
+Restore Old Configurations
+--------------------------
+
+The install scripts listed above first check for existing config files and
+create a backup before overwriting them. A unix timestamp is appended to their
 name so other backups aren’t overwritten.
+
+Backup Files
+~~~~~~~~~~~~
 
 -  ``~/.vimrc.bak.<timestamp>`` for ``.vimrc``
 -  ``~/.config/nvim/init.vim.bak.<timestamp>`` for neovim configs (if

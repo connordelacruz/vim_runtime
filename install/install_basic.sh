@@ -1,4 +1,13 @@
-#!/bin/sh
+#!/usr/bin/env bash
+# ==============================================================================
+# install_basic.sh
+#
+# Backs up existing .vimrc and installs the basic vim configurations.
+#
+# Author: Connor de la Cruz
+# Repo: https://github.com/connordelacruz/vim_runtime
+# ==============================================================================
+
 set -e
 
 # Backup existing vimrc
@@ -13,6 +22,5 @@ if [ -f ~/.vimrc ]; then
 fi
 
 
-cd ~/.vim_runtime
 cat ~/.vim_runtime/vimrcs/basic.vim > ~/.vimrc
-echo "Basic vim configuration installed successfully"
+echo "Basic vim configuration installed successfully."
