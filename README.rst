@@ -64,6 +64,17 @@ script after installing either version:
    ~/.vim_runtime/install/install_nvim.sh
 
 
+Updating
+--------
+
+Running ``update.sh`` will pull the latest changes from the repository
+and initialize/update plugin submodules.
+
+Running ``update_plugins.sh`` will go through each of the submodules and
+pull from each of their remotes. The changes will need to be staged and
+committed after updating submodules.
+
+
 Restore Old Configurations
 --------------------------
 
@@ -190,17 +201,6 @@ still be included if you place them at the root of ``local/``.
 to its overhead. I personally haven’t encountered any noticeable impact
 on performance, but felt it worth mentioning. I’m open to suggestions on
 a more efficient way of organizing things.
-
-
-Updating
---------
-
-Running ``update.sh`` will pull the latest changes from the repository
-and initialize/update plugin submodules.
-
-Running ``update_plugins.sh`` will go through each of the submodules and
-pull from each of their remotes. The changes will need to be staged and
-committed after updating submodules.
 
 
 Customization
