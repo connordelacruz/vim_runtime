@@ -50,6 +50,12 @@ au FileType markdown setlocal tw=80 fo+=t fo-=l
 au FileType rst setlocal tw=80 fo+=t fo-=l
 
 """"""""""""""""""""""""""""""
+" => SCSS
+""""""""""""""""""""""""""""""
+
+autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
+
+""""""""""""""""""""""""""""""
 " => YAML
 """"""""""""""""""""""""""""""
 
