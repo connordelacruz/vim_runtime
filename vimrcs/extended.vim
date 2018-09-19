@@ -93,6 +93,12 @@ cnoremap <C-N> <Down>
 " Caps lock struggles
 command W echoerr 'Turn CAPS LOCK off my dude.'
 
+" Create directories on save if filepath doesn't exist
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -143,4 +149,12 @@ function! CmdLine(str)
     unmenu Foo
 endfunction 
 
+function s:MkNonExDir(file, buf)
+    if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
+        let dir=fnamemodify(a:file, ':h')
+        if !isdirectory(dir)
+            call mkdir(dir, 'p')
+        endif
+    endif
+endfunction
 
