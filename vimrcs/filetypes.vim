@@ -11,6 +11,11 @@ au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 
 """"""""""""""""""""""""""""""
+" => HTML
+""""""""""""""""""""""""""""""
+autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+
+""""""""""""""""""""""""""""""
 " => JavaScript
 """"""""""""""""""""""""""""""
 autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
