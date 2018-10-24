@@ -19,25 +19,24 @@ let s:base0F = [ '#d27b53', 17 ] " brown
 let s:p = {'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {}}
 
 let s:p.normal.left     = [ [ s:base00, s:base0D ], [ s:base05, s:base02 ] ]
-let s:p.insert.left     = [ [ s:base01, s:base0B ], [ s:base05, s:base02 ] ]
-let s:p.visual.left     = [ [ s:base00, s:base09 ], [ s:base05, s:base02 ] ]
-let s:p.replace.left    = [ [ s:base00, s:base08 ], [ s:base05, s:base02 ] ]
-let s:p.inactive.left   = [ [ s:base02, s:base00 ] ]
-
 let s:p.normal.middle   = [ [ s:base07, s:base01 ] ]
-let s:p.inactive.middle = [ [ s:base01, s:base00 ] ]
-
 let s:p.normal.right    = [ [ s:base01, s:base03 ], [ s:base06, s:base02 ] ]
-let s:p.inactive.right  = [ [ s:base01, s:base00 ] ]
-
 let s:p.normal.error    = [ [ s:base07, s:base08 ] ]
 let s:p.normal.warning  = [ [ s:base07, s:base09 ] ]
+
+let s:p.inactive.left   = [ [ s:base04, s:base02 ] ]
+let s:p.inactive.middle = [ [ s:base07, s:base01 ] ]
+let s:p.inactive.right  = [ [ s:base04, s:base02 ] ]
+
+let s:p.insert.left     = [ [ s:base01, s:base0B ], [ s:base05, s:base02 ] ]
+
+let s:p.visual.left     = [ [ s:base00, s:base09 ], [ s:base05, s:base02 ] ]
+
+let s:p.replace.left    = [ [ s:base00, s:base08 ], [ s:base05, s:base02 ] ]
 
 let s:p.tabline.left    = [ [ s:base05, s:base02 ] ]
 let s:p.tabline.middle  = [ [ s:base05, s:base01 ] ]
 let s:p.tabline.right   = [ [ s:base05, s:base02 ] ]
-" let s:p.tabline.tabsel  = [ [ s:base02, s:base0A ] ]
 let s:p.tabline.tabsel  = [ [ s:base05, s:base03 ] ]
 
-" let g:lightline#colorscheme#base16_eighties#palette = lightline#colorscheme#flatten(s:p)
 let g:lightline#colorscheme#eighties#palette = lightline#colorscheme#flatten(s:p)

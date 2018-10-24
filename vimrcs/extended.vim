@@ -93,7 +93,7 @@ cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 
 " Caps lock struggles
-command W echoerr 'Turn CAPS LOCK off my dude.'
+command W echoerr 'Turn off CAPS LOCK my dude.'
 
 " Create directories on save if filepath doesn't exist
 augroup BWCCreateDir
