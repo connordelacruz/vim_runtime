@@ -26,8 +26,10 @@ if has('nvim') && $COLORTERM == "truecolor"
     let base16colorspace=256
     " Set default colorscheme to oceanicnext
     try
-        colorscheme oceanicnext
-        let g:lightline.colorscheme = 'oceanicnext'
+        " colorscheme oceanicnext
+        " let g:lightline.colorscheme = 'oceanicnext'
+        colorscheme eighties
+        let g:lightline.colorscheme = 'eighties'
     catch
     endtry
 else
