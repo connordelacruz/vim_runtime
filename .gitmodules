@@ -82,3 +82,7 @@
 	path = bundle/plugin/pep8-indent
 	url = https://github.com/Vimjas/vim-python-pep8-indent.git
     ignore = dirty
+[submodule "bundle/syntax/jsx"]
+	path = bundle/syntax/jsx
+	url = https://github.com/mxw/vim-jsx.git
+    ignore = dirty
