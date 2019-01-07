@@ -22,6 +22,11 @@ autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
 let g:javascript_plugin_jsdoc = 1
 
 """"""""""""""""""""""""""""""
+" => JSON
+""""""""""""""""""""""""""""""
+autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
+
+""""""""""""""""""""""""""""""
 " => Python 
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
