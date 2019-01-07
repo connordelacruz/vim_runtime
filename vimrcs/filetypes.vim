@@ -18,7 +18,7 @@ autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
 """"""""""""""""""""""""""""""
 " => JavaScript
 """"""""""""""""""""""""""""""
-autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType javascript,javascript.jsx setlocal ts=2 sts=2 sw=2 expandtab
 let g:javascript_plugin_jsdoc = 1
 
 """"""""""""""""""""""""""""""
