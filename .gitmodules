@@ -86,3 +86,6 @@
 	path = bundle/syntax/jsx
 	url = https://github.com/mxw/vim-jsx.git
     ignore = dirty
+[submodule "bundle/plugin/splitjoin"]
+	path = bundle/plugin/splitjoin
+	url = https://github.com/AndrewRadev/splitjoin.vim.git
