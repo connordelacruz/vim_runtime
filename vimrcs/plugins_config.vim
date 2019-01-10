@@ -4,9 +4,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Load pathogen paths
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
 
 " Load global plugins
@@ -20,9 +20,9 @@ call pathogen#infect(s:local.'{}', s:local.'colors/{}', s:local.'syntax/{}', s:l
 call pathogen#helptags()
 
 
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim grep
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
 
@@ -104,4 +104,5 @@ let g:table_mode_header_fillchar='='
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
 
+" TODO: colorizer filetypes autoload?
 
