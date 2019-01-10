@@ -89,3 +89,8 @@
 [submodule "bundle/plugin/splitjoin"]
 	path = bundle/plugin/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
+    ignore = dirty
+[submodule "bundle/plugin/auto-pairs"]
+	path = bundle/plugin/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+    ignore = dirty
