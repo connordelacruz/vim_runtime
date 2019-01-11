@@ -13,18 +13,18 @@ au FileType gitcommit call setpos('.', [0, 1, 1, 0])
 """"""""""""""""""""""""""""""
 " => HTML
 """"""""""""""""""""""""""""""
-autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+au FileType html setlocal ts=2 sts=2 sw=2 expandtab
 
 """"""""""""""""""""""""""""""
 " => JavaScript
 """"""""""""""""""""""""""""""
-autocmd FileType javascript,javascript.jsx setlocal ts=2 sts=2 sw=2 expandtab
+au FileType javascript,javascript.jsx setlocal ts=2 sts=2 sw=2 expandtab
 let g:javascript_plugin_jsdoc = 1
 
 """"""""""""""""""""""""""""""
 " => JSON
 """"""""""""""""""""""""""""""
-autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
+au FileType json setlocal ts=2 sts=2 sw=2 expandtab
 
 """"""""""""""""""""""""""""""
 " => Python 
@@ -49,7 +49,7 @@ au FileType python set indentkeys-=0#
 """"""""""""""""""""""""""""""
 " => Markdown
 """"""""""""""""""""""""""""""
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+au BufNewFile,BufReadPost *.md set filetype=markdown
 au FileType markdown setlocal tw=80 fo+=t fo-=l
 " Disable auto-pairs space insertion for .md
 au FileType markdown let g:AutoPairsMapSpace = 0
@@ -62,10 +62,10 @@ au FileType rst setlocal tw=80 fo+=t fo-=l
 """"""""""""""""""""""""""""""
 " => SCSS
 """"""""""""""""""""""""""""""
-autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
+au FileType scss setlocal ts=2 sts=2 sw=2 expandtab
 
 """"""""""""""""""""""""""""""
 " => YAML
 """"""""""""""""""""""""""""""
-autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
