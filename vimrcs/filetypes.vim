@@ -49,26 +49,23 @@ au FileType python set indentkeys-=0#
 """"""""""""""""""""""""""""""
 " => Markdown
 """"""""""""""""""""""""""""""
-
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 au FileType markdown setlocal tw=80 fo+=t fo-=l
+" Disable auto-pairs space insertion for .md
+au FileType markdown let g:AutoPairsMapSpace = 0
 
 """"""""""""""""""""""""""""""
 " => RestructuredText
 """"""""""""""""""""""""""""""
-
 au FileType rst setlocal tw=80 fo+=t fo-=l
 
 """"""""""""""""""""""""""""""
 " => SCSS
 """"""""""""""""""""""""""""""
-
 autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
 
 """"""""""""""""""""""""""""""
 " => YAML
 """"""""""""""""""""""""""""""
-
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-
 
