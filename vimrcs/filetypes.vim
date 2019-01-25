@@ -65,6 +65,12 @@ au FileType rst setlocal tw=80 fo+=t fo-=l
 au FileType scss setlocal ts=2 sts=2 sw=2 expandtab
 
 """"""""""""""""""""""""""""""
+" => Vim
+""""""""""""""""""""""""""""""
+" Disable auto-pairs for double quotes in .vim files
+au FileType vim let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'", '`':'`'}
+
+""""""""""""""""""""""""""""""
 " => YAML
 """"""""""""""""""""""""""""""
 au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
