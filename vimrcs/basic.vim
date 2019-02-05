@@ -5,7 +5,6 @@
 "    -> Colors and Fonts
 "    -> Files and backups
 "    -> Text, tab and indent related
-"    -> Visual mode related
 "    -> Moving around, tabs and buffers
 "    -> Status line
 "    -> Editing mappings
@@ -178,14 +177,6 @@ set si "Smart indent
 
 " Incrementing for alphabet, octal, and hex sequences
 set nrformats=alpha,octal,hex
-
-""""""""""""""""""""""""""""""
-" => Visual mode related
-""""""""""""""""""""""""""""""
-" Visual mode pressing * or # searches for the current selection
-" Super useful! From an idea by Michael Naumann
-vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
-vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

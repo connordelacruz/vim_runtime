@@ -94,3 +94,7 @@
 	path = bundle/plugin/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
     ignore = dirty
+[submodule "bundle/plugin/visual-star-search"]
+	path = bundle/plugin/visual-star-search
+	url = https://github.com/bronson/vim-visual-star-search.git
+    ignore = dirty
