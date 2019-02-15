@@ -58,6 +58,8 @@ au FileType markdown let g:AutoPairsMapSpace = 0
 " => RestructuredText
 """"""""""""""""""""""""""""""
 au FileType rst setlocal tw=80 fo+=t fo-=l
+" Add auto pair for double backtick (``)
+au FileType rst let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '```':'```', '"""':'"""', "'''":"'''", "`":"`", "``":"``"}
 
 """"""""""""""""""""""""""""""
 " => SCSS
@@ -67,7 +69,7 @@ au FileType scss setlocal ts=2 sts=2 sw=2 expandtab
 """"""""""""""""""""""""""""""
 " => Vim
 """"""""""""""""""""""""""""""
-" Disable auto-pairs for double quotes in .vim files
+" Disable auto-pairs for double quotes
 au FileType vim let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'", '`':'`'}
 
 """"""""""""""""""""""""""""""
