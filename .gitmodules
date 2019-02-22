@@ -98,3 +98,7 @@
 	path = bundle/plugin/visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
     ignore = dirty
+[submodule "bundle/plugin/long-line-search"]
+	path = bundle/plugin/long-line-search
+	url = https://github.com/connordelacruz/vim-long-line-search.git
+    ignore = dirty
