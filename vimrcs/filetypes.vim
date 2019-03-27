@@ -69,8 +69,9 @@ au FileType scss setlocal ts=2 sts=2 sw=2 expandtab
 """"""""""""""""""""""""""""""
 " => Vim
 """"""""""""""""""""""""""""""
+" TODO: verify that this is fixed before removing
 " Disable auto-pairs for double quotes
-au FileType vim let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'", '`':'`'}
+" au FileType vim let g:AutoPairs={'(':')', '[':']', '{':'}',"'":"'", '`':'`'}
 
 """"""""""""""""""""""""""""""
 " => YAML
