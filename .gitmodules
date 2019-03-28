@@ -106,3 +106,7 @@
 	path = bundle/plugin/matchit
 	url = https://github.com/tmhedberg/matchit.git
     ignore = dirty
+[submodule "bundle/plugin/nerdtree-git-plugin"]
+	path = bundle/plugin/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
+    ignore = dirty
