@@ -102,3 +102,7 @@
 	path = bundle/plugin/long-line-search
 	url = https://github.com/connordelacruz/vim-long-line-search.git
     ignore = dirty
+[submodule "bundle/plugin/matchit"]
+	path = bundle/plugin/matchit
+	url = https://github.com/tmhedberg/matchit.git
+    ignore = dirty
