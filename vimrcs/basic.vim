@@ -213,6 +213,10 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 " Remap VIM 0 to first non-blank character and <Leader>0 to first character
 noremap <Leader>0 0
 noremap 0 ^
+" Copy/paste to clipboard
+nnoremap <leader>yy "*yy
+vnoremap <leader>y "*y
+noremap <leader>p "*p
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
