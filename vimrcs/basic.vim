@@ -216,7 +216,8 @@ noremap 0 ^
 " Copy/paste to clipboard
 nnoremap <leader>yy "*yy
 vnoremap <leader>y "*y
-noremap <leader>p "*p
+nnoremap <leader>p "*p
+vnoremap <leader>p "*p
 
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
