@@ -5,6 +5,12 @@
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 """"""""""""""""""""""""""""""
+" => Bash
+""""""""""""""""""""""""""""""
+" Assume .sh files are bash by default if shebang isn't present
+let g:is_bash = 1
+
+""""""""""""""""""""""""""""""
 " => Git
 """"""""""""""""""""""""""""""
 " Start on first line of commit messages
