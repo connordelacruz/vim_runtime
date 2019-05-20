@@ -99,6 +99,12 @@ set noshowmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=1
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+" Next/prev hunk
+nmap <leader>gn <Plug>GitGutterNextHunk
+nmap <leader>gp <Plug>GitGutterPrevHunk
+" Stage/undo hunk
+nmap <leader>ga <Plug>GitGutterStageHunk
+nmap <leader>gp <Plug>GitGutterUndoHunk
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
