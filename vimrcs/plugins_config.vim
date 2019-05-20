@@ -127,5 +127,3 @@ let g:table_mode_header_fillchar='='
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
 
-" TODO: colorizer filetypes autoload?
-
