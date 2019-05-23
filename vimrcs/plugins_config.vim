@@ -104,7 +104,7 @@ nmap <leader>gn <Plug>GitGutterNextHunk
 nmap <leader>gp <Plug>GitGutterPrevHunk
 " Stage/undo hunk
 nmap <leader>ga <Plug>GitGutterStageHunk
-nmap <leader>gp <Plug>GitGutterUndoHunk
+nmap <leader>gu <Plug>GitGutterUndoHunk
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
