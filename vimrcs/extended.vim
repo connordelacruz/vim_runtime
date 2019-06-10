@@ -131,7 +131,6 @@ endfunction
 " TODO: make a plugin, merge w/ LongLineSearch?
 " TODO: take 2nd arg for override line width
 " TODO: config for default character
-" TODO: this jumps to last searched text for some reason
 " Fill rest of line with a character
 function! FillLine(...)
     let tw = &textwidth ? &textwidth : 80
@@ -149,5 +148,5 @@ function! FillLine(...)
     endif
 endfunction
 
-command! -nargs=* FillLine call FillLine(<args>) | normal n
+command! -nargs=* FillLine call FillLine(<args>)
 
