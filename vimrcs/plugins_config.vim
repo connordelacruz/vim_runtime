@@ -110,6 +110,7 @@ nmap <leader>gu <Plug>GitGutterUndoHunk
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => CamelCaseMotion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO: see if there's a way to toggle on/off instead of pressing leader each time
 call camelcasemotion#CreateMotionMappings('<leader>')
 
 

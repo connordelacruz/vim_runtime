@@ -148,5 +148,7 @@ function! FillLine(...)
     endif
 endfunction
 
-command! -nargs=* FillLine call FillLine(<args>)
+command! -nargs=* FillLine call FillLine(<f-args>)
+" Bind to <leader>f
+nnoremap <leader>f :FillLine<space>
 
