@@ -1,3 +1,4 @@
+" TODO: update docs
 " Tabmerge -- Merge the windows in a tab with the current tab.
 "
 " Copyright July 17, 2007 Christian J. Robinson <infynity@onewest.net>
@@ -31,6 +32,8 @@ if !exists("g:tm_default_location")
 endif
 
 command! -nargs=* Tabmerge call Tabmerge(<f-args>)
+
+" TODO: mapping configs
 
 function! Tabmerge(...)  " {{{1
 	if a:0 > 2

@@ -120,6 +120,8 @@ call camelcasemotion#CreateMotionMappings('<leader>')
 " Configure for RST tables by default
 let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
+" <leader>T prefix
+let g:table_mode_map_prefix='<leader>T'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -127,4 +129,6 @@ let g:table_mode_header_fillchar='='
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
+" Mapping
+nnoremap <leader>tm :Tabmerge<CR>
 
