@@ -110,3 +110,7 @@
 	path = bundle/plugin/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
     ignore = dirty
+[submodule "bundle/syntax/scss"]
+	path = bundle/syntax/scss
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+    ignore = dirty
