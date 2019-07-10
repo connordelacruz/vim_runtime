@@ -214,6 +214,7 @@ set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ 
 noremap <Leader>0 0
 noremap 0 ^
 " Copy/paste to clipboard
+" TODO: capital P, additional mappings for smart paste: https://vim.fandom.com/wiki/Smart_paste
 nnoremap <leader>yy "*yy
 vnoremap <leader>y "*y
 nnoremap <leader>p "*p
