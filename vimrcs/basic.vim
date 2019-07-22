@@ -220,6 +220,9 @@ vnoremap <leader>y "*y
 nnoremap <leader>p "*p
 vnoremap <leader>p "*p
 
+" Add cursor support (excluding visual mode)
+set mouse=nic
+
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
     let save_cursor = getpos(".")
