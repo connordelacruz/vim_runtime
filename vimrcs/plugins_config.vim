@@ -59,6 +59,8 @@ let g:NERDTreeIndicatorMapCustom = {
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO: show pull/push arrows for git repo?
+" TODO: higher contrast between sections in theme
 let g:lightline = {
       \ 'active': {
       \   'left': [ ['mode', 'paste'],

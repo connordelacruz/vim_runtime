@@ -2,6 +2,10 @@
 
 Custom syntax highlighting and indentation for markdown files.
 
+## TODO
+
+- This has weird indentation issues, disabling for now
+
 ## Indent
 
 Indentation is based on the [builtin RST indent
