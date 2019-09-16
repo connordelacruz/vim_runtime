@@ -118,3 +118,7 @@
 	path = bundle/plugin/sass-colors
 	url = https://github.com/shmargum/vim-sass-colors.git
     ignore = dirty
+[submodule "bundle/plugin/jcommenter"]
+	path = bundle/plugin/jcommenter
+	url = https://github.com/connordelacruz/jcommenter.vim.git
+    ignore = dirty
