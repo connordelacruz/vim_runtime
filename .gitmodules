@@ -118,3 +118,7 @@
 	path = bundle/plugin/jcommenter
 	url = https://github.com/connordelacruz/jcommenter.vim.git
     ignore = dirty
+[submodule "bundle/plugin/manpager"]
+	path = bundle/plugin/manpager
+	url = https://github.com/lambdalisue/vim-manpager.git
+    ignore = dirty
