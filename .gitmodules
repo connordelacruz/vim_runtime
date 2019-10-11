@@ -122,3 +122,7 @@
 	path = bundle/plugin/manpager
 	url = https://github.com/lambdalisue/vim-manpager.git
     ignore = dirty
+[submodule "bundle/plugin/Tabmerge"]
+	path = bundle/plugin/Tabmerge
+	url = https://github.com/connordelacruz/Tabmerge.git
+    ignore = dirty
