@@ -3,6 +3,15 @@
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" TODO: reminder to update .vimrc after feature/single-source
+if !exists("g:vimrc_updated")
+    echohl WarningMsg
+    echo ".vimrc is out of date, please re-install vim_runtime."
+    echohl None
+else
+    unlet g:vimrc_updated
+endif
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => GUI related 
