@@ -126,3 +126,7 @@
 	path = bundle/plugin/Tabmerge
 	url = https://github.com/connordelacruz/Tabmerge.git
     ignore = dirty
+[submodule "bundle/plugin/startify"]
+	path = bundle/plugin/startify
+	url = https://github.com/mhinz/vim-startify.git
+    ignore = dirty
