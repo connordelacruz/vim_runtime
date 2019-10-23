@@ -2,11 +2,13 @@
 " Plugin configurations
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO rename plugins.vim, re-organize to be in line w/ new rc's
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO: move this somewhere before general.vim?
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
 
 " Load global plugins

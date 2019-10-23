@@ -117,6 +117,7 @@ endif
 " Enable syntax highlighting
 syntax enable 
 
+" TODO removing in colors.vim
 " Enable 256 colors palette in Gnome Terminal
 " https://askubuntu.com/a/126
 if $COLORTERM == 'gnome-terminal'
@@ -185,6 +186,7 @@ set nrformats=alpha,octal,hex
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO PICKUP HERE -----------------------------------------------------------
 
 " Specify the behavior when switching between buffers 
 try
@@ -240,6 +242,7 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO removed in new version
 " Remove the Windows ^M - when the encodings gets messed up
 noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 

@@ -37,8 +37,6 @@ if has('nvim') && $COLORTERM == "truecolor"
     try
         colorscheme oceanicnext
         let g:lightline.colorscheme = 'oceanicnext'
-        " colorscheme eighties
-        " let g:lightline.colorscheme = 'eighties'
     catch
     endtry
 else
@@ -93,7 +91,7 @@ cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 
 " Caps lock struggles
-command W echoerr 'Check that CAPS LOCK'
+command W echoerr 'Check your CAPS LOCK, bud'
 
 " Create directories on save if filepath doesn't exist
 augroup BWCCreateDir
@@ -104,6 +102,7 @@ augroup END
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO: leader?
 vnoremap $1 <esc>`>a)<esc>`<i(<esc>
 vnoremap $2 <esc>`>a]<esc>`<i[<esc>
 vnoremap $3 <esc>`>a}<esc>`<i{<esc>
@@ -115,6 +114,7 @@ vnoremap $e <esc>`>a"<esc>`<i"<esc>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General abbreviations
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" TODO removed in new rc
 iab xdate <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
 
 
