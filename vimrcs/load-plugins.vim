@@ -1,7 +1,7 @@
 " ============================================================================
 " Load pathogen plugins
 " ============================================================================
-" TODO rename init-pathogen.vim?
+" TODO rename init-pathogen.vim? Merge w/ plugins and just import before colors/filetypes??
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
 
 " Load global plugins
