@@ -16,6 +16,7 @@ but it’s still heavily based on his project.
 TODO
 ----
 
+-  Need to re-work for new setup, this is very out-of-date
 -  Directory structure details
 -  Overview of configurations
 -  Add overridden/non-submodule plugins to list
