@@ -27,9 +27,9 @@ set so=7
 set nu
 " Show ruler TODO REMOVE? Lightline handles this
 set ru
-" Command bar height TODO REMOVE? Default is 1
+" Command bar height 
 set ch=1
-" Backspace behavior in insert mode TODO REMOVE? this is default
+" Backspace behavior in insert mode
 set bs=eol,start,indent
 " Wrap to first/last character if at end/beginning of line
 set ww+=<,>,h,l
@@ -59,19 +59,19 @@ set wig=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 set ic
 " Don't ignore case if pattern contains upper case chars
 set scs
-" Highlight search results TODO REMOVE? on by default
+" Highlight search results 
 set hls
 " Unhighlight previous session search when opening vim
 nohls
-" When searching, show results of pattern as it's typed so far TODO REMOVE? on by default
+" When searching, show results of pattern as it's typed so far 
 set is
-" Enable regex characters TODO REMOVE? on by default
+" Enable regex characters 
 set magic
 
 " Tabs =======================================================================
 " Use spaces instead of tab characters
 set et
-" Enable smart tab TODO REMOVE? on by default
+" Enable smart tab 
 set sta
 " 1 tab == 4 spaces
 set sw=4
@@ -87,7 +87,6 @@ set wrap
 " Wrap at breakat character
 set lbr
 " Disable list so linebreak works properly (disabled by default but just to be sure)
-" TODO REMOVE?
 set nolist
 
 " Performance ================================================================
@@ -171,19 +170,19 @@ endfunction
 " TODO: do this for vimrcs/ files too?
 autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
 
-" Misc =======================================================================
-" TODO ORGANIZE?
-
+" Encoding ===================================================================
 " utf8 encoding
 set enc=utf8
-" Use Unix as the standard file type TODO is this necessary?
+" Use Unix as the standard file type 
 set ffs=unix,dos,mac
+
+" Misc =======================================================================
+" TODO ORGANIZE?
 
 " Incrementing for alphabet, octal, and hex sequences
 set nf=alpha,octal,hex
 
 " Avoid garbled characters in Chinese language windows OS
-" TODO: remove?
 let $LANG='en' 
 set langmenu=en
 source $VIMRUNTIME/delmenu.vim
@@ -215,34 +214,3 @@ if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.scss :call CleanExtraSpaces()
 endif
 
-" TODO do we need this?
-" Don't close window, when deleting a buffer
-command! Bclose call <SID>BufcloseCloseIt()
-function! <SID>BufcloseCloseIt()
-   let l:currentBufNum = bufnr("%")
-   let l:alternateBufNum = bufnr("#")
-
-   if buflisted(l:alternateBufNum)
-     buffer #
-   else
-     bnext
-   endif
-
-   if bufnr("%") == l:currentBufNum
-     new
-   endif
-
-   if buflisted(l:currentBufNum)
-     execute("bdelete! ".l:currentBufNum)
-   endif
-endfunction
-
-" Caps lock struggles
-command W echoerr 'Check your CAPS LOCK, bud'
-
-" TODO REMOVE, this almost certainly does nothing...
-function! CmdLine(str)
-    exe "menu Foo.Bar :" . a:str
-    emenu Foo.Bar
-    unmenu Foo
-endfunction 
