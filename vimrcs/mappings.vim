@@ -36,3 +36,9 @@ vnoremap $$ <esc>`>a"<esc>`<i"<esc>
 vnoremap $q <esc>`>a'<esc>`<i'<esc>
 vnoremap $e <esc>`>a"<esc>`<i"<esc>
 
+" Helper Functions ===========================================================
+
+" FillLine -------------------------------------------------------------------
+" Bind to <leader>f
+nnoremap <leader>f :FillLine<space>
+

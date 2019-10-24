@@ -70,11 +70,15 @@ let g:lightline.tabline = {
     \ 'right': [ [ '' ] ]
     \ }
 
-" lightline colorscheme gets overwritten in extended.vim based
-" one what default colorscheme is set. If the terminal emulator
-" doesn't support true color or 256 color, default the scheme
-" to wombat.
-let g:lightline.colorscheme = 'wombat'
+" Set lightline colorscheme to match vim colorscheme
+if exists('g:colors_name') && g:colors_name =~ 'oceanicnext'
+    let g:lightline.colorscheme = 'oceanicnext'
+elseif exists('g:colors_name') && g:colors_name =~ 'onedark'
+    let g:lightline.colorscheme = 'onedark'
+" Default to wombat
+else
+    let g:lightline.colorscheme = 'wombat'
+endif
 
 " Hide redundant insert/replace/visual mode message
 set noshowmode

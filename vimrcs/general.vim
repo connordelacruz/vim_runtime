@@ -198,7 +198,7 @@ endif
 " Return to last edit position when opening files 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" TODO MOVE TO filetypes.vim
+" TODO MOVE TO functions.vim, variable in filetypes.vim
 " Delete trailing white space on save
 fun! CleanExtraSpaces()
     let save_cursor = getpos(".")
@@ -242,29 +242,3 @@ function! CmdLine(str)
     emenu Foo.Bar
     unmenu Foo
 endfunction 
-
-" TODO: make a plugin?
-" TODO: take 2nd arg for override line width
-" TODO: config for default character
-" TODO REORGANIZE?
-" Fill rest of line with a character
-function! FillLine(...)
-    let tw = &textwidth ? &textwidth : 80
-    if a:0 < 1
-        let str = '-'
-    else
-        let str = a:1
-    endif
-    " Strip trailing spaces
-    .s/[[:space:]]*$//
-    " Number of strs to insert
-    let n = (tw - col('$')) / len(str)
-    if n > 0
-        .s/$/\=(' '.repeat(str,n))/
-    endif
-endfunction
-
-command! -nargs=* FillLine call FillLine(<f-args>)
-" Bind to <leader>f
-" TODO move to mappings.vim
-nnoremap <leader>f :FillLine<space>
