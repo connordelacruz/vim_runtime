@@ -11,6 +11,10 @@ filetype indent on
 " Update files modified outside of vim
 set autoread
 
+" Leader =====================================================================
+let mapleader = ","
+let g:mapleader = ","
+
 " UI =========================================================================
 " TODO reorganize section? Kinda generic
 

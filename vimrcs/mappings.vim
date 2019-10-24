@@ -2,10 +2,6 @@
 " Mapping configs
 " ============================================================================
 
-" Leader =====================================================================
-let mapleader = ","
-let g:mapleader = ","
-
 " Navigation =================================================================
 " Remap VIM 0 to first non-blank character and <Leader>0 to first character
 noremap <Leader>0 0
