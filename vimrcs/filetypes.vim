@@ -51,7 +51,7 @@ au FileType python set cinkeys-=0#
 au FileType python set indentkeys-=0#
 
 " RestructuredText ===========================================================
-au FileType rst setlocal tw=80 fo+=t fo-=l
+au FileType rst setlocal tw=80 fo+=t fo-=l nofoldenable
 " Add auto pair for double backtick (``)
 " TODO +=?
 au FileType rst let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '```':'```', '"""':'"""', "'''":"'''", "`":"`", "``":"``"}
