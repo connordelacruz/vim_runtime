@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# install_basic.sh
+# install.sh
 #
-# Backs up existing .vimrc and installs the basic vim configurations.
+# Backs up existing .vimrc and update to source .vim_runtime/init.vim.
 #
 # Author: Connor de la Cruz
 # Repo: https://github.com/connordelacruz/vim_runtime
@@ -21,6 +21,21 @@ if [ -f ~/.vimrc ]; then
     echo "Backup of .vimrc created ($backup_file)"
 fi
 
+# create new .vimrc
+echo 'Creating new .vimrc...'
+echo 'source ~/.vim_runtime/init.vim' > ~/.vimrc
+echo 'New .vimrc created.'
 
-cat ~/.vim_runtime/vimrcs/basic.vim > ~/.vimrc
-echo "Basic vim configuration installed successfully."
+# Initialize submodules
+echo 'Initializing plugin submodules...'
+current_dir="$(pwd)"
+
+cd ~/.vim_runtime
+
+git submodule update --init --recursive
+
+cd "$current_dir"
+unset current_dir
+echo 'Plugin submodules initialized.'
+
+echo "Extended vim configuration installed successfully."
