@@ -147,3 +147,9 @@ let s:header = [
 
 let g:startify_custom_header = startify#center(s:header)
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-closetag
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable closetag for React js(x) files
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js,*.jsx"
+
