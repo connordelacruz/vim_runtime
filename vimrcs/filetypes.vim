@@ -13,8 +13,9 @@ let g:is_bash = 1
 """"""""""""""""""""""""""""""
 " => Git
 """"""""""""""""""""""""""""""
-" Start on first line of commit messages
-au FileType gitcommit call setpos('.', [0, 1, 1, 0])
+" au FileType gitcommit call setpos('.', [0, 1, 1, 0])
+" Start on first line of commit messages, create a split, start in instert mode
+au FileType gitcommit exec 'norm gg$' | exec 'bel sp' | startinsert!
 
 """"""""""""""""""""""""""""""
 " => HTML
