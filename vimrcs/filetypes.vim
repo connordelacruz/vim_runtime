@@ -9,10 +9,12 @@ au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Bash =======================================================================
 " Assume .sh files are bash by default if shebang isn't present
 let g:is_bash = 1
+" Enable autopairs space
+au FileType sh let g:AutoPairsMapSpace=1
 
 " Git ========================================================================
-" Start on first line of commit messages
-au FileType gitcommit call setpos('.', [0, 1, 1, 0])
+" Start w/ cursor at the top
+au FileType gitcommit exec 'norm! gg$'
 
 " HTML =======================================================================
 au FileType html setlocal ts=2 sts=2 sw=2 expandtab

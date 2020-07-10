@@ -130,3 +130,7 @@
 	path = bundle/plugin/startify
 	url = https://github.com/mhinz/vim-startify.git
     ignore = dirty
+[submodule "bundle/plugin/smile"]
+	path = bundle/plugin/smile
+	url = https://github.com/idanarye/vim-smile.git
+    ignore = dirty
