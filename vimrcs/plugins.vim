@@ -22,7 +22,7 @@ map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<cr>
 " Open NERDTree by default for all filetypes (excluding those in noNERD)
 let noNERD = ['gitcommit', 'man']
-autocmd vimenter * if index(noNERD, &ft) < 0 | NERDTree | wincmd p | endif
+autocmd vimenter * if index(noNERD, &ft) < 0 | NERDTree %:p:h | wincmd p | endif
 " Close vim if the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
