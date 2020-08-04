@@ -134,3 +134,6 @@
 	path = bundle/plugin/smile
 	url = https://github.com/idanarye/vim-smile.git
     ignore = dirty
+[submodule "bundle/plugin/indentLine"]
+	path = bundle/plugin/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
