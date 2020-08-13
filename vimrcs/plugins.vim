@@ -104,9 +104,6 @@ nnoremap <silent> <leader>d :GitGutterToggle<cr>
 " Next/prev hunk
 nmap ]g <Plug>(GitGutterNextHunk)
 nmap [g <Plug>(GitGutterPrevHunk)
-" TODO OLD, REMOVE
-nmap <leader>gn <Plug>(GitGutterNextHunk)
-nmap <leader>gp <Plug>(GitGutterPrevHunk)
 " Stage/undo hunk
 nmap <leader>ga <Plug>(GitGutterStageHunk)
 nmap <leader>gu <Plug>(GitGutterUndoHunk)
