@@ -14,6 +14,8 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_char = '▏'
 let g:indentLine_color_gui = "#343D46"
+" Disable setting conceal for markdown
+au FileType markdown let g:indentLine_setConceal = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree

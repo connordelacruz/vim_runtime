@@ -137,3 +137,6 @@
 [submodule "bundle/plugin/indentLine"]
 	path = bundle/plugin/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule "bundle/plugin/ack"]
+	path = bundle/plugin/ack
+	url = https://github.com/mileszs/ack.vim.git
