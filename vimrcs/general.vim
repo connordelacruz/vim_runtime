@@ -12,8 +12,9 @@ filetype indent on
 set autoread
 
 " Leader =====================================================================
-let mapleader = ","
-let g:mapleader = ","
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+let g:mapleader = " "
 
 " UI =========================================================================
 " TODO reorganize section? Kinda generic

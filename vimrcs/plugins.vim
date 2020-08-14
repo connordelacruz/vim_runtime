@@ -1,7 +1,7 @@
 " ============================================================================
 " Plugin configurations
 " ============================================================================
-" TODO re-organize to be in line w/ new rc's
+" TODO REFORMAT/ORGANIZE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim grep
@@ -24,9 +24,6 @@ let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
-map <leader>nn :NERDTreeToggle<cr>
-map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<cr>
 " Close vim if the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Set to 1 to open by default
@@ -100,20 +97,6 @@ set noshowmode
 " => Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=1
-nnoremap <silent> <leader>d :GitGutterToggle<cr>
-" Next/prev hunk
-nmap ]g <Plug>(GitGutterNextHunk)
-nmap [g <Plug>(GitGutterPrevHunk)
-" Stage/undo hunk
-nmap <leader>ga <Plug>(GitGutterStageHunk)
-nmap <leader>gu <Plug>(GitGutterUndoHunk)
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => CamelCaseMotion
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO: see if there's a way to toggle on/off instead of pressing leader each time
-call camelcasemotion#CreateMotionMappings('<leader>')
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vim Table Mode
@@ -121,16 +104,12 @@ call camelcasemotion#CreateMotionMappings('<leader>')
 " Configure for RST tables by default
 let g:table_mode_corner_corner='+'
 let g:table_mode_header_fillchar='='
-" <leader>T prefix
-let g:table_mode_map_prefix='<leader>T'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tabmerge
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
-" Mapping
-nnoremap <leader>tm :Tabmerge<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Startify
