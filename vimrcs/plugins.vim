@@ -37,18 +37,18 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => NERDTree git plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "*",
-    \ "Staged"    : "+",
-    \ "Untracked" : "?",
-    \ "Renamed"   : "→",
-    \ "Unmerged"  : "=",
-    \ "Deleted"   : "-",
-    \ "Dirty"     : "x",
-    \ "Clean"     : "✓",
-    \ 'Ignored'   : "▫",
-    \ "Unknown"   : "?"
-    \ }
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'*',
+                \ 'Staged'    :'+',
+                \ 'Untracked' :'?',
+                \ 'Renamed'   :'→',
+                \ 'Unmerged'  :'=',
+                \ 'Deleted'   :'-',
+                \ 'Dirty'     :'x',
+                \ 'Clean'     :'✓',
+                \ 'Ignored'   :'▫',
+                \ 'Unknown'   :'?',
+                \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => lightline
