@@ -1,7 +1,10 @@
 " ============================================================
 " oceanicnext
-" Author: Mike Hartington
-" Source: https://github.com/mhartington/oceanic-next
+"
+" Author: Connor de la Cruz
+"
+" Original Author: Mike Hartington
+" Based On: https://github.com/mhartington/oceanic-next
 " ============================================================
 
 let s:p = {"normal": {}, "inactive": {}, "insert": {}, "replace": {}, "visual": {}, "tabline": {} }

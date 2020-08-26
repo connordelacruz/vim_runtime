@@ -140,3 +140,6 @@
 [submodule "bundle/plugin/ack"]
 	path = bundle/plugin/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/colors/nord"]
+	path = bundle/colors/nord
+	url = https://github.com/arcticicestudio/nord-vim.git
