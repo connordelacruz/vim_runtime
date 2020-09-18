@@ -17,9 +17,9 @@ call pathogen#helptags()
 source ~/.vim_runtime/vimrcs/general.vim
 source ~/.vim_runtime/vimrcs/colors.vim
 source ~/.vim_runtime/vimrcs/functions.vim
-source ~/.vim_runtime/vimrcs/mappings.vim
 source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins.vim
+source ~/.vim_runtime/vimrcs/mappings.vim
 
 " Source Local Configs =======================================================
 try

@@ -134,3 +134,12 @@
 	path = bundle/plugin/smile
 	url = https://github.com/idanarye/vim-smile.git
     ignore = dirty
+[submodule "bundle/plugin/indentLine"]
+	path = bundle/plugin/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "bundle/plugin/ack"]
+	path = bundle/plugin/ack
+	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/colors/nord"]
+	path = bundle/colors/nord
+	url = https://github.com/arcticicestudio/nord-vim.git
