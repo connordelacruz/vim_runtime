@@ -143,3 +143,6 @@
 [submodule "bundle/colors/nord"]
 	path = bundle/colors/nord
 	url = https://github.com/arcticicestudio/nord-vim.git
+[submodule "bundle/syntax/processing"]
+	path = bundle/syntax/processing
+	url = https://github.com/sophacles/vim-processing.git

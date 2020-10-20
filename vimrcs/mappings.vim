@@ -11,6 +11,10 @@ noremap 0 ^
 
 " Quick Save -----------------------------------------------------------------
 nnoremap ,w :w<cr>
+nnoremap ,wa :wa<cr>
+
+" Quick Quit -----------------------------------------------------------------
+nnoremap ,q :q<cr>
 
 " Copy/Paste -----------------------------------------------------------------
 " Clipboard
@@ -63,6 +67,9 @@ nmap <leader>gu <Plug>(GitGutterUndoHunk)
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
+
+" Processing -----------------------------------------------------------------
+au FileType processing nnoremap <buffer> ,r :RunProcessing<cr>
 
 " Table Mode -----------------------------------------------------------------
 " <leader>T prefix

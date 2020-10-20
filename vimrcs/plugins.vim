@@ -102,8 +102,9 @@ let g:gitgutter_enabled=1
 " => Vim Table Mode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure for RST tables by default
-let g:table_mode_corner_corner='+'
-let g:table_mode_header_fillchar='='
+" TODO: just do for python? 
+" let g:table_mode_corner_corner='+'
+" let g:table_mode_header_fillchar='='
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tabmerge
