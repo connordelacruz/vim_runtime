@@ -26,7 +26,8 @@ au FileType javascript,javascript.jsx setlocal ts=2 sts=2 sw=2 expandtab
 let g:javascript_plugin_jsdoc = 1
 
 " JSON =======================================================================
-au FileType json setlocal ts=2 sts=2 sw=2 expandtab
+au FileType json setlocal ts=2 sts=2 sw=2 expandtab 
+au FileType json let g:indentLine_setConceal=0
 
 " Markdown ===================================================================
 au BufNewFile,BufReadPost *.md set filetype=markdown

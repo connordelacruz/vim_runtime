@@ -40,6 +40,8 @@ set sm
 set mat=2
 " Add cursor support (excluding visual mode)
 set mouse=nic
+" Highlight current cursor line
+set cul
 
 " Splits =====================================================================
 " Open new horizontal splits below current window
