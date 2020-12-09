@@ -18,14 +18,6 @@
 	path = bundle/plugin/gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
     ignore = dirty
-[submodule "bundle/vim-log-syntax"]
-	path = bundle/syntax/log-file
-	url = https://github.com/dzeban/vim-log-syntax.git
-    ignore = dirty
-[submodule "bundle/vim-javascript"]
-	path = bundle/syntax/javascript
-	url = https://github.com/pangloss/vim-javascript
-    ignore = dirty
 [submodule "bundle/multiple-cursors"]
 	path = bundle/plugin/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
@@ -45,10 +37,6 @@
 [submodule "bundle/plugin/markdown-toc"]
 	path = bundle/plugin/markdown-toc
 	url = https://github.com/mzlogin/vim-markdown-toc.git
-    ignore = dirty
-[submodule "bundle/plugin/css-color"]
-	path = bundle/syntax/css-color
-	url = https://github.com/ap/vim-css-color.git
     ignore = dirty
 [submodule "bundle/plugin/pydocstring"]
 	path = bundle/plugin/pydocstring
@@ -78,10 +66,6 @@
 	path = bundle/plugin/pep8-indent
 	url = https://github.com/Vimjas/vim-python-pep8-indent.git
     ignore = dirty
-[submodule "bundle/syntax/jsx"]
-	path = bundle/syntax/jsx
-	url = https://github.com/mxw/vim-jsx.git
-    ignore = dirty
 [submodule "bundle/plugin/splitjoin"]
 	path = bundle/plugin/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
@@ -105,10 +89,6 @@
 [submodule "bundle/plugin/nerdtree-git-plugin"]
 	path = bundle/plugin/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
-    ignore = dirty
-[submodule "bundle/syntax/scss"]
-	path = bundle/syntax/scss
-	url = https://github.com/cakebaker/scss-syntax.vim.git
     ignore = dirty
 [submodule "bundle/plugin/jcommenter"]
 	path = bundle/plugin/jcommenter
@@ -136,9 +116,7 @@
 [submodule "bundle/plugin/ack"]
 	path = bundle/plugin/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/syntax/processing"]
-	path = bundle/syntax/processing
-	url = https://github.com/sophacles/vim-processing.git
 [submodule "bundle/plugin/bullets"]
 	path = bundle/plugin/bullets
 	url = https://github.com/dkarter/bullets.vim.git
+    ignore = dirty

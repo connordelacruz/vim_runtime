@@ -15,5 +15,19 @@ Plug 'joshdick/onedark.vim'
 " Lightline
 Plug '~/.vim_runtime/bundle/colors/lightline-colors'
 
+" SYNTAX =====================================================================
+" CSS
+Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
+" JS
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Markdown TODO REMOVE?
+" Plug '~/.vim_runtime/bundle/syntax/markdown', { 'for': 'markdown' }
+" Processing
+Plug 'sophacles/vim-processing', { 'for': 'processing' }
+" RST
+Plug '~/.vim_runtime/bundle/syntax/rst-headings', { 'for': 'rst' }
+" SCSS
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+
 " END ========================================================================
 call plug#end()
