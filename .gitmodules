@@ -30,10 +30,6 @@
 	path = bundle/plugin/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
     ignore = dirty
-[submodule "bundle/colors/onedark"]
-	path = bundle/colors/onedark
-	url = https://github.com/joshdick/onedark.vim
-    ignore = dirty
 [submodule "bundle/plugin/surround"]
 	path = bundle/plugin/surround
 	url = https://github.com/tpope/vim-surround.git
@@ -140,9 +136,6 @@
 [submodule "bundle/plugin/ack"]
 	path = bundle/plugin/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "bundle/colors/nord"]
-	path = bundle/colors/nord
-	url = https://github.com/arcticicestudio/nord-vim.git
 [submodule "bundle/syntax/processing"]
 	path = bundle/syntax/processing
 	url = https://github.com/sophacles/vim-processing.git

@@ -1,0 +1,4 @@
+# Ignore everything in here, Plug will install these
+*
+!.gitignore
+
