@@ -30,14 +30,21 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 " } ==========================================================================
 
 " PLUGINS { ==================================================================
+" TODO brief explanation of each
 " Core
 Plug 'connordelacruz/Tabmerge'
 Plug 'tpope/vim-abolish'
 Plug 'mileszs/ack.vim'
 Plug 'bkad/CamelCaseMotion'
+Plug 'Yggdroot/indentLine'
+Plug 'itchyny/lightline.vim'
 " Editing
 Plug 'jiangmiao/auto-pairs'
 Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'text', 'gitcommit'] } " TODO g:bullets_enabled_file_types
+Plug 'tpope/vim-commentary'
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 " } ==========================================================================
 
 call plug#end()

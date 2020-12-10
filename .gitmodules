@@ -1,7 +1,3 @@
-[submodule "bundle/lightline.vim"]
-	path = bundle/plugin/lightline
-    url = https://github.com/itchyny/lightline.vim.git
-    ignore = dirty
 [submodule "bundle/nerdtree"]
 	path = bundle/plugin/nerdtree
     url = https://github.com/scrooloose/nerdtree.git
@@ -10,14 +6,6 @@
 	path = bundle/plugin/tlib
     url = https://github.com/vim-scripts/tlib.git
     ignore = dirty
-[submodule "bundle/vim-commentary"]
-	path = bundle/plugin/commentary
-    url = https://github.com/tpope/vim-commentary.git
-    ignore = dirty
-[submodule "bundle/vim-gitgutter"]
-	path = bundle/plugin/gitgutter
-	url = https://github.com/airblade/vim-gitgutter.git
-    ignore = dirty
 [submodule "bundle/multiple-cursors"]
 	path = bundle/plugin/multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
@@ -25,10 +13,6 @@
 [submodule "bundle/plugin/surround"]
 	path = bundle/plugin/surround
 	url = https://github.com/tpope/vim-surround.git
-    ignore = dirty
-[submodule "bundle/plugin/fugitive"]
-	path = bundle/plugin/fugitive
-	url = https://github.com/tpope/vim-fugitive.git
     ignore = dirty
 [submodule "bundle/plugin/visual-increment"]
 	path = bundle/plugin/visual-increment
@@ -70,10 +54,6 @@
 	path = bundle/plugin/nerdtree-git-plugin
 	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
     ignore = dirty
-[submodule "bundle/plugin/jcommenter"]
-	path = bundle/plugin/jcommenter
-	url = https://github.com/connordelacruz/jcommenter.vim.git
-    ignore = dirty
 [submodule "bundle/plugin/manpager"]
 	path = bundle/plugin/manpager
 	url = https://github.com/lambdalisue/vim-manpager.git
@@ -86,6 +66,3 @@
 	path = bundle/plugin/smile
 	url = https://github.com/idanarye/vim-smile.git
     ignore = dirty
-[submodule "bundle/plugin/indentLine"]
-	path = bundle/plugin/indentLine
-	url = https://github.com/Yggdroot/indentLine.git
