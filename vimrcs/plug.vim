@@ -8,6 +8,10 @@
 "https://github.com/junegunn/vim-plug/issues/182
 call plug#begin('~/.vim_runtime/plugged')
 
+" LIBRARIES { ================================================================
+Plug 'vim-scripts/tlib'
+" } ==========================================================================
+
 " COLORSCHEMES { =============================================================
 " Editor ---------------------------------------------------------------------
 " Selection of base16 schemes
@@ -69,13 +73,22 @@ Plug 'mhinz/vim-startify'
 " Insert and delete parens, quotes, etc in pairs
 Plug 'jiangmiao/auto-pairs'
 " Smarter bullet points
-Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'text', 'gitcommit'] } " TODO g:bullets_enabled_file_types
+" TODO: g:bullets_enabled_file_types
+Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'text', 'gitcommit'] } 
 " Comment stuff out
 Plug 'tpope/vim-commentary'
 " Split/join lines
 Plug 'AndrewRadev/splitjoin.vim'
 " Improve your surroundings
 Plug 'tpope/vim-surround'
+" Custom surround mappings
+Plug '~/.vim_runtime/bundle/plugin/surround-mappings'
+" Create tables in vim
+" TODO: filetypes 
+Plug 'dhruvasagar/vim-table-mode'
+" TODO TRY OUT:
+" Auto-increment sequences of numbers or letters
+" Plug 'triglav/vim-visual-increment'
 
 " Git ------------------------------------------------------------------------
 " Git wrapper
@@ -101,6 +114,10 @@ Plug 'tpope/vim-abolish'
 Plug 'mileszs/ack.vim'
 " Search for long lines
 Plug 'connordelacruz/vim-long-line-search'
+" Look for TO-DOs
+Plug '~/.vim_runtime/bundle/plugin/tasklist'
+" Select text in visual mode and search for it with *
+Plug 'bronson/vim-visual-star-search'
 
 " Tabs -----------------------------------------------------------------------
 " Merge tabs into splits
