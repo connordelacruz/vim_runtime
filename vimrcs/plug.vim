@@ -19,35 +19,49 @@ Plug 'joshdick/onedark.vim'
 Plug '~/.vim_runtime/bundle/colors/lightline-colors'
 " } ==========================================================================
 
-" SYNTAX { ===================================================================
-" CSS
+" SYNTAX & FILETYPE-SPECIFIC { ===============================================
+" CSS ------------------------------------------------------------------------
+" Colorize CSS
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
-" JS
+
+" JS -------------------------------------------------------------------------
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-" Markdown
+
+" Manpage --------------------------------------------------------------------
+" Use vim as a manpager
+Plug 'lambdalisue/vim-manpager'
+
+" Markdown -------------------------------------------------------------------
 " Plug '~/.vim_runtime/bundle/syntax/markdown', { 'for': 'markdown' } " TODO REMOVE?
-" Processing
+" Generate table of contents
+Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
+
+" Processing -----------------------------------------------------------------
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
-" RST
+
+" Python ---------------------------------------------------------------------
+" PEP8-compliant indents
+Plug 'Vimjas/vim-python-pep8-indent'
+
+" RST ------------------------------------------------------------------------
+" Auto-format headings while typing
 Plug '~/.vim_runtime/bundle/syntax/rst-headings', { 'for': 'rst' }
-" SCSS
+
+" SCSS -----------------------------------------------------------------------
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+
 " } ==========================================================================
 
 " PLUGINS { ==================================================================
 " Core -----------------------------------------------------------------------
 " Merge tabs into splits
 Plug 'connordelacruz/Tabmerge'
-" Search and replace tools + some other neat things
-Plug 'tpope/vim-abolish'
-" Ack in vim
-Plug 'mileszs/ack.vim'
-" Vim motions for camelCase and snake_case
-Plug 'bkad/CamelCaseMotion'
 " Visualize indentation
 Plug 'Yggdroot/indentLine'
 " Status line
 Plug 'itchyny/lightline.vim'
+" File explorer
+Plug 'preservim/nerdtree'
 
 " Editing --------------------------------------------------------------------
 " Insert and delete parens, quotes, etc in pairs
@@ -62,6 +76,25 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 " Show changes in the gutter
 Plug 'airblade/vim-gitgutter'
+" Show file status in nerdtree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+" Navigation & Motion --------------------------------------------------------
+" Vim motions for camelCase and snake_case
+Plug 'bkad/CamelCaseMotion'
+" Improve % matching
+Plug 'tmhedberg/matchit'
+" TODO TRY OUT:
+" Multiple cursors
+" Plug 'mg979/vim-visual-multi'
+
+" Search ---------------------------------------------------------------------
+" Search and replace tools + some other neat things
+Plug 'tpope/vim-abolish'
+" Ack in vim
+Plug 'mileszs/ack.vim'
+" Search for long lines
+Plug 'connordelacruz/vim-long-line-search'
 
 " } ==========================================================================
 

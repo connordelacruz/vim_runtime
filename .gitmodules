@@ -1,14 +1,6 @@
-[submodule "bundle/nerdtree"]
-	path = bundle/plugin/nerdtree
-    url = https://github.com/scrooloose/nerdtree.git
-    ignore = dirty
 [submodule "bundle/tlib"]
 	path = bundle/plugin/tlib
     url = https://github.com/vim-scripts/tlib.git
-    ignore = dirty
-[submodule "bundle/multiple-cursors"]
-	path = bundle/plugin/multiple-cursors
-	url = https://github.com/terryma/vim-multiple-cursors.git
     ignore = dirty
 [submodule "bundle/plugin/surround"]
 	path = bundle/plugin/surround
@@ -18,10 +10,6 @@
 	path = bundle/plugin/visual-increment
 	url = https://github.com/triglav/vim-visual-increment.git
     ignore = dirty
-[submodule "bundle/plugin/markdown-toc"]
-	path = bundle/plugin/markdown-toc
-	url = https://github.com/mzlogin/vim-markdown-toc.git
-    ignore = dirty
 [submodule "bundle/plugin/pydocstring"]
 	path = bundle/plugin/pydocstring
 	url = https://github.com/heavenshell/vim-pydocstring.git
@@ -30,10 +18,6 @@
 	path = bundle/plugin/table-mode
 	url = https://github.com/dhruvasagar/vim-table-mode.git
     ignore = dirty
-[submodule "bundle/plugin/pep8-indent"]
-	path = bundle/plugin/pep8-indent
-	url = https://github.com/Vimjas/vim-python-pep8-indent.git
-    ignore = dirty
 [submodule "bundle/plugin/splitjoin"]
 	path = bundle/plugin/splitjoin
 	url = https://github.com/AndrewRadev/splitjoin.vim.git
@@ -41,22 +25,6 @@
 [submodule "bundle/plugin/visual-star-search"]
 	path = bundle/plugin/visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
-    ignore = dirty
-[submodule "bundle/plugin/long-line-search"]
-	path = bundle/plugin/long-line-search
-	url = https://github.com/connordelacruz/vim-long-line-search.git
-    ignore = dirty
-[submodule "bundle/plugin/matchit"]
-	path = bundle/plugin/matchit
-	url = https://github.com/tmhedberg/matchit.git
-    ignore = dirty
-[submodule "bundle/plugin/nerdtree-git-plugin"]
-	path = bundle/plugin/nerdtree-git-plugin
-	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
-    ignore = dirty
-[submodule "bundle/plugin/manpager"]
-	path = bundle/plugin/manpager
-	url = https://github.com/lambdalisue/vim-manpager.git
     ignore = dirty
 [submodule "bundle/plugin/startify"]
 	path = bundle/plugin/startify

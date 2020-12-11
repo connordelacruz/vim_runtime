@@ -47,6 +47,7 @@ cnoremap <C-N> <Down>
 " FillLine -------------------------------------------------------------------
 nnoremap <leader>f :FillLine<space>
 nnoremap <leader>F :FillLine<cr>
+nnoremap ,f :FillLine =<cr>
 
 
 " PLUGINS ====================================================================
