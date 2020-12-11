@@ -41,7 +41,9 @@ Plug 'sophacles/vim-processing', { 'for': 'processing' }
 
 " Python ---------------------------------------------------------------------
 " PEP8-compliant indents
-Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+" Generate docstrings
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 
 " RST ------------------------------------------------------------------------
 " Auto-format headings while typing
@@ -54,14 +56,14 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
 " PLUGINS { ==================================================================
 " Core -----------------------------------------------------------------------
-" Merge tabs into splits
-Plug 'connordelacruz/Tabmerge'
 " Visualize indentation
 Plug 'Yggdroot/indentLine'
 " Status line
 Plug 'itchyny/lightline.vim'
 " File explorer
 Plug 'preservim/nerdtree'
+" Fancy start screen
+Plug 'mhinz/vim-startify'
 
 " Editing --------------------------------------------------------------------
 " Insert and delete parens, quotes, etc in pairs
@@ -70,6 +72,10 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'text', 'gitcommit'] } " TODO g:bullets_enabled_file_types
 " Comment stuff out
 Plug 'tpope/vim-commentary'
+" Split/join lines
+Plug 'AndrewRadev/splitjoin.vim'
+" Improve your surroundings
+Plug 'tpope/vim-surround'
 
 " Git ------------------------------------------------------------------------
 " Git wrapper
@@ -95,6 +101,16 @@ Plug 'tpope/vim-abolish'
 Plug 'mileszs/ack.vim'
 " Search for long lines
 Plug 'connordelacruz/vim-long-line-search'
+
+" Tabs -----------------------------------------------------------------------
+" Merge tabs into splits
+Plug 'connordelacruz/Tabmerge'
+" Customize tabline
+Plug '~/.vim_runtime/bundle/plugin/set_tabline'
+
+" Misc -----------------------------------------------------------------------
+" Increase happiness
+Plug 'idanarye/vim-smile'
 
 " } ==========================================================================
 

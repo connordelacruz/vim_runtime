@@ -2,35 +2,15 @@
 	path = bundle/plugin/tlib
     url = https://github.com/vim-scripts/tlib.git
     ignore = dirty
-[submodule "bundle/plugin/surround"]
-	path = bundle/plugin/surround
-	url = https://github.com/tpope/vim-surround.git
-    ignore = dirty
 [submodule "bundle/plugin/visual-increment"]
 	path = bundle/plugin/visual-increment
 	url = https://github.com/triglav/vim-visual-increment.git
-    ignore = dirty
-[submodule "bundle/plugin/pydocstring"]
-	path = bundle/plugin/pydocstring
-	url = https://github.com/heavenshell/vim-pydocstring.git
     ignore = dirty
 [submodule "bundle/plugin/rst-table-mode"]
 	path = bundle/plugin/table-mode
 	url = https://github.com/dhruvasagar/vim-table-mode.git
     ignore = dirty
-[submodule "bundle/plugin/splitjoin"]
-	path = bundle/plugin/splitjoin
-	url = https://github.com/AndrewRadev/splitjoin.vim.git
-    ignore = dirty
 [submodule "bundle/plugin/visual-star-search"]
 	path = bundle/plugin/visual-star-search
 	url = https://github.com/bronson/vim-visual-star-search.git
-    ignore = dirty
-[submodule "bundle/plugin/startify"]
-	path = bundle/plugin/startify
-	url = https://github.com/mhinz/vim-startify.git
-    ignore = dirty
-[submodule "bundle/plugin/smile"]
-	path = bundle/plugin/smile
-	url = https://github.com/idanarye/vim-smile.git
     ignore = dirty
