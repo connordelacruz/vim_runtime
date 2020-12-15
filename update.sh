@@ -2,7 +2,7 @@
 # ==============================================================================
 # update.sh
 #
-# Pulls updates from remote repo and initializes any new submodules.
+# Pulls updates from remote repo.
 #
 # Author: Connor de la Cruz
 # Repo: https://github.com/connordelacruz/vim_runtime
@@ -18,9 +18,6 @@ cd ~/.vim_runtime/
 
 echo 'Pulling recent changes...'
 git pull --rebase
-
-echo 'Updating submodules...'
-git submodule update --init --recursive
 
 cd "$current_dir"
 unset current_dir
