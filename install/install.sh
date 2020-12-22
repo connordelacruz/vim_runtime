@@ -1,32 +1,42 @@
 #!/usr/bin/env bash
+set -e
 # ==============================================================================
-# install.sh
-#
 # Backs up existing .vimrc and update to source .vim_runtime/init.vim.
 #
 # Author: Connor de la Cruz
 # Repo: https://github.com/connordelacruz/vim_runtime
 # ==============================================================================
-set -e
 
-current_dir="$(pwd)"
-# Backup existing vimrc
-if [ -f ~/.vimrc ]; then
+backup_vimrc() {
     echo 'Backing up current .vimrc...'
-    cd ~
-    # append timestamp to backup file in case .vimrc.bak already exists
-    timestamp="$(date +'%s')"
-    backup_file=".vimrc.bak.$timestamp"
-    cp .vimrc "$backup_file"
-    echo "Backup of .vimrc created ($backup_file)"
-fi
+    local timestamp="$(date +'%s')"
+    local backup_file=".vimrc.bak.$timestamp"
+    cp "$HOME/.vimrc" "$HOME/$backup_file"
+    echo "Backup created: $backup_file"
+    echo ''
+}
 
-# create new .vimrc
-echo 'Creating new .vimrc...'
-echo 'source ~/.vim_runtime/init.vim' > ~/.vimrc
-echo 'New .vimrc created.'
+create_vimrc() {
+    echo 'Creating new .vimrc...'
+    echo 'source ~/.vim_runtime/init.vim' > ~/.vimrc
+    echo 'New .vimrc created.'
+    echo ''
+}
 
-cd "$current_dir"
-unset current_dir
+install_plugins() {
+    echo 'Installing plugins...'
+    vim +PlugInstall +qa
+    echo ''
+}
 
-echo "Extended vim configuration installed successfully."
+main() {
+    if [ -f ~/.vimrc ]; then
+        backup_vimrc
+    fi
+    create_vimrc
+    install_plugins
+    echo 'Setup complete.'
+}
+
+main "$@"
+
