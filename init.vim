@@ -3,7 +3,7 @@
 " ============================================================================
 set runtimepath+=~/.vim_runtime
 " Load Plugins ===============================================================
-source ~/.vim_runtime/vimrcs/plug.vim
+source ~/.vim_runtime/plug.vim
 " Source Global Configs ======================================================
 source ~/.vim_runtime/vimrcs/general.vim
 source ~/.vim_runtime/vimrcs/colors.vim
