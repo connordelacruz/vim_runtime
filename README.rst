@@ -1,6 +1,13 @@
 Vim Runtime Configuration
 =========================
 
+.. note::
+
+    This README is (very) out of date as of 2021. Plugins are now managed with
+    vim-plug and the directory structure, included configs, etc have changed a
+    lot. I'll work on updating this when I get around to it, sorry!
+
+
 My runtime configuration for vim (and neovim).
 
 I wanted a vimrc setup with some sensible defaults and a plugin setup
@@ -12,15 +19,6 @@ I started this out using Amir Salihefendic’s `ultimate
 vimrc <https://github.com/amix/vimrc>`__, which I highly recommend
 checking out. The configurations, plugins, and organization has changed,
 but it’s still heavily based on his project.
-
-TODO
-----
-
--  Need to re-work for new setup, this is very out-of-date
--  Directory structure details
--  Overview of configurations
--  Add overridden/non-submodule plugins to list
--  Screenshots
 
 
 .. contents::
