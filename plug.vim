@@ -3,6 +3,7 @@
 " ============================================================================
 
 " TODO move bundle plugins to unplugged/ ?
+let g:bundle_dir = '~/.vim_runtime/bundle/'
 
 " TODO make configurable dir e.g. let g:plug_dir
 "https://github.com/junegunn/vim-plug/issues/182
@@ -15,12 +16,12 @@ Plug 'vim-scripts/tlib'
 " COLORSCHEMES { =============================================================
 " Editor ---------------------------------------------------------------------
 " Selection of base16 schemes
-Plug '~/.vim_runtime/bundle/colors/base16'
+Plug g:bundle_dir . 'colors/base16'
 " Fallback for less colorful terminals
 Plug 'joshdick/onedark.vim'
 
 " Lightline ------------------------------------------------------------------
-Plug '~/.vim_runtime/bundle/colors/lightline-colors'
+Plug g:bundle_dir . 'colors/lightline-colors'
 " } ==========================================================================
 
 " SYNTAX & FILETYPE-SPECIFIC { ===============================================
@@ -36,7 +37,7 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'lambdalisue/vim-manpager'
 
 " Markdown -------------------------------------------------------------------
-" Plug '~/.vim_runtime/bundle/syntax/markdown', { 'for': 'markdown' } " TODO REMOVE?
+" Plug g:bundle_dir . 'syntax/markdown', { 'for': 'markdown' } " TODO REMOVE?
 " Generate table of contents
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
 
@@ -51,7 +52,7 @@ Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 
 " RST ------------------------------------------------------------------------
 " Auto-format headings while typing
-Plug '~/.vim_runtime/bundle/syntax/rst-headings', { 'for': 'rst' }
+Plug g:bundle_dir . 'syntax/rst-headings', { 'for': 'rst' }
 
 " SCSS -----------------------------------------------------------------------
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
@@ -82,7 +83,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 " Improve your surroundings
 Plug 'tpope/vim-surround'
 " Custom surround mappings
-Plug '~/.vim_runtime/bundle/plugin/surround-mappings'
+Plug g:bundle_dir . 'plugin/surround-mappings'
 " Create tables in vim
 " TODO: filetypes 
 Plug 'dhruvasagar/vim-table-mode'
@@ -115,7 +116,7 @@ Plug 'mileszs/ack.vim'
 " Search for long lines
 Plug 'connordelacruz/vim-long-line-search'
 " Look for TO-DOs
-Plug '~/.vim_runtime/bundle/plugin/tasklist'
+Plug g:bundle_dir . 'plugin/tasklist'
 " Select text in visual mode and search for it with *
 Plug 'bronson/vim-visual-star-search'
 
@@ -123,7 +124,7 @@ Plug 'bronson/vim-visual-star-search'
 " Merge tabs into splits
 Plug 'connordelacruz/Tabmerge'
 " Customize tabline
-Plug '~/.vim_runtime/bundle/plugin/set_tabline'
+Plug g:bundle_dir . 'plugin/set_tabline'
 
 " Misc -----------------------------------------------------------------------
 " Increase happiness
