@@ -72,7 +72,10 @@ nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
 
 " Processing -----------------------------------------------------------------
-au FileType processing nnoremap <buffer> ,r :RunProcessing<cr>
+" Run
+au FileType processing nnoremap <buffer> ,R :RunProcessing<cr>
+" Save and run
+au FileType processing nnoremap <buffer> ,r :w<cr> :RunProcessing<cr>
 
 " Table Mode -----------------------------------------------------------------
 " <leader>T prefix
