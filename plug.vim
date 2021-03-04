@@ -75,7 +75,7 @@ Plug 'mhinz/vim-startify'
 Plug 'jiangmiao/auto-pairs'
 " Smarter bullet points
 " TODO: g:bullets_enabled_file_types
-Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'text', 'gitcommit'] } 
+Plug 'dkarter/bullets.vim', { 'for': ['markdown', 'text', 'gitcommit', 'rst'] } 
 " Comment stuff out
 Plug 'tpope/vim-commentary'
 " Split/join lines

@@ -25,6 +25,7 @@ main() {
     fi
     echo 'source ~/.vimrc' > ~/.config/nvim/init.vim
     echo 'Configured nvim to source ~/.vimrc'
+    # TODO pip3 install neomvim
 }
 
 main "$@"
