@@ -29,6 +29,10 @@ Plug g:unmanaged_dir . 'colors/lightline-colors'
 " Colorize CSS
 Plug 'ap/vim-css-color', { 'for': ['css', 'scss'] }
 
+" HTML -----------------------------------------------------------------------
+" Close tags
+Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx'] }
+
 " JS -------------------------------------------------------------------------
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 
