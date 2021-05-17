@@ -4,21 +4,23 @@
 " TODO REFORMAT/ORGANIZE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim grep
+" Colorizer
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:colorizer_auto_filetype='css,scss,html,processing'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vim grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => indentLine
+" indentLine
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_char = '▏'
 let g:indentLine_color_gui = "#343D46"
 " Disable setting conceal for markdown
 au FileType markdown let g:indentLine_setConceal = 0
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree
+" NERDTree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
@@ -33,9 +35,8 @@ let noNERD = ['gitcommit', 'man']
 if NERDTreeOpenByDefault
     autocmd vimenter * if index(noNERD, &ft) < 0 | NERDTree %:p:h | wincmd p | endif
 endif
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree git plugin
+" NERDTree git plugin
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'*',
@@ -49,9 +50,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Ignored'   :'▫',
                 \ 'Unknown'   :'?',
                 \ }
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => lightline
+" lightline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TODO: show pull/push arrows for git repo?
 " TODO: higher contrast between sections in theme
@@ -92,28 +92,24 @@ endif
 
 " Hide redundant insert/replace/visual mode message
 set noshowmode
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Git gutter (Git diff)
+" Git gutter (Git diff)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=1
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim Table Mode
+" Vim Table Mode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Configure for RST tables by default
 " TODO: just do for python? 
 " let g:table_mode_corner_corner='+'
 " let g:table_mode_header_fillchar='='
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Tabmerge
+" Tabmerge
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Startify
+" Startify
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let s:header = [
             \ '                              ',
@@ -137,9 +133,8 @@ let s:header = [
             \ ]
 
 let g:startify_custom_header = startify#center(s:header)
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-closetag
+" vim-closetag
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable closetag for React js(x) files
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js,*.jsx"
