@@ -31,7 +31,7 @@ Plug 'chrisbra/Colorizer'
 
 " HTML -----------------------------------------------------------------------
 " Close tags
-Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx'] }
+Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'markdown'] }
 
 " JS -------------------------------------------------------------------------
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
