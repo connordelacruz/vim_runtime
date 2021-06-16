@@ -37,8 +37,12 @@ let noNERD = ['gitcommit', 'man']
 if NERDTreeOpenByDefault
     " Start NERDTree. If a file is specified, move the cursor to its window.
     " Will not start if file is in noNERD or window is too narrow
-    autocmd StdinReadPre * let s:std_in=1
-    autocmd VimEnter * if index(noNERD, &ft) < 0 && winwidth('%') >= NERDDefaultMinWidth | NERDTree %:p:h | if argc() > 0 || exists("s:std_in") | wincmd p | endif
+    " Note: updates lightline after switching windows to fix a bug with the
+    " mode not showing.
+    augroup NERD
+        autocmd StdinReadPre * let s:std_in=1
+        autocmd VimEnter * if index(noNERD, &ft) < 0 && winwidth('%') >= NERDDefaultMinWidth | NERDTree %:p:h | if argc() > 0 || exists("s:std_in") | wincmd p | call lightline#update() | endif
+    augroup END
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree git plugin
