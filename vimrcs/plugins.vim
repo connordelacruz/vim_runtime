@@ -29,11 +29,16 @@ let g:NERDTreeWinSize=35
 " Close vim if the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Set to 1 to open by default
-let NERDTreeOpenByDefault=0
+let NERDTreeOpenByDefault=1
+" Don't open by default for windows narrower than this
+let NERDDefaultMinWidth=130
 " If opening by default, exclude these filetypes
 let noNERD = ['gitcommit', 'man']
 if NERDTreeOpenByDefault
-    autocmd vimenter * if index(noNERD, &ft) < 0 | NERDTree %:p:h | wincmd p | endif
+    " Start NERDTree. If a file is specified, move the cursor to its window.
+    " Will not start if file is in noNERD or window is too narrow
+    autocmd StdinReadPre * let s:std_in=1
+    autocmd VimEnter * if index(noNERD, &ft) < 0 && winwidth('%') >= NERDDefaultMinWidth | NERDTree %:p:h | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree git plugin

@@ -47,8 +47,8 @@ cnoremap <C-N> <Down>
 " FUNCTIONS ==================================================================
 
 " FillLine -------------------------------------------------------------------
-nnoremap <leader>f :FillLine<space>
-nnoremap <leader>F :FillLine<cr>
+nnoremap <leader>F :FillLine<space>
+nnoremap <leader>f :FillLine<cr>
 nnoremap ,f :FillLine =<cr>
 
 

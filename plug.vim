@@ -65,6 +65,11 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
 " PLUGINS { ==================================================================
 " Core -----------------------------------------------------------------------
+" TODO
+" if has('nvim')
+"     " Code completion
+"     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" endif
 " Visualize indentation
 Plug 'Yggdroot/indentLine'
 " Status line
