@@ -24,6 +24,8 @@ let g:mapleader = " "
 syntax enable 
 " Number of lines to keep above and below cursor
 set so=7
+" Enable multiple sign columns
+set scl=auto:9
 " Show line numbers
 set nu
 " Show ruler TODO REMOVE? Lightline handles this

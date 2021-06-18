@@ -27,8 +27,6 @@ Plug g:unmanaged_dir . 'colors/lightline-colors'
 " SYNTAX & FILETYPE-SPECIFIC { ===============================================
 " General --------------------------------------------------------------------
 " Color Highlighting
-" Plug 'chrisbra/Colorizer'
-" TODO: https://github.com/RRethy/vim-hexokinase
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " HTML -----------------------------------------------------------------------

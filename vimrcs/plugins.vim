@@ -6,11 +6,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colorizer
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO REPLACE WITH HEXOKINASE
-let g:colorizer_auto_filetype='css,scss,html,processing'
-
+let g:Hexokinase_ftEnabled=['css', 'scss', 'html', 'processing']
 let g:Hexokinase_highlighters = ['background', 'sign_column']
-set signcolumn=auto:9 " TODO MOVE CONFIG
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
