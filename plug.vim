@@ -1,69 +1,60 @@
-" ============================================================================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug configs
-" ============================================================================
-
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Local (unmanaged) plugins
 let g:unmanaged_dir = '~/.vim_runtime/unplugged/'
-
 " TODO make configurable dir e.g. let g:plug_dir
 "https://github.com/junegunn/vim-plug/issues/182
 call plug#begin('~/.vim_runtime/plugged')
-
-" LIBRARIES { ================================================================
+" ============================================================================
+" LIBRARIES { 
+" ============================================================================
 Plug 'vim-scripts/tlib'
-" } ==========================================================================
-
-" COLORSCHEMES { =============================================================
+" }
+" ============================================================================
+" COLORSCHEMES { 
+" ============================================================================
 " Editor ---------------------------------------------------------------------
 " Selection of base16 schemes
 Plug g:unmanaged_dir . 'colors/base16'
 " Fallback for less colorful terminals
 Plug 'joshdick/onedark.vim'
-
 " Lightline ------------------------------------------------------------------
 Plug g:unmanaged_dir . 'colors/lightline-colors'
-" } ==========================================================================
-
-" SYNTAX & FILETYPE-SPECIFIC { ===============================================
+" }
+" ============================================================================
+" SYNTAX & FILETYPE-SPECIFIC {
+" ============================================================================
 " General --------------------------------------------------------------------
 " Color Highlighting
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-
 " HTML -----------------------------------------------------------------------
 " Close tags
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'markdown'] }
-
 " JS -------------------------------------------------------------------------
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-
 " Manpage --------------------------------------------------------------------
 " Use vim as a manpager
 Plug 'lambdalisue/vim-manpager'
-
 " Markdown -------------------------------------------------------------------
-" Plug g:unmanaged_dir . 'syntax/markdown', { 'for': 'markdown' } " TODO REMOVE?
 " Generate table of contents
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
-
 " Processing -----------------------------------------------------------------
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
-
 " Python ---------------------------------------------------------------------
 " PEP8-compliant indents
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 " Generate docstrings
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
-
 " RST ------------------------------------------------------------------------
 " Auto-format headings while typing
 Plug g:unmanaged_dir . 'syntax/rst-headings', { 'for': 'rst' }
-
 " SCSS -----------------------------------------------------------------------
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-
-" } ==========================================================================
-
-" PLUGINS { ==================================================================
+" }
+" ============================================================================
+" PLUGINS {
+" ============================================================================
 " Core -----------------------------------------------------------------------
 " TODO
 " if has('nvim')
@@ -78,7 +69,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdtree'
 " Fancy start screen
 Plug 'mhinz/vim-startify'
-
 " Editing --------------------------------------------------------------------
 " Insert and delete parens, quotes, etc in pairs
 Plug 'jiangmiao/auto-pairs'
@@ -99,7 +89,6 @@ Plug 'dhruvasagar/vim-table-mode'
 " TODO TRY OUT:
 " Auto-increment sequences of numbers or letters
 " Plug 'triglav/vim-visual-increment'
-
 " Git ------------------------------------------------------------------------
 " Git wrapper
 Plug 'tpope/vim-fugitive'
@@ -107,7 +96,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Show file status in nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
 " Navigation & Motion --------------------------------------------------------
 " Vim motions for camelCase and snake_case
 Plug 'bkad/CamelCaseMotion'
@@ -116,7 +104,6 @@ Plug 'tmhedberg/matchit'
 " TODO TRY OUT:
 " Multiple cursors
 " Plug 'mg979/vim-visual-multi'
-
 " Search ---------------------------------------------------------------------
 " Search and replace tools + some other neat things
 Plug 'tpope/vim-abolish'
@@ -128,24 +115,21 @@ Plug 'connordelacruz/vim-long-line-search'
 Plug g:unmanaged_dir . 'plugin/tasklist'
 " Select text in visual mode and search for it with *
 Plug 'bronson/vim-visual-star-search'
-
 " Tabs -----------------------------------------------------------------------
 " Merge tabs into splits
 Plug 'connordelacruz/Tabmerge'
 " Customize tabline
 Plug g:unmanaged_dir . 'plugin/set_tabline'
-
 " Misc -----------------------------------------------------------------------
 " Increase happiness
 Plug 'idanarye/vim-smile'
-
-" } ==========================================================================
-
-" LOCAL PLUGINS { ============================================================
+" }
+" ============================================================================
+" LOCAL PLUGINS { 
+" ============================================================================
 try
     source ~/.vim_runtime/local_plug.vim
 catch
 endtry
-" } ==========================================================================
-
+" }
 call plug#end()
