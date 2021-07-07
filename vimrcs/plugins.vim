@@ -18,6 +18,8 @@ set grepprg=/bin/grep\ -nH
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:indentLine_char = '▏'
 let g:indentLine_color_gui = "#343D46"
+" Excluded filetypes
+let g:indentLine_fileTypeExclude = ['startify']
 " Disable setting conceal for markdown
 au FileType markdown let g:indentLine_setConceal = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -42,7 +44,18 @@ if NERDTreeOpenByDefault
     " mode not showing.
     augroup NERD
         autocmd StdinReadPre * let s:std_in=1
-        autocmd VimEnter * if index(noNERD, &ft) < 0 && winwidth('%') >= NERDDefaultMinWidth | NERDTree %:p:h | if argc() > 0 || exists("s:std_in") | wincmd p | call lightline#update() | endif
+        autocmd VimEnter * 
+                    \ if !argc()
+                    \ | Startify
+                    \ | endif
+                    \ | if index(noNERD, &ft) < 0 && winwidth('%') >= NERDDefaultMinWidth 
+                    \ | NERDTree %:p:h 
+                    \ | wincmd p | call lightline#update() 
+                    " Note: commented out below so Startify and Nerdtree would cooperate
+                    " \ | if argc() > 0 || exists("s:std_in") 
+                    "     \ | wincmd p | call lightline#update() 
+                    "     \ | endif
+                    " \ | endif
     augroup END
 endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -143,6 +156,8 @@ let s:header = [
             \ ]
 
 let g:startify_custom_header = startify#center(s:header)
+" Replace paths w/ env vars (if it'd be shorter)
+let g:startify_use_env = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-closetag
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
