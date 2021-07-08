@@ -28,6 +28,9 @@ Plug g:unmanaged_dir . 'colors/lightline-colors'
 " General --------------------------------------------------------------------
 " Color Highlighting
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" Doc block generator + custom templates
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug g:unmanaged_dir . 'plugin/doge-custom'
 " HTML -----------------------------------------------------------------------
 " Close tags
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'markdown'] }
@@ -44,8 +47,6 @@ Plug 'sophacles/vim-processing', { 'for': 'processing' }
 " Python ---------------------------------------------------------------------
 " PEP8-compliant indents
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
-" Generate docstrings
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 " RST ------------------------------------------------------------------------
 " Auto-format headings while typing
 Plug g:unmanaged_dir . 'syntax/rst-headings', { 'for': 'rst' }

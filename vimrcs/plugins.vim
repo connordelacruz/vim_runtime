@@ -9,6 +9,10 @@
 let g:Hexokinase_ftEnabled=['css', 'scss', 'html', 'processing']
 let g:Hexokinase_highlighters = ['background', 'sign_column']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Doge
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:doge_doc_standard_python = 'python_custom'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
