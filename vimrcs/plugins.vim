@@ -12,6 +12,21 @@ let g:Hexokinase_highlighters = ['background', 'sign_column']
 " Doge
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:doge_doc_standard_python = 'python_custom'
+" Aliases
+let g:doge_filetype_aliases = {
+            \  'javascript': [
+            \    'javascript.jsx',
+            \    'javascriptreact',
+            \    'javascript.tsx',
+            \    'typescriptreact',
+            \    'typescript',
+            \    'typescript.tsx',
+            \  ],
+            \  'java': [
+            \    'groovy',
+            \    'processing',
+            \  ],
+            \}
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim grep
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
