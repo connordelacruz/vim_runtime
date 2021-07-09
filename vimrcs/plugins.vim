@@ -1,16 +1,11 @@
 " ============================================================================
 " Plugin configurations
 " ============================================================================
-" TODO REFORMAT/ORGANIZE
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Colorizer
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colorizer ==================================================================
 let g:Hexokinase_ftEnabled=['css', 'scss', 'html', 'processing']
 let g:Hexokinase_highlighters = ['background', 'sign_column']
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Doge
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Doge =======================================================================
 let g:doge_doc_standard_python = 'python_custom'
 " Aliases
 let g:doge_filetype_aliases = {
@@ -27,29 +22,26 @@ let g:doge_filetype_aliases = {
             \    'processing',
             \  ],
             \}
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim grep
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Grep =======================================================================
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" indentLine
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" indentLine =================================================================
 let g:indentLine_char = '▏'
 let g:indentLine_color_gui = "#343D46"
 " Excluded filetypes
 let g:indentLine_fileTypeExclude = ['startify']
 " Disable setting conceal for markdown
 au FileType markdown let g:indentLine_setConceal = 0
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NERDTree ===================================================================
+" CORE CONFIGS ---------------------------------------------------------------
 let g:NERDTreeWinPos = "right"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore = ['\.pyc$', '__pycache__']
 let g:NERDTreeWinSize=35
+let NERDTreeMinimalUI=1
 " Close vim if the only window left is NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" OPEN BY DEFAULT ------------------------------------------------------------
 " Set to 1 to open by default
 let NERDTreeOpenByDefault=1
 " Don't open by default for windows narrower than this
@@ -77,9 +69,20 @@ if NERDTreeOpenByDefault
                     " \ | endif
     augroup END
 endif
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree git plugin
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" HIDE LIGHTLINE -------------------------------------------------------------
+" Hack to hide lightline on nerdtree buffers
+augroup filetype_nerdtree
+" TODO BETTER DOC: https://vi.stackexchange.com/a/22414
+    au!
+    au FileType nerdtree call s:disable_lightline_on_nerdtree()
+    au WinEnter,BufWinEnter,TabEnter * call s:disable_lightline_on_nerdtree()
+augroup END
+
+fu s:disable_lightline_on_nerdtree() abort
+    let nerdtree_winnr = index(map(range(1, winnr('$')), {_,v -> getbufvar(winbufnr(v), '&ft')}), 'nerdtree') + 1
+    call timer_start(0, {-> nerdtree_winnr && setwinvar(nerdtree_winnr, '&stl', '%#Normal#')})
+endfu
+" NERDTREE GIT PLUGIN --------------------------------------------------------
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'*',
                 \ 'Staged'    :'+',
@@ -92,16 +95,15 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Ignored'   :'▫',
                 \ 'Unknown'   :'?',
                 \ }
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" lightline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TODO: show pull/push arrows for git repo?
-" TODO: higher contrast between sections in theme
+" lightline ==================================================================
 let g:lightline = {
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
       \   'right': [ [ 'lineinfo' ], ['percent'] ]
+      \ },
+      \ 'inactive': {
+      \   'left': [ ['readonly', 'filename', 'modified'] ],
       \ },
       \ 'component': {
       \   'readonly': '%{&filetype=="help"?"":&readonly?"[RO]":""}',
@@ -121,7 +123,6 @@ let g:lightline.tabline = {
     \ 'left': [ [ 'tabs' ] ],
     \ 'right': [ [ '' ] ]
     \ }
-
 " Set lightline colorscheme to match vim colorscheme
 if exists('g:colors_name') && g:colors_name =~ 'oceanicnext'
     let g:lightline.colorscheme = 'oceanicnext'
@@ -131,28 +132,14 @@ elseif exists('g:colors_name') && g:colors_name =~ 'onedark'
 else
     let g:lightline.colorscheme = 'wombat'
 endif
-
 " Hide redundant insert/replace/visual mode message
 set noshowmode
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Git gutter (Git diff)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Git gutter =================================================================
 let g:gitgutter_enabled=1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Vim Table Mode
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Configure for RST tables by default
-" TODO: just do for python? 
-" let g:table_mode_corner_corner='+'
-" let g:table_mode_header_fillchar='='
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Tabmerge
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Tabmerge ===================================================================
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Startify
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Startify ===================================================================
 let s:header = [
             \ '                              ',
             \ '            ╷ ╷               ',
@@ -177,9 +164,7 @@ let s:header = [
 let g:startify_custom_header = startify#center(s:header)
 " Replace paths w/ env vars (if it'd be shorter)
 let g:startify_use_env = 1
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-closetag
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-closetag ===============================================================
 " Enable closetag for React js(x) files
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js,*.jsx"
 
