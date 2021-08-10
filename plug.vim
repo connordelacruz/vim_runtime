@@ -29,8 +29,9 @@ Plug g:unmanaged_dir . 'colors/lightline-colors'
 " Color Highlighting
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " Doc block generator + custom templates
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
-Plug g:unmanaged_dir . 'plugin/doge-custom'
+" TODO FIGURE OUT AND RE-ENABLE
+" Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+" Plug g:unmanaged_dir . 'plugin/doge-custom'
 " HTML -----------------------------------------------------------------------
 " Close tags
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'markdown'] }

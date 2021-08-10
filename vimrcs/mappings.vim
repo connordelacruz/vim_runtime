@@ -2,6 +2,8 @@
 " Mapping configs
 " ============================================================================
 
+" TODO: MORE <silent> MAPPINGS
+
 " GENERAL ====================================================================
 
 " Navigation -----------------------------------------------------------------
@@ -43,13 +45,16 @@ cnoremap <C-K> <C-U>
 cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 
+" Search ---------------------------------------------------------------------
+nnoremap <silent> ,n :noh<cr>
+
 
 " FUNCTIONS ==================================================================
 
 " FillLine -------------------------------------------------------------------
 nnoremap <leader>F :FillLine<space>
-nnoremap <leader>f :FillLine<cr>
-nnoremap ,f :FillLine =<cr>
+nnoremap <leader>f :FillLine =<cr>
+nnoremap ,f :FillLine<cr>
 
 
 " PLUGINS ====================================================================
