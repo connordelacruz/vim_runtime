@@ -3,8 +3,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Local (unmanaged) plugins
 let g:unmanaged_dir = '~/.vim_runtime/unplugged/'
-" TODO make configurable dir e.g. let g:plug_dir
-"https://github.com/junegunn/vim-plug/issues/182
 call plug#begin('~/.vim_runtime/plugged')
 " ============================================================================
 " LIBRARIES { 
@@ -29,7 +27,7 @@ Plug g:unmanaged_dir . 'colors/lightline-colors'
 " Color Highlighting
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " Doc block generator + custom templates
-" TODO FIGURE OUT AND RE-ENABLE
+" TODO FIGURE OUT AND RE-ENABLE; https://github.com/kkoomen/vim-doge/issues/298
 " Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 " Plug g:unmanaged_dir . 'plugin/doge-custom'
 " HTML -----------------------------------------------------------------------
@@ -58,11 +56,6 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 " PLUGINS {
 " ============================================================================
 " Core -----------------------------------------------------------------------
-" TODO
-" if has('nvim')
-"     " Code completion
-"     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" endif
 " Visualize indentation
 Plug 'Yggdroot/indentLine'
 " Status line
