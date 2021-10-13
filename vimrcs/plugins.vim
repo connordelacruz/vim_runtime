@@ -6,6 +6,7 @@
 let g:Hexokinase_ftEnabled=['css', 'scss', 'html', 'processing']
 let g:Hexokinase_highlighters = ['background', 'sign_column']
 " Doge =======================================================================
+" TODO currently unused since doge has problems
 let g:doge_doc_standard_python = 'python_custom'
 " Aliases
 let g:doge_filetype_aliases = {

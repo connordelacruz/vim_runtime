@@ -46,6 +46,8 @@ Plug 'sophacles/vim-processing', { 'for': 'processing' }
 " Python ---------------------------------------------------------------------
 " PEP8-compliant indents
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
+" Docstring generator
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 " RST ------------------------------------------------------------------------
 " Auto-format headings while typing
 Plug g:unmanaged_dir . 'syntax/rst-headings', { 'for': 'rst' }
@@ -118,6 +120,8 @@ Plug g:unmanaged_dir . 'plugin/set_tabline'
 " Misc -----------------------------------------------------------------------
 " Increase happiness
 Plug 'idanarye/vim-smile'
+" Devicons (must be loaded after relevant plugins)
+Plug 'ryanoasis/vim-devicons'
 " }
 " ============================================================================
 " LOCAL PLUGINS { 
