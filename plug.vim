@@ -33,6 +33,8 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " HTML -----------------------------------------------------------------------
 " Close tags
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'markdown'] }
+" Jenkinsfile ----------------------------------------------------------------
+Plug 'martinda/Jenkinsfile-vim-syntax'
 " JS -------------------------------------------------------------------------
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " Manpage --------------------------------------------------------------------
