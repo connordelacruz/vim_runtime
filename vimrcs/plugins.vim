@@ -51,23 +51,19 @@ let NERDDefaultMinWidth=130
 let noNERD = ['gitcommit', 'man']
 if NERDTreeOpenByDefault
     " Start NERDTree. If a file is specified, move the cursor to its window.
-    " Will not start if file is in noNERD or window is too narrow
+    " Will not start if file is in noNERD or window is too narrow or filetype is in noNERD.
+    " If no args are provided (and file isn't a man page), open Startify.
     " Note: updates lightline after switching windows to fix a bug with the
     " mode not showing.
     augroup NERD
         autocmd StdinReadPre * let s:std_in=1
         autocmd VimEnter * 
-                    \ if !argc()
+                    \ if !argc() && &ft != 'man' 
                     \ | Startify
                     \ | endif
                     \ | if index(noNERD, &ft) < 0 && winwidth('%') >= NERDDefaultMinWidth 
                     \ | NERDTree %:p:h 
                     \ | wincmd p | call lightline#update() 
-                    " Note: commented out below so Startify and Nerdtree would cooperate
-                    " \ | if argc() > 0 || exists("s:std_in") 
-                    "     \ | wincmd p | call lightline#update() 
-                    "     \ | endif
-                    " \ | endif
     augroup END
 endif
 " HIDE LIGHTLINE -------------------------------------------------------------

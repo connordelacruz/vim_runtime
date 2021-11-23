@@ -37,11 +37,8 @@ au FileType markdown setlocal tw=80 fo+=t fo-=l
 au FileType markdown let g:AutoPairsMapSpace = 0
 
 " Python =====================================================================
-let python_highlight_all = 1
-au FileType python syn keyword pythonDecorator True None False self
-
+" Additional file extensions
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
-au BufNewFile,BufRead *.mako set ft=mako
 au BufNewFile,BufRead *.pyde set ft=python
 " Fix auto-pairs not working with prefixed strings
 " https://github.com/jiangmiao/auto-pairs/issues/211#issuecomment-564944940
