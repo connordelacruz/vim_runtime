@@ -50,6 +50,8 @@ Plug 'sophacles/vim-processing', { 'for': 'processing' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 " Docstring generator
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
+" Enhanced syntax highlighting
+Plug 'vim-python/python-syntax', { 'for': 'python' }
 " RST ------------------------------------------------------------------------
 " Auto-format headings while typing
 Plug g:unmanaged_dir . 'syntax/rst-headings', { 'for': 'rst' }

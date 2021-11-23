@@ -43,6 +43,20 @@ au FileType python syn keyword pythonDecorator True None False self
 au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.mako set ft=mako
 au BufNewFile,BufRead *.pyde set ft=python
+" Fix auto-pairs not working with prefixed strings
+" https://github.com/jiangmiao/auto-pairs/issues/211#issuecomment-564944940
+au FileType python let b:AutoPairs = AutoPairsDefine(
+            \ {
+                \ "f'" : "'", 
+                \ 'f"' : '"', 
+                \ "r'" : "'", 
+                \ 'r"' : '"', 
+                \ "b'" : "'", 
+                \ 'b"' : '"'
+            \ }
+        \ )
+
+let python_highlight_all = 1
 
 au FileType python map <buffer> F :set foldmethod=indent<cr>
 
