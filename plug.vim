@@ -32,7 +32,7 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " Plug g:unmanaged_dir . 'plugin/doge-custom'
 " HTML -----------------------------------------------------------------------
 " Close tags
-Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'markdown'] }
+Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx'] }
 " Jenkinsfile ----------------------------------------------------------------
 Plug 'martinda/Jenkinsfile-vim-syntax'
 " JS -------------------------------------------------------------------------

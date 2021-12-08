@@ -44,6 +44,8 @@ set mat=2
 set mouse=nic
 " Highlight current cursor line
 set cul
+" Hide '~' at end of file
+set fillchars+=eob:\ 
 
 " Splits =====================================================================
 " Open new horizontal splits below current window
