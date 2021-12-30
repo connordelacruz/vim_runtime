@@ -68,8 +68,7 @@ au FileType python set indentkeys-=0#
 " RestructuredText ===========================================================
 au FileType rst setlocal tw=80 fo+=t fo-=l nofoldenable
 " Add auto pair for double backtick (``)
-" TODO +=?
-au FileType rst let g:AutoPairs = {'(':')', '[':']', '{':'}',"'":"'",'"':'"', '```':'```', '"""':'"""', "'''":"'''", "`":"`", "``":"``"}
+au FileType rst let b:AutoPairs = AutoPairsDefine({ '``' : '``' })
 
 " SCSS =======================================================================
 au FileType scss setlocal ts=2 sts=2 sw=2 expandtab
