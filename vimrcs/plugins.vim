@@ -3,26 +3,35 @@
 " ============================================================================
 
 " Colorizer ==================================================================
+" Plugin configs
 let g:Hexokinase_ftEnabled=['css', 'scss', 'html', 'processing']
 let g:Hexokinase_highlighters = ['background', 'sign_column']
+" Command alias (I can never remember the plugin's name)
+command! ColorHighlightToggle :HexokinaseToggle
 " Doge =======================================================================
 " TODO currently unused since doge has problems
-let g:doge_doc_standard_python = 'python_custom'
+" let g:doge_doc_standard_python = 'python_custom'
+" " Aliases
+" let g:doge_filetype_aliases = {
+"             \  'javascript': [
+"             \    'javascript.jsx',
+"             \    'javascriptreact',
+"             \    'javascript.tsx',
+"             \    'typescriptreact',
+"             \    'typescript',
+"             \    'typescript.tsx',
+"             \  ],
+"             \  'java': [
+"             \    'groovy',
+"             \    'processing',
+"             \  ],
+"             \}
+" Fugitive ===================================================================
 " Aliases
-let g:doge_filetype_aliases = {
-            \  'javascript': [
-            \    'javascript.jsx',
-            \    'javascriptreact',
-            \    'javascript.tsx',
-            \    'typescriptreact',
-            \    'typescript',
-            \    'typescript.tsx',
-            \  ],
-            \  'java': [
-            \    'groovy',
-            \    'processing',
-            \  ],
-            \}
+command! Gco :Git commit -av
+command! Gcv :Git commit -v
+command! GaddCurrent :Git add %
+command! GpushHead :Git push -u origin HEAD
 " Grep =======================================================================
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
@@ -93,33 +102,35 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Unknown'   :'?',
                 \ }
 " lightline ==================================================================
+" Lightline configs
 let g:lightline = {
       \ 'active': {
-      \   'left': [ ['mode', 'paste'],
-      \             ['filename', 'readonly', 'fugitive', 'modified'] ],
-      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+          \ 'left': [ ['mode', 'paste'],
+          \           ['filename', 'readonly', 'fugitive', 'modified'] ],
+          \ 'right': [ [ 'lineinfo' ], ['percent'] ]
       \ },
       \ 'inactive': {
-      \   'left': [ ['readonly', 'filename', 'modified'] ],
+          \ 'left': [ ['readonly', 'filename', 'modified'] ],
       \ },
       \ 'component': {
-      \   'readonly': '%{&filetype=="help"?"":&readonly?"[RO]":""}',
-      \   'modified': '%{&filetype=="help"?"":&modified?"*":&modifiable?"":"-"}',
-      \   'fugitive': '%{(exists("*FugitiveHead") && ""!=FugitiveHead())?"".FugitiveHead():""}'
+          \ 'readonly': '%{&filetype=="help"?"":&readonly?"[RO]":""}',
+          \ 'modified': '%{&filetype=="help"?"":&modified?"*":&modifiable?"":"-"}',
+          \ 'fugitive': '%{(exists("*FugitiveHead") && ""!=FugitiveHead())?"".FugitiveHead():""}'
       \ },
       \ 'component_visible_condition': {
-      \   'readonly': '(&filetype!="help"&& &readonly)',
-      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-      \   'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
+          \ 'readonly': '(&filetype!="help"&& &readonly)',
+          \ 'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+          \ 'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
       \ },
       \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': '|', 'right': ' ' }
-      \ }
+      \ 'subseparator': { 'left': '|', 'right': ' ' },
+      \ 'tabline': {
+          \ 'left': [ [ 'tabs' ] ],
+          \ 'right': [ [ '' ] ]
+      \ },
+\ }
+" TODO: custom tab function for tabnum w/ brackets around active? Also change modified symbol from + to *
 
-let g:lightline.tabline = {
-    \ 'left': [ [ 'tabs' ] ],
-    \ 'right': [ [ '' ] ]
-    \ }
 " Set lightline colorscheme to match vim colorscheme
 if exists('g:colors_name') && g:colors_name =~ 'oceanicnext'
     let g:lightline.colorscheme = 'oceanicnext'
