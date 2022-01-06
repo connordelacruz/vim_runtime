@@ -33,8 +33,10 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " HTML -----------------------------------------------------------------------
 " Close tags
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx'] }
-" Jenkinsfile ----------------------------------------------------------------
+" Jenkinsfile / Groovy -------------------------------------------------------
 Plug 'martinda/Jenkinsfile-vim-syntax'
+" Fix Groovy indentation
+Plug 'vim-scripts/groovyindent-unix'
 " JS -------------------------------------------------------------------------
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " Manpage --------------------------------------------------------------------

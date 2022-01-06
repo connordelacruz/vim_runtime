@@ -53,6 +53,8 @@ au FileType python let b:AutoPairs = AutoPairsDefine(
             \ }
         \ )
 
+" TODO: I don't think I came up with these, figure out what they do/ if you'll use em
+
 let python_highlight_all = 1
 
 au FileType python map <buffer> F :set foldmethod=indent<cr>

@@ -96,7 +96,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:lightline = {
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
-      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+      \             ['filename', 'readonly', 'fugitive', 'modified'] ],
       \   'right': [ [ 'lineinfo' ], ['percent'] ]
       \ },
       \ 'inactive': {
@@ -105,7 +105,7 @@ let g:lightline = {
       \ 'component': {
       \   'readonly': '%{&filetype=="help"?"":&readonly?"[RO]":""}',
       \   'modified': '%{&filetype=="help"?"":&modified?"*":&modifiable?"":"-"}',
-      \   'fugitive': '%{exists("*FugitiveHead")?FugitiveHead():""}'
+      \   'fugitive': '%{(exists("*FugitiveHead") && ""!=FugitiveHead())?"".FugitiveHead():""}'
       \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&filetype!="help"&& &readonly)',
