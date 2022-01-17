@@ -5,6 +5,10 @@
 " TODO: MORE <silent> MAPPINGS
 
 " GENERAL ====================================================================
+" Leader ---------------------------------------------------------------------
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+let g:mapleader = " "
 " Navigation -----------------------------------------------------------------
 " Remap VIM 0 to first non-blank character and <Leader>0 to first character
 noremap <leader>0 0
@@ -83,4 +87,3 @@ let g:table_mode_map_prefix='<leader>T'
 " Tabmerge -------------------------------------------------------------------
 nnoremap <leader>tm :Tabmerge<CR>
 nnoremap ,tm :Tabmerge r<CR>
-

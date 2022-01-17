@@ -1,5 +1,5 @@
 " ============================================================================
-" General settings
+" General configs
 " ============================================================================
 
 " General ====================================================================
@@ -11,99 +11,89 @@ filetype indent on
 " Update files modified outside of vim
 set autoread
 
-" Leader =====================================================================
-nnoremap <SPACE> <Nop>
-let mapleader = " "
-let g:mapleader = " "
-
 " UI =========================================================================
 " TODO reorganize section? Kinda generic
 
-" Enable syntax highlighting.
-" See colors.vim for colorscheme configs
+" Enable syntax highlighting
 syntax enable 
 " Number of lines to keep above and below cursor
-set so=7
+set scrolloff=7
 " Enable multiple sign columns
-set scl=auto:9
+set signcolumn=auto:9
 " Show line numbers
-set nu
-" Show ruler TODO REMOVE? Lightline handles this
-set ru
-" Command bar height 
-set ch=1
+set number
 " Backspace behavior in insert mode
-set bs=eol,start,indent
-" Wrap to first/last character if at end/beginning of line
-set ww+=<,>,h,l
+set backspace=eol,start,indent
+" Wrap to first/last character if moving cursor at end/beginning of line
+set whichwrap+=<,>,h,l
 " Show matching brackets when cursor is over one
-set sm
+set showmatch
 " How many tenths of a second to blink when matching brackets
-set mat=2
+set matchtime=2
 " Add cursor support (excluding visual mode)
 set mouse=nic
 " Highlight current cursor line
-set cul
+set cursorline
 " Hide '~' at end of file
 set fillchars+=eob:\ 
 
 " Splits =====================================================================
 " Open new horizontal splits below current window
-set sb
+set splitbelow
 " Open new vertical splits to the right of current window
-set spr
+set splitright
 
 " Menu =======================================================================
-" Enable wildmenu
-set wmnu
-" Ignore case
-set wic
+" Enable wildmenu (enhanced tab completion for commands)
+set wildmenu
+" Ignore case when completing file/dir names
+set wildignorecase
 " Ignore compiled files, VCS, etc
-set wig=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+set wildignore+=*.o,*~,*.pyc,*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 
 " Search =====================================================================
 " Ignore case
-set ic
+set ignorecase
 " Don't ignore case if pattern contains upper case chars
-set scs
+set smartcase
 " Highlight search results 
-set hls
+set hlsearch
 " Unhighlight previous session search when opening vim
 nohls
 " When searching, show results of pattern as it's typed so far 
-set is
+set incsearch
 " Enable regex characters 
 set magic
 
 " Tabs =======================================================================
 " Use spaces instead of tab characters
-set et
+set expandtab
 " Enable smart tab 
-set sta
+set smarttab
 " 1 tab == 4 spaces
-set sw=4
-set ts=4
+set shiftwidth=4
+set tabstop=4
 " Auto indent
-set ai 
+set autoindent 
 " Smart indent
-set si 
+set smartindent
 
 " Wrapping ===================================================================
 " Wrap lines
 set wrap
 " Wrap at breakat character
-set lbr
+set linebreak
 " Disable list so linebreak works properly (disabled by default but just to be sure)
 set nolist
 
 " Performance ================================================================
 " Don't redraw while executing macros
-set lz
+set lazyredraw
 " Apparently, vim has issues with updatetime < 1000 prior to 7.4.427
 if v:version > 704 || (v:version == 704 && has('patch427'))
-    set ut=250
+    set updatetime=250
 else
-    set ut=1000
+    set updatetime=1000
 endif
 
 " GUI ========================================================================
@@ -123,9 +113,9 @@ set guioptions-=L
 
 " Backups and Undo ===========================================================
 " Disable backups and swap file
-set nobk
-set nowb
-set noswf
+set nobackup
+set nowritebackup
+set noswapfile
 " Enable persistent undo (even when you close a buffer)
 try
     set undodir=~/.vim_runtime/temp_dirs/undodir
