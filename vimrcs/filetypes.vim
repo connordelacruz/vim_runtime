@@ -14,7 +14,7 @@ au FileType sh let g:AutoPairsMapSpace=1
 
 " Git ========================================================================
 " Start w/ cursor at the top
-" au FileType gitcommit exec 'norm! gg$'
+au FileType gitcommit exec 'norm gg$' | startinsert!
 au! VimEnter COMMIT_EDITMSG exec 'norm gg$' | startinsert!
 
 " HTML =======================================================================
