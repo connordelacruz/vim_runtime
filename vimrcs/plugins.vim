@@ -32,6 +32,8 @@ command! Gco :Git commit -av
 command! Gcv :Git commit -v
 command! GaddCurrent :Git add %
 command! GpushHead :Git push -u origin HEAD
+" Git gutter =================================================================
+let g:gitgutter_enabled=1
 " Grep =======================================================================
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
@@ -142,8 +144,9 @@ else
 endif
 " Hide redundant insert/replace/visual mode message
 set noshowmode
-" Git gutter =================================================================
-let g:gitgutter_enabled=1
+" open-browser-github ========================================================
+" Open using branch instead of commit hash
+let g:openbrowser_github_always_use_commit_hash = 0
 " Tabmerge ===================================================================
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'

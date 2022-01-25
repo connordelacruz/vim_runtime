@@ -16,6 +16,8 @@ call plug#begin('~/.vim_runtime/plugged')
 " Libraries { ================================================================
 " Note: tbh not sure what plugins use this but I'm afraid to remove it :shrug:
 Plug 'vim-scripts/tlib'
+" Open URLs (required for tyru/open-browser-github.vim)
+Plug 'tyru/open-browser.vim'
 " }
 
 " Colorschemes { =============================================================
@@ -105,6 +107,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Show file status in nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
+" Open GitHub URLs (requires tyru/open-browser.vim)
+Plug 'tyru/open-browser-github.vim'
 " Navigation & Motion --------------------------------------------------------
 " Vim motions for camelCase and snake_case
 Plug 'bkad/CamelCaseMotion'

@@ -76,6 +76,13 @@ nmap <leader>gu <Plug>(GitGutterUndoHunk)
 nnoremap <leader>nn :NERDTreeToggle<cr>
 nnoremap <leader>nb :NERDTreeFromBookmark<Space>
 nnoremap <leader>nf :NERDTreeFind<cr>
+" open-browser-github --------------------------------------------------------
+" Open current file
+nnoremap <leader>gf :OpenGithubFile<cr>
+" Open current line
+nnoremap <leader>gl :.OpenGithubFile<cr>
+" Open selected lines
+vnoremap <leader>gl :'<,'>OpenGithubFile<cr>
 " Processing -----------------------------------------------------------------
 " Run
 au FileType processing nnoremap <buffer> ,R :RunProcessing<cr>
