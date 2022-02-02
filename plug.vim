@@ -54,6 +54,8 @@ Plug 'lambdalisue/vim-manpager'
 " Markdown -------------------------------------------------------------------
 " Generate table of contents
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
+" Markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 " Processing -----------------------------------------------------------------
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
 " Python ---------------------------------------------------------------------
