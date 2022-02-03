@@ -81,10 +81,15 @@ Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'Yggdroot/indentLine'
 " Status line
 Plug 'itchyny/lightline.vim'
-" File explorer
-Plug 'preservim/nerdtree'
 " Fancy start screen
 Plug 'mhinz/vim-startify'
+" NerdTree -------------------------------------------------------------------
+" File explorer
+Plug 'preservim/nerdtree'
+" Show file status in nerdtree
+Plug 'Xuyuanp/nerdtree-git-plugin'
+" Syntax highlighting (for use w/ vim-devicons, which is included at the end)
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Editing --------------------------------------------------------------------
 " Insert and delete parens, quotes, etc in pairs
 Plug 'jiangmiao/auto-pairs'
@@ -110,8 +115,6 @@ Plug 'dhruvasagar/vim-table-mode'
 Plug 'tpope/vim-fugitive'
 " Show changes in the gutter
 Plug 'airblade/vim-gitgutter'
-" Show file status in nerdtree
-Plug 'Xuyuanp/nerdtree-git-plugin'
 " Open GitHub URLs (requires tyru/open-browser.vim)
 Plug 'tyru/open-browser-github.vim'
 " Navigation & Motion --------------------------------------------------------

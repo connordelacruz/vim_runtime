@@ -91,6 +91,7 @@ fu s:disable_lightline_on_nerdtree() abort
     call timer_start(0, {-> nerdtree_winnr && setwinvar(nerdtree_winnr, '&stl', '%#Normal#')})
 endfu
 " NERDTREE GIT PLUGIN --------------------------------------------------------
+" Custom symbols
 let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Modified'  :'*',
                 \ 'Staged'    :'+',
@@ -98,11 +99,14 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Renamed'   :'→',
                 \ 'Unmerged'  :'=',
                 \ 'Deleted'   :'-',
-                \ 'Dirty'     :'x',
+                \ 'Dirty'     :'~',
                 \ 'Clean'     :'✓',
                 \ 'Ignored'   :'▫',
                 \ 'Unknown'   :'?',
                 \ }
+" TODO: figure out how to customize colors
+" NERDTREE SYNTAX HIGHLIGHTING -----------------------------------------------
+" TODO: customize colors https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
 " lightline ==================================================================
 " Lightline configs
 let g:lightline = {
