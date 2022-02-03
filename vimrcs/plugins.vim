@@ -157,18 +157,29 @@ lua << EOF
       sign_priority = 15,
       -- Highlight configs
       highlight = {
-          -- pattern or table of patterns, used for highlightng (vim regex)
+          -- pattern or table of patterns, used for highlighting (vim regex)
+          -- (Same as default except without ':') TODO: but maybe we should use ':'
           pattern = [[.*<(KEYWORDS)\s*]], 
           },
       -- list of named colors where we try to extract the guifg from the
       -- list of hilight groups or use the hex color if hl not found as a fallback
-      -- TODO: custom color definitions for some keywords, maybe use a yellow or orange for to-dos
-      -- TODO: sign_priority
+      -- TESTING:
+      -- TODO: lorem ipsum
+      -- FIX: lorem ipsum
+      -- WARNING: lorem ipsum
+      -- NOTE: lorem ipsum
+      -- PERF: lorem ipsum
+      -- HACK: lorem ipsum
       colors = {
+          -- Red
           error = { "ErrorMsg", "#DC2626" },
+          -- Yellow
           warning = { "Type", "#FBBF24" },
-          info = { "Title", "#2563EB" },
+          -- Orange
+          info = { "Constant", "#2563EB" },
+          -- Cyan
           hint = { "Special", "#10B981" },
+          -- Purple
           default = { "Keyword", "#7C3AED" },
           },
   }
