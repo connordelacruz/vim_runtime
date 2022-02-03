@@ -34,6 +34,9 @@ Plug g:unmanaged_dir . 'colors/lightline-colors'
 " General --------------------------------------------------------------------
 " Color Highlighting
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" To-Do highlighting
+Plug 'nvim-lua/plenary.nvim'
+Plug 'folke/todo-comments.nvim'
 " Doc block generator + custom templates
 " TODO FIGURE OUT AND RE-ENABLE; https://github.com/kkoomen/vim-doge/issues/298
 " TODO OR REMOVE (install, custom templates, configs)!

@@ -150,6 +150,29 @@ let g:openbrowser_github_always_use_commit_hash = 0
 " Tabmerge ===================================================================
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
+" To-Do ======================================================================
+lua << EOF
+  require("todo-comments").setup {
+      -- Priority of column signs (want gitgutter to have higher priority)
+      sign_priority = 15,
+      -- Highlight configs
+      highlight = {
+          -- pattern or table of patterns, used for highlightng (vim regex)
+          pattern = [[.*<(KEYWORDS)\s*]], 
+          },
+      -- list of named colors where we try to extract the guifg from the
+      -- list of hilight groups or use the hex color if hl not found as a fallback
+      -- TODO: custom color definitions for some keywords, maybe use a yellow or orange for to-dos
+      -- TODO: sign_priority
+      colors = {
+          error = { "ErrorMsg", "#DC2626" },
+          warning = { "Type", "#FBBF24" },
+          info = { "Title", "#2563EB" },
+          hint = { "Special", "#10B981" },
+          default = { "Keyword", "#7C3AED" },
+          },
+  }
+EOF
 " Startify ===================================================================
 let s:header = [
             \ '                              ',
