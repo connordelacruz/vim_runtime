@@ -91,6 +91,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " TODO: customize colors https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
 " lightline ==================================================================
 " Lightline configs
+" NOTE: for powerline font separators in iTerm2, should enable "Use built-in Powerline glyphs" for profile for best alignment
+" https://iterm2.com/documentation-preferences-profiles-text.html
 let g:lightline = {
       \ 'active': {
           \ 'left': [ ['mode', 'paste'],
@@ -110,12 +112,14 @@ let g:lightline = {
           \ 'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
           \ 'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
       \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': '|', 'right': ' ' },
+      \ 'separator': { 'left': '', 'right': '' },
+      \ 'subseparator': { 'left': '', 'right': '' },
       \ 'tabline': {
           \ 'left': [ [ 'tabs' ] ],
           \ 'right': [ [ '' ] ]
       \ },
+      \ 'tabline_separator': { 'left': ' ', 'right': ' ' },
+      \ 'tabline_subseparator': { 'left': ' ', 'right': ' ' },
 \ }
 " TODO: custom tab function for tabnum w/ brackets around active? Also change modified symbol from + to *
 
