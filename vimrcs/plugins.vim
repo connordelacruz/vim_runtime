@@ -8,24 +8,6 @@ let g:Hexokinase_ftEnabled=['css', 'scss', 'html', 'processing']
 let g:Hexokinase_highlighters = ['background', 'sign_column']
 " Command alias (I can never remember the plugin's name)
 command! ColorHighlightToggle :HexokinaseToggle
-" Doge =======================================================================
-" TODO currently unused since doge has problems
-" let g:doge_doc_standard_python = 'python_custom'
-" " Aliases
-" let g:doge_filetype_aliases = {
-"             \  'javascript': [
-"             \    'javascript.jsx',
-"             \    'javascriptreact',
-"             \    'javascript.tsx',
-"             \    'typescriptreact',
-"             \    'typescript',
-"             \    'typescript.tsx',
-"             \  ],
-"             \  'java': [
-"             \    'groovy',
-"             \    'processing',
-"             \  ],
-"             \}
 " Fugitive ===================================================================
 " Aliases
 command! Gco :Git commit -av
