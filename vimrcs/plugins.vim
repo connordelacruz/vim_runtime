@@ -164,9 +164,9 @@ lua << EOF
           -- Red
           error = { "ErrorMsg", "#DC2626" },
           -- Yellow
-          warning = { "Type", "#FBBF24" },
+          info = { "Todo", "#FBBF24" },
           -- Orange
-          info = { "Constant", "#2563EB" },
+          warning = { "Constant", "#2563EB" },
           -- Cyan
           hint = { "Special", "#10B981" },
           -- Purple

@@ -49,6 +49,7 @@ endfunction
 command! -nargs=* FillLine call FillLine(<f-args>)
 
 " Misc =======================================================================
-
 " Caps lock struggles
 command W echoerr 'Check your CAPS LOCK, bud'
+" Alias for hitest.vim
+command Hitest source $VIMRUNTIME/syntax/hitest.vim
