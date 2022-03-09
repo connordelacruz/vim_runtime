@@ -125,27 +125,11 @@ endtry
 
 " Buffers ====================================================================
 " Specify the behavior when switching between buffers 
-" TODO explain configs, figure out why it was in a try/catch?
-try
-  set switchbuf=useopen,usetab,newtab
-  set stal=2
-catch
-endtry
+set switchbuf=useopen,usetab,newtab
 
-" Status Line ================================================================
-" Always show the status line
-set laststatus=2
-" Format the status line
-" TODO REMOVE? Lightline handles this?
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-" Returns true if paste mode is enabled
-" Used for status line format
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    endif
-    return ''
-endfunction
+" Tabline ====================================================================
+" Always show tabline
+set showtabline=2
 
 " Saving =====================================================================
 " Create directories on save if filepath doesn't exist
@@ -169,9 +153,9 @@ autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_con
 
 " Encoding ===================================================================
 " utf8 encoding
-set enc=utf8
-" Use Unix as the standard file type 
-set ffs=unix,dos,mac
+set encoding=utf8
+" Use Unix as the standard file type for end-of-line
+set fileformats=unix,dos,mac
 
 " Misc =======================================================================
 " TODO ORGANIZE?
