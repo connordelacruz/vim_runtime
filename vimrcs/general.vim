@@ -13,7 +13,6 @@ set autoread
 
 " UI =========================================================================
 " TODO reorganize section? Kinda generic
-
 " Enable syntax highlighting
 syntax enable 
 " Number of lines to keep above and below cursor
@@ -111,6 +110,10 @@ set guioptions-=R
 set guioptions-=l
 set guioptions-=L
 
+" Editing ====================================================================
+" Return to last edit position when opening files 
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
 " Backups and Undo ===========================================================
 " Disable backups and swap file
 set nobackup
@@ -133,11 +136,6 @@ set showtabline=2
 
 " Saving =====================================================================
 " Create directories on save if filepath doesn't exist
-augroup BWCCreateDir
-    autocmd!
-    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
-augroup END
-
 function s:MkNonExDir(file, buf)
     if empty(getbufvar(a:buf, '&buftype')) && a:file!~#'\v^\w+\:\/'
         let dir=fnamemodify(a:file, ':h')
@@ -146,44 +144,13 @@ function s:MkNonExDir(file, buf)
         endif
     endif
 endfunction
+augroup BWCCreateDir
+    autocmd!
+    autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
+augroup END
 
-" Reloding vimrcs ============================================================
-" TODO: do this for vimrcs/ files too?
-autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
-
-" Encoding ===================================================================
-" utf8 encoding
-set encoding=utf8
-" Use Unix as the standard file type for end-of-line
-set fileformats=unix,dos,mac
-
-" Misc =======================================================================
-" TODO ORGANIZE?
-
-" Incrementing for alphabet, octal, and hex sequences
-set nf=alpha,octal,hex
-
-" Avoid garbled characters in Chinese language windows OS
-let $LANG='en' 
-set langmenu=en
-source $VIMRUNTIME/delmenu.vim
-source $VIMRUNTIME/menu.vim
-
-" No annoying sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
-" Properly disable sound on errors on MacVim
-if has("gui_macvim")
-    autocmd GUIEnter * set vb t_vb=
-endif
-
-" Return to last edit position when opening files 
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-
-" TODO MOVE TO functions.vim, variable in filetypes.vim
 " Delete trailing white space on save
+" TODO MOVE TO functions.vim, variable in filetypes.vim? Also s: prefix like above?
 fun! CleanExtraSpaces()
     let save_cursor = getpos(".")
     let old_query = getreg('/')
@@ -193,5 +160,27 @@ fun! CleanExtraSpaces()
 endfun
 if has("autocmd")
     autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee,*.scss :call CleanExtraSpaces()
+endif
+
+" Reloading vimrcs ===========================================================
+" TODO: do this for vimrcs/ files too
+autocmd! bufwritepost ~/.vim_runtime/my_configs.vim source ~/.vim_runtime/my_configs.vim
+
+" Encoding ===================================================================
+" utf8 encoding
+set encoding=utf8
+" Use Unix as the standard file type for end-of-line
+set fileformats=unix,dos,mac
+
+" Misc =======================================================================
+" Incrementing for alphabet, octal, and hex sequences
+set nrformats=alpha,octal,hex
+" No annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+" Properly disable sound on errors on MacVim
+if has("gui_macvim")
+    autocmd GUIEnter * set vb t_vb=
 endif
 

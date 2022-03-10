@@ -5,6 +5,9 @@
 " TODO: MORE <silent> MAPPINGS
 
 " GENERAL ====================================================================
+" Timeout Length -------------------------------------------------------------
+" Time in milliseconds to wait for a mapped sequence to complete
+set timeoutlen=500
 " Leader ---------------------------------------------------------------------
 nnoremap <SPACE> <Nop>
 let mapleader = " "
@@ -37,6 +40,7 @@ nnoremap <leader>P "*P
 vnoremap <leader>p "*p
 vnoremap <leader>P "*P
 " TODO: additional mappings for smart paste: https://vim.fandom.com/wiki/Smart_paste
+" TODO: may be same as above but https://vim.fandom.com/wiki/Format_pasted_text_automatically
 " Quick Surround -------------------------------------------------------------
 " TODO: more intuitive mappings?
 vnoremap <leader>1 <esc>`>a)<esc>`<i(<esc>
