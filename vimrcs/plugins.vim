@@ -10,7 +10,7 @@ let g:Hexokinase_highlighters = ['background', 'sign_column']
 command! ColorHighlightToggle :HexokinaseToggle
 " Fugitive ===================================================================
 " Aliases
-command! Gco :Git commit -av
+command! Gco :silent w | :Git commit -av
 command! Gcv :Git commit -v
 command! GaddCurrent :Git add %
 command! GpushHead :Git push -u origin HEAD
@@ -40,11 +40,15 @@ autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTa
 let NERDTreeOpenByDefault=1
 " Don't open by default for windows narrower than this
 let NERDDefaultMinWidth=130
+" Don't open by default if directory has too many files
+let NERDDefaultMaxFiles=80
 " If opening by default, exclude these filetypes
 let noNERD = ['gitcommit', 'man']
 if NERDTreeOpenByDefault
     " Start NERDTree. If a file is specified, move the cursor to its window.
-    " Will not start if file is in noNERD or window is too narrow or filetype is in noNERD.
+    " Will not start if file is in noNERD or window is too narrow or filetype
+    " is in noNERD, or if the number of files in the target directory exceed
+    " NERDDefaultMaxFiles.
     " If no args are provided (and file isn't a man page), open Startify.
     " Note: updates lightline after switching windows to fix a bug with the
     " mode not showing.
@@ -54,7 +58,9 @@ if NERDTreeOpenByDefault
                     \ if !argc() && &ft != 'man' 
                     \ | Startify
                     \ | endif
-                    \ | if index(noNERD, &ft) < 0 && winwidth('%') >= NERDDefaultMinWidth 
+                    \ | if index(noNERD, &ft) < 0 && 
+                        \ winwidth('%') >= NERDDefaultMinWidth &&
+                        \ len(split(globpath(expand('%:p:h'), '*'), '\n')) <= NERDDefaultMaxFiles
                     \ | NERDTree %:p:h 
                     \ | wincmd p | call lightline#update() 
     augroup END
