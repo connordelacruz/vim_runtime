@@ -42,6 +42,7 @@ au BufNewFile,BufRead *.jinja set syntax=htmljinja
 au BufNewFile,BufRead *.pyde set ft=python
 " Fix auto-pairs not working with prefixed strings
 " https://github.com/jiangmiao/auto-pairs/issues/211#issuecomment-564944940
+" TODO: autopair issues w/ closing quote, turns into 3 quotes..
 au FileType python let b:AutoPairs = AutoPairsDefine(
             \ {
                 \ "f'" : "'", 
