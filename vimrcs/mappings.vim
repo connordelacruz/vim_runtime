@@ -69,6 +69,9 @@ nnoremap ,f :FillLine<cr>
 " CamelCaseMotion ------------------------------------------------------------
 " TODO: see if there's a way to toggle on/off instead of pressing leader each time?
 call camelcasemotion#CreateMotionMappings('<leader>')
+" Fugitive -------------------------------------------------------------------
+" Quick save and commit all
+nnoremap ,g :Gco<cr>
 " GitGutter ------------------------------------------------------------------
 " Next/prev hunk
 nmap ]g <Plug>(GitGutterNextHunk)

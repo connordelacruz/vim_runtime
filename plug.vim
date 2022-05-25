@@ -84,10 +84,10 @@ Plug 'preservim/nerdtree'
 " Show file status in nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Syntax highlighting (for use w/ vim-devicons, which is included at the end)
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" TODO: REMOVE?
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " TODO: use this for colors instead?
 " Plug 'bryanmylee/vim-colorscheme-icons'
-" TODO: Try https://github.com/preservim/tagbar
 " Editing --------------------------------------------------------------------
 " Insert and delete parens, quotes, etc in pairs
 Plug 'jiangmiao/auto-pairs'
