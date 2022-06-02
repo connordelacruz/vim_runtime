@@ -78,6 +78,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 " Fancy start screen
 Plug 'mhinz/vim-startify'
+" Register preview
+Plug 'junegunn/vim-peekaboo'
 " NerdTree -------------------------------------------------------------------
 " File explorer
 Plug 'preservim/nerdtree'

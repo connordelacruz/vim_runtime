@@ -143,6 +143,9 @@ set noshowmode
 " open-browser-github ========================================================
 " Open using branch instead of commit hash
 let g:openbrowser_github_always_use_commit_hash = 0
+" peekaboo ===================================================================
+" Where to open window
+let g:peekaboo_window = 'botright 25new'
 " Tabmerge ===================================================================
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
