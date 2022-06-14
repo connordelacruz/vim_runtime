@@ -152,8 +152,10 @@ let g:tm_default_location = 'b'
 " To-Do ======================================================================
 lua << EOF
   require("todo-comments").setup {
+      -- Hide signs in column (don't really use and may improve performance)
+      signs = false,
       -- Priority of column signs (want gitgutter to have higher priority)
-      sign_priority = 15,
+      -- sign_priority = 15,
       -- Highlight configs
       highlight = {
           -- pattern or table of patterns, used for highlighting (vim regex)
