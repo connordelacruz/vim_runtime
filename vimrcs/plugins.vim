@@ -4,7 +4,7 @@
 
 " Colorizer ==================================================================
 " Plugin configs
-let g:Hexokinase_ftEnabled=['css', 'scss', 'html', 'processing']
+let g:Hexokinase_ftEnabled=['css', 'scss', 'html']
 let g:Hexokinase_highlighters = ['background', 'sign_column']
 " Command alias (I can never remember the plugin's name)
 command! ColorHighlightToggle :HexokinaseToggle
@@ -155,7 +155,7 @@ lua << EOF
       -- Hide signs in column (don't really use and may improve performance)
       signs = false,
       -- Priority of column signs (want gitgutter to have higher priority)
-      -- sign_priority = 15,
+      sign_priority = 15,
       -- Highlight configs
       highlight = {
           -- pattern or table of patterns, used for highlighting (vim regex)

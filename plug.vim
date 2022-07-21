@@ -46,6 +46,8 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'vim-scripts/groovyindent-unix'
 " JS -------------------------------------------------------------------------
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" Log Files ------------------------------------------------------------------
+Plug 'mtdl9/vim-log-highlighting', { 'for': 'log' }
 " Manpage --------------------------------------------------------------------
 " Use vim as a manpager
 Plug 'lambdalisue/vim-manpager'
