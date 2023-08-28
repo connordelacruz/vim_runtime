@@ -15,7 +15,8 @@ call plug#begin('~/.vim_runtime/plugged')
 
 " Libraries { ================================================================
 " Note: tbh not sure what plugins use this but I'm afraid to remove it :shrug:
-Plug 'vim-scripts/tlib'
+" TODO: remove this eventually if nothing breaks:
+" Plug 'vim-scripts/tlib'
 " Open URLs (required for tyru/open-browser-github.vim)
 Plug 'tyru/open-browser.vim'
 " }
@@ -39,13 +40,18 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/todo-comments.nvim'
 " HTML -----------------------------------------------------------------------
 " Close tags
-Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx'] }
+" TODO: for javascript too, hopefully won't break shit?
+Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'javascript'] }
 " Jenkinsfile / Groovy -------------------------------------------------------
 Plug 'martinda/Jenkinsfile-vim-syntax'
 " Fix Groovy indentation
 Plug 'vim-scripts/groovyindent-unix'
 " JS -------------------------------------------------------------------------
+" TODO: replace w/ https://github.com/yuezk/vim-js 
+" Improved JS highlighting
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+" JSX
+Plug 'maxmellon/vim-jsx-pretty'
 " Log Files ------------------------------------------------------------------
 Plug 'mtdl9/vim-log-highlighting', { 'for': 'log' }
 " Manpage --------------------------------------------------------------------
