@@ -10,7 +10,7 @@ let g:Hexokinase_highlighters = ['background', 'sign_column']
 command! ColorHighlightToggle :HexokinaseToggle
 " Fugitive ===================================================================
 " Aliases
-command! Gco :silent w | :Git commit -av
+command! Gco :silent w | :Git commit -av | exec 'norm gg$' | startinsert!
 command! Gcv :Git commit -v
 command! GaddCurrent :Git add %
 command! GpushHead :Git push -u origin HEAD
