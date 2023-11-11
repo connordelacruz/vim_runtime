@@ -118,6 +118,9 @@ Plug 'dhruvasagar/vim-table-mode'
 " TODO TRY OUT:
 " Auto-increment sequences of numbers or letters
 " Plug 'triglav/vim-visual-increment'
+" Text alignment -------------------------------------------------------------
+Plug 'godlygeek/tabular'
+
 " Git ------------------------------------------------------------------------
 " Git wrapper
 Plug 'tpope/vim-fugitive'
