@@ -152,8 +152,6 @@ Plug g:unmanaged_dir . 'plugin/set_tabline'
 " Misc -----------------------------------------------------------------------
 " Increase happiness
 Plug 'idanarye/vim-smile'
-" Devicons (must be loaded after relevant plugins)
-Plug 'ryanoasis/vim-devicons'
 " }
 
 " Local Plugins { ============================================================
@@ -161,5 +159,10 @@ try
     source ~/.vim_runtime/local_plug.vim
 catch
 endtry
+" }
+
+" Post { =====================================================================
+" Devicons (must be loaded after relevant plugins)
+Plug 'ryanoasis/vim-devicons'
 " }
 call plug#end()
