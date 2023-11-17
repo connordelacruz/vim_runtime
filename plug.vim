@@ -171,9 +171,6 @@ Plug 'bronson/vim-visual-star-search'
 Plug 'sangdol/mintabline.vim'
 " Merge tabs into splits
 Plug 'connordelacruz/Tabmerge'
-" Customize tabline
-" TODO REMOVE
-" Plug g:unmanaged_dir . 'plugin/set_tabline'
 
 " Misc -----------------------------------------------------------------------
 " Increase happiness
