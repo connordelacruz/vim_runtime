@@ -14,13 +14,9 @@ call plug#begin('~/.vim_runtime/plugged')
 " ============================================================================
 
 " Libraries { ================================================================
-" Note: tbh not sure what plugins use this but I'm afraid to remove it :shrug:
-" TODO: remove this eventually if nothing breaks:
-" Plug 'vim-scripts/tlib'
 " Open URLs (required for tyru/open-browser-github.vim)
 Plug 'tyru/open-browser.vim'
-
-" }
+" } ==========================================================================
 
 " Colorschemes { =============================================================
 
@@ -32,8 +28,7 @@ Plug 'joshdick/onedark.vim'
 
 " Lightline ------------------------------------------------------------------
 Plug g:unmanaged_dir . 'colors/lightline-colors'
-
-" }
+" } ==========================================================================
 
 " Syntax & Filetype-Specific { ===============================================
 
@@ -46,7 +41,6 @@ Plug 'folke/todo-comments.nvim'
 
 " HTML -----------------------------------------------------------------------
 " Close tags
-" TODO: for javascript too, hopefully won't break shit?
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'javascript'] }
 
 " Jenkinsfile / Groovy -------------------------------------------------------
@@ -91,8 +85,7 @@ Plug g:unmanaged_dir . 'syntax/rst-headings', { 'for': 'rst' }
 
 " SCSS -----------------------------------------------------------------------
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
-
-" }
+" } ==========================================================================
 
 " Features { =================================================================
 
@@ -111,11 +104,6 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'preservim/nerdtree'
 " Show file status in nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" Syntax highlighting (for use w/ vim-devicons, which is included at the end)
-" TODO: REMOVE?
-" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-" TODO: use this for colors instead?
-" Plug 'bryanmylee/vim-colorscheme-icons'
 
 " Editing --------------------------------------------------------------------
 " Insert and delete parens, quotes, etc in pairs
@@ -134,9 +122,7 @@ Plug g:unmanaged_dir . 'plugin/surround-mappings'
 " Create tables in vim
 " TODO: filetypes 
 Plug 'dhruvasagar/vim-table-mode'
-" TODO TRY OUT:
-" Auto-increment sequences of numbers or letters
-" Plug 'triglav/vim-visual-increment'
+
 " Text alignment -------------------------------------------------------------
 Plug 'godlygeek/tabular'
 
@@ -175,18 +161,18 @@ Plug 'connordelacruz/Tabmerge'
 " Misc -----------------------------------------------------------------------
 " Increase happiness
 Plug 'idanarye/vim-smile'
-" }
+" } ==========================================================================
 
 " Local Plugins { ============================================================
 try
     source ~/.vim_runtime/local_plug.vim
 catch
 endtry
-" }
+" } ==========================================================================
 
 " Post { =====================================================================
 " Devicons (must be loaded after relevant plugins)
 Plug 'ryanoasis/vim-devicons'
 
-" }
+" } ==========================================================================
 call plug#end()
