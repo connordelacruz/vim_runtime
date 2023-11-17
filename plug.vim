@@ -19,51 +19,64 @@ call plug#begin('~/.vim_runtime/plugged')
 " Plug 'vim-scripts/tlib'
 " Open URLs (required for tyru/open-browser-github.vim)
 Plug 'tyru/open-browser.vim'
+
 " }
 
 " Colorschemes { =============================================================
+
 " Editor ---------------------------------------------------------------------
 " Selection of base16 schemes
 Plug g:unmanaged_dir . 'colors/base16'
 " Fallback for less colorful terminals
 Plug 'joshdick/onedark.vim'
+
 " Lightline ------------------------------------------------------------------
 Plug g:unmanaged_dir . 'colors/lightline-colors'
+
 " }
 
 " Syntax & Filetype-Specific { ===============================================
+
 " General --------------------------------------------------------------------
 " Color Highlighting
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 " To-Do highlighting
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/todo-comments.nvim'
+
 " HTML -----------------------------------------------------------------------
 " Close tags
 " TODO: for javascript too, hopefully won't break shit?
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'javascript'] }
+
 " Jenkinsfile / Groovy -------------------------------------------------------
 Plug 'martinda/Jenkinsfile-vim-syntax'
 " Fix Groovy indentation
 Plug 'vim-scripts/groovyindent-unix'
+
 " JS -------------------------------------------------------------------------
 " TODO: replace w/ https://github.com/yuezk/vim-js 
 " Improved JS highlighting
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 " JSX
 Plug 'maxmellon/vim-jsx-pretty'
+
 " Log Files ------------------------------------------------------------------
 Plug 'mtdl9/vim-log-highlighting', { 'for': 'log' }
+
 " Manpage --------------------------------------------------------------------
 " Use vim as a manpager
 Plug 'lambdalisue/vim-manpager'
+
 " Markdown -------------------------------------------------------------------
 " Generate table of contents
 Plug 'mzlogin/vim-markdown-toc', { 'for': 'markdown' }
 " Markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
 " Processing -----------------------------------------------------------------
 Plug 'sophacles/vim-processing', { 'for': 'processing' }
+
 " Python ---------------------------------------------------------------------
 " PEP8-compliant indents
 Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
@@ -71,14 +84,18 @@ Plug 'Vimjas/vim-python-pep8-indent', { 'for': 'python' }
 Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 " Enhanced syntax highlighting
 Plug 'vim-python/python-syntax', { 'for': 'python' }
+
 " RST ------------------------------------------------------------------------
 " Auto-format headings while typing
 Plug g:unmanaged_dir . 'syntax/rst-headings', { 'for': 'rst' }
+
 " SCSS -----------------------------------------------------------------------
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
+
 " }
 
 " Features { =================================================================
+
 " Core -----------------------------------------------------------------------
 " Visualize indentation
 Plug 'Yggdroot/indentLine'
@@ -88,6 +105,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'
 " Register preview
 Plug 'junegunn/vim-peekaboo'
+
 " NerdTree -------------------------------------------------------------------
 " File explorer
 Plug 'preservim/nerdtree'
@@ -98,6 +116,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " TODO: use this for colors instead?
 " Plug 'bryanmylee/vim-colorscheme-icons'
+
 " Editing --------------------------------------------------------------------
 " Insert and delete parens, quotes, etc in pairs
 Plug 'jiangmiao/auto-pairs'
@@ -128,11 +147,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 " Open GitHub URLs (requires tyru/open-browser.vim)
 Plug 'tyru/open-browser-github.vim'
+
 " Navigation & Motion --------------------------------------------------------
 " Vim motions for camelCase and snake_case
 Plug 'bkad/CamelCaseMotion'
 " Improve % matching
 Plug 'tmhedberg/matchit'
+
 " Search ---------------------------------------------------------------------
 " Search and replace tools + some other neat things
 Plug 'tpope/vim-abolish'
@@ -144,11 +165,16 @@ Plug 'connordelacruz/vim-long-line-search'
 Plug g:unmanaged_dir . 'plugin/tasklist'
 " Select text in visual mode and search for it with *
 Plug 'bronson/vim-visual-star-search'
+
 " Tabs -----------------------------------------------------------------------
+" Nicer tabline
+Plug 'sangdol/mintabline.vim'
 " Merge tabs into splits
 Plug 'connordelacruz/Tabmerge'
 " Customize tabline
-Plug g:unmanaged_dir . 'plugin/set_tabline'
+" TODO REMOVE
+" Plug g:unmanaged_dir . 'plugin/set_tabline'
+
 " Misc -----------------------------------------------------------------------
 " Increase happiness
 Plug 'idanarye/vim-smile'
@@ -164,5 +190,6 @@ endtry
 " Post { =====================================================================
 " Devicons (must be loaded after relevant plugins)
 Plug 'ryanoasis/vim-devicons'
+
 " }
 call plug#end()

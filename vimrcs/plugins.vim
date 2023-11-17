@@ -100,33 +100,36 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " NOTE: for powerline font separators in iTerm2, should enable "Use built-in Powerline glyphs" for profile for best alignment
 " https://iterm2.com/documentation-preferences-profiles-text.html
 let g:lightline = {
-      \ 'active': {
-          \ 'left': [ ['mode', 'paste'],
-          \           ['filename', 'readonly', 'fugitive', 'modified'] ],
-          \ 'right': [ [ 'lineinfo' ], ['percent'] ]
-      \ },
-      \ 'inactive': {
-          \ 'left': [ ['readonly', 'filename', 'modified'] ],
-      \ },
-      \ 'component': {
-          \ 'readonly': '%{&filetype=="help"?"":&readonly?"[RO]":""}',
-          \ 'modified': '%{&filetype=="help"?"":&modified?"*":&modifiable?"":"-"}',
-          \ 'fugitive': '%{(exists("*FugitiveHead") && ""!=FugitiveHead())?"".FugitiveHead():""}'
-      \ },
-      \ 'component_visible_condition': {
-          \ 'readonly': '(&filetype!="help"&& &readonly)',
-          \ 'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-          \ 'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
-      \ },
-      \ 'separator': { 'left': '', 'right': '' },
-      \ 'subseparator': { 'left': '|', 'right': '|' },
-      \ 'tabline': {
-          \ 'left': [ [ 'tabs' ] ],
-          \ 'right': [ [ '' ] ]
-      \ },
-      \ 'tabline_separator': { 'left': ' ', 'right': ' ' },
-      \ 'tabline_subseparator': { 'left': ' ', 'right': ' ' },
-\ }
+            \ 'enable': {
+            \   'tabline': 0
+            \ },
+            \ 'active': {
+            \ 'left': [ ['mode', 'paste'],
+            \           ['filename', 'readonly', 'fugitive', 'modified'] ],
+            \ 'right': [ [ 'lineinfo' ], ['percent'] ]
+            \ },
+            \ 'inactive': {
+            \ 'left': [ ['readonly', 'filename', 'modified'] ],
+            \ },
+            \ 'component': {
+            \ 'readonly': '%{&filetype=="help"?"":&readonly?"[RO]":""}',
+            \ 'modified': '%{&filetype=="help"?"":&modified?"*":&modifiable?"":"-"}',
+            \ 'fugitive': '%{(exists("*FugitiveHead") && ""!=FugitiveHead())?"".FugitiveHead():""}'
+            \ },
+            \ 'component_visible_condition': {
+            \ 'readonly': '(&filetype!="help"&& &readonly)',
+            \ 'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+            \ 'fugitive': '(exists("*FugitiveHead") && ""!=FugitiveHead())'
+            \ },
+            \ 'separator': { 'left': '', 'right': '' },
+            \ 'subseparator': { 'left': '|', 'right': '|' },
+            \ 'tabline': {
+            \ 'left': [ [ 'tabs' ] ],
+            \ 'right': [ [ '' ] ]
+            \ },
+            \ 'tabline_separator': { 'left': ' ', 'right': ' ' },
+            \ 'tabline_subseparator': { 'left': ' ', 'right': ' ' },
+            \ }
 " TODO: custom tab function for tabnum w/ brackets around active? Also change modified symbol from + to *
 
 " Set lightline colorscheme to match vim colorscheme
@@ -146,6 +149,9 @@ let g:openbrowser_github_always_use_commit_hash = 0
 " peekaboo ===================================================================
 " Where to open window
 let g:peekaboo_window = 'botright 25new'
+" vem-tabline ================================================================
+" Enable multiwindow mode
+let g:vem_tabline_multiwindow_mode = 1
 " Tabmerge ===================================================================
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
