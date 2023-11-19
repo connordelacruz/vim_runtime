@@ -16,6 +16,7 @@ command! GaddCurrent :Git add %
 command! GpushHead :Git push -u origin HEAD
 " Git gutter =================================================================
 let g:gitgutter_enabled=1
+
 " Grep =======================================================================
 let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
 set grepprg=/bin/grep\ -nH
@@ -26,6 +27,7 @@ let g:indentLine_color_gui = "#343D46"
 let g:indentLine_fileTypeExclude = ['startify']
 " Disable setting conceal for markdown
 au FileType markdown let g:indentLine_setConceal = 0
+
 " NERDTree ===================================================================
 " CORE CONFIGS ---------------------------------------------------------------
 let g:NERDTreeWinPos = "right"
@@ -123,14 +125,7 @@ let g:lightline = {
             \ },
             \ 'separator': { 'left': '', 'right': '' },
             \ 'subseparator': { 'left': '|', 'right': '|' },
-            \ 'tabline': {
-            \ 'left': [ [ 'tabs' ] ],
-            \ 'right': [ [ '' ] ]
-            \ },
-            \ 'tabline_separator': { 'left': ' ', 'right': ' ' },
-            \ 'tabline_subseparator': { 'left': ' ', 'right': ' ' },
             \ }
-" TODO: custom tab function for tabnum w/ brackets around active? Also change modified symbol from + to *
 
 " Set lightline colorscheme to match vim colorscheme
 if exists('g:colors_name') && g:colors_name =~ 'oceanicnext'
@@ -143,15 +138,17 @@ else
 endif
 " Hide redundant insert/replace/visual mode message
 set noshowmode
+
+" vim-matchup ================================================================
+" Offscreen popup window
+let g:matchup_matchparen_offscreen = {'method': 'popup'}
+
 " open-browser-github ========================================================
 " Open using branch instead of commit hash
 let g:openbrowser_github_always_use_commit_hash = 0
 " peekaboo ===================================================================
 " Where to open window
 let g:peekaboo_window = 'botright 25new'
-" vem-tabline ================================================================
-" Enable multiwindow mode
-let g:vem_tabline_multiwindow_mode = 1
 " Tabmerge ===================================================================
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'

@@ -120,10 +120,10 @@ Plug 'tpope/vim-surround'
 " Custom surround mappings
 Plug g:unmanaged_dir . 'plugin/surround-mappings'
 " Create tables in vim
-" TODO: filetypes 
 Plug 'dhruvasagar/vim-table-mode'
 
 " Text alignment -------------------------------------------------------------
+" Tabular alignment
 Plug 'godlygeek/tabular'
 
 " Git ------------------------------------------------------------------------
@@ -138,7 +138,7 @@ Plug 'tyru/open-browser-github.vim'
 " Vim motions for camelCase and snake_case
 Plug 'bkad/CamelCaseMotion'
 " Improve % matching
-Plug 'tmhedberg/matchit'
+Plug 'andymass/vim-matchup'
 
 " Search ---------------------------------------------------------------------
 " Search and replace tools + some other neat things
