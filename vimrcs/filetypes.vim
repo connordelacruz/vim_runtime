@@ -54,17 +54,10 @@ au FileType python let b:AutoPairs = AutoPairsDefine(
             \ }
         \ )
 
-" TODO: I don't think I came up with these, figure out what they do/ if you'll use em
-
-let python_highlight_all = 1
-
-au FileType python map <buffer> <leader>1 /class 
-au FileType python map <buffer> <leader>2 /def 
-au FileType python map <buffer> <leader>C ?class 
-au FileType python map <buffer> <leader>D ?def 
-au FileType python set cindent
-au FileType python set cinkeys-=0#
-au FileType python set indentkeys-=0#
+" TODO do these do anything? prob remove
+" au FileType python set cindent
+" au FileType python set cinkeys-=0#
+" au FileType python set indentkeys-=0#
 
 " RestructuredText ===========================================================
 au FileType rst setlocal tw=80 fo+=t fo-=l nofoldenable
