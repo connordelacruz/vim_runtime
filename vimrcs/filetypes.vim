@@ -58,8 +58,6 @@ au FileType python let b:AutoPairs = AutoPairsDefine(
 
 let python_highlight_all = 1
 
-au FileType python map <buffer> F :set foldmethod=indent<cr>
-
 au FileType python map <buffer> <leader>1 /class 
 au FileType python map <buffer> <leader>2 /def 
 au FileType python map <buffer> <leader>C ?class 
