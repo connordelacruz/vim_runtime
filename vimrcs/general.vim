@@ -18,7 +18,11 @@ syntax enable
 " Number of lines to keep above and below cursor
 set scrolloff=7
 " Enable multiple sign columns
-set signcolumn=auto:9
+if has('nvim')
+    set signcolumn=auto:9
+else
+    set signcolumn=auto
+endif
 " Show line numbers
 set number
 " Backspace behavior in insert mode

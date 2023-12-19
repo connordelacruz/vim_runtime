@@ -152,7 +152,37 @@ let g:peekaboo_window = 'botright 25new'
 " Tabmerge ===================================================================
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
+" Startify ===================================================================
+let s:header = [
+            \ '                              ',
+            \ '            ╷ ╷               ',
+            \ '            │ │               ',
+            \ '            ║ ║               ',
+            \ '            ║ ║               ',
+            \ '           ▐███▌              ',
+            \ '           ▐███▌      │   │   ',
+            \ '           ▐███▌      ╽   ╽   ',
+            \ '          ▐█████▌     ┃   ┃   ',
+            \ '          ▐█████▌     █████   ',
+            \ '    ▄██▄  ▐█████▌     █████   ',
+            \ '    ████ ▐███████▌    █████   ',
+            \ '    ████ ▐███████▌   ▐█████▌  ',
+            \ '  ▐██████████████▌   ▐█████▌  ',
+            \ '  ▐█████████████████▌▐█████▌  ',
+            \ '  ▐█████████████████████████  ',
+            \ '██████████████████████████████',
+            \ '██████████████████████████████',
+            \ ]
+
+let g:startify_custom_header = startify#center(s:header)
+" Replace paths w/ env vars (if it'd be shorter)
+let g:startify_use_env = 1
+" vim-closetag ===============================================================
+" Enable closetag for React js(x) files
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js,*.jsx"
+
 " To-Do ======================================================================
+if has('nvim')
 lua << EOF
   require("todo-comments").setup {
       -- Hide signs in column (don't really use and may improve performance)
@@ -188,32 +218,5 @@ lua << EOF
           },
   }
 EOF
-" Startify ===================================================================
-let s:header = [
-            \ '                              ',
-            \ '            ╷ ╷               ',
-            \ '            │ │               ',
-            \ '            ║ ║               ',
-            \ '            ║ ║               ',
-            \ '           ▐███▌              ',
-            \ '           ▐███▌      │   │   ',
-            \ '           ▐███▌      ╽   ╽   ',
-            \ '          ▐█████▌     ┃   ┃   ',
-            \ '          ▐█████▌     █████   ',
-            \ '    ▄██▄  ▐█████▌     █████   ',
-            \ '    ████ ▐███████▌    █████   ',
-            \ '    ████ ▐███████▌   ▐█████▌  ',
-            \ '  ▐██████████████▌   ▐█████▌  ',
-            \ '  ▐█████████████████▌▐█████▌  ',
-            \ '  ▐█████████████████████████  ',
-            \ '██████████████████████████████',
-            \ '██████████████████████████████',
-            \ ]
 
-let g:startify_custom_header = startify#center(s:header)
-" Replace paths w/ env vars (if it'd be shorter)
-let g:startify_use_env = 1
-" vim-closetag ===============================================================
-" Enable closetag for React js(x) files
-let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js,*.jsx"
-
+endif
