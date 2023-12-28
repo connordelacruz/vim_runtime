@@ -140,7 +140,7 @@ call <sid>hi("Visual",        "", s:gui02, "", s:cterm02, "", "")
 call <sid>hi("VisualNOS",     s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("WarningMsg",    s:gui08, "", s:cterm08, "", "", "")
 call <sid>hi("WildMenu",      s:gui08, s:gui0A, s:cterm08, "", "", "")
-call <sid>hi("Title",         s:gui0D, "", s:cterm0D, "", "none", "")
+call <sid>hi("Title",         s:gui0D, "", s:cterm0D, "", "bold", "")
 call <sid>hi("Conceal",       s:gui0D, s:gui00, s:cterm0D, s:cterm00, "", "")
 call <sid>hi("Cursor",        s:gui00, s:gui05, s:cterm00, s:cterm05, "", "")
 call <sid>hi("NonText",       s:gui03, "", s:cterm03, "", "", "")
@@ -288,6 +288,7 @@ call <sid>hi("markdownCodeBlock",         s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("markdownHeadingDelimiter",  s:gui0D, "", s:cterm0D, "", "", "")
 
 " NERDTree highlighting
+call <sid>hi("NERDTreeCWD",       s:gui0D, "", s:cterm0D, "", "bold", "")
 call <sid>hi("NERDTreeDirSlash",  s:gui0D, "", s:cterm0D, "", "", "")
 call <sid>hi("NERDTreeExecFile",  s:gui05, "", s:cterm05, "", "", "")
 

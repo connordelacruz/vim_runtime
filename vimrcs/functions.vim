@@ -51,3 +51,13 @@ command! -nargs=* FillLine call FillLine(<f-args>)
 " Misc =======================================================================
 " Alias for hitest.vim
 command Hitest source $VIMRUNTIME/syntax/hitest.vim
+
+" Show hl group under cursor
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
+command! -nargs=* SynStack call SynStack(<f-args>)
