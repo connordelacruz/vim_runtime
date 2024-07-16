@@ -39,6 +39,10 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/todo-comments.nvim'
 
+" CSV ------------------------------------------------------------------------
+" Color highlight CSV columns and headers
+Plug 'mechatroner/rainbow_csv'
+
 " HTML -----------------------------------------------------------------------
 " Close tags
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'javascript'] }
