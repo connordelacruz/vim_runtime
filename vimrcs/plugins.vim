@@ -191,8 +191,8 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js,*.jsx"
 " ----------------------------------------------------------------------------
 
 if has('nvim')
-" To-Do ======================================================================
 lua << EOF
+  -- To-Do ======================================================================
   require("todo-comments").setup {
       -- Hide signs in column (don't really use and may improve performance)
       signs = false,
@@ -226,6 +226,8 @@ lua << EOF
           default = { "Keyword", "#7C3AED" },
           },
   }
+  -- symbols-outline =========================================================
+  require("symbols-outline").setup()
 EOF
 
 endif

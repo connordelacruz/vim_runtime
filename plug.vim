@@ -109,6 +109,10 @@ Plug 'preservim/nerdtree'
 " Show file status in nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
+" Handy Tools ----------------------------------------------------------------
+" Symbols outline
+Plug 'simrat39/symbols-outline.nvim'
+
 " Editing --------------------------------------------------------------------
 " Insert and delete parens, quotes, etc in pairs
 Plug 'jiangmiao/auto-pairs'
