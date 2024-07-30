@@ -14,7 +14,8 @@ if !has('gui_running')
   endif
 endif
 
-" GUI color definitions
+" GUI color definitions ------------------------------------------------------
+" Black-White
 let s:gui00 = "1B2B34"
 let s:gui01 = "343D46"
 let s:gui02 = "4F5B66"
@@ -23,16 +24,24 @@ let s:gui04 = "A7ADBA"
 let s:gui05 = "C0C5CE"
 let s:gui06 = "CDD3DE"
 let s:gui07 = "D8DEE9"
+" Red
 let s:gui08 = "EC5f67"
+" Orange
 let s:gui09 = "F99157"
+" Yellow
 let s:gui0A = "FAC863"
+" Green
 let s:gui0B = "99C794"
+" Cyan
 let s:gui0C = "5FB3B3"
+" Blue
 let s:gui0D = "6699CC"
+" Magenta
 let s:gui0E = "C594C5"
+" Brown
 let s:gui0F = "AB7967"
 
-" Terminal color definitions
+" Terminal color definitions -------------------------------------------------
 let s:cterm00 = "00"
 let s:cterm03 = "08"
 let s:cterm05 = "07"
@@ -285,6 +294,8 @@ call <sid>hi("markdownCode",              s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("markdownError",             s:gui05, s:gui00, s:cterm05, s:cterm00, "", "")
 call <sid>hi("markdownCodeBlock",         s:gui0B, "", s:cterm0B, "", "", "")
 call <sid>hi("markdownHeadingDelimiter",  s:gui0D, "", s:cterm0D, "", "", "")
+call <sid>hi("markdownBold",              s:gui0A, "", s:cterm0A, "", "bold", "")
+call <sid>hi("markdownItalic",              s:gui0E, "", s:cterm0E, "", "italic", "")
 
 " NERDTree highlighting
 call <sid>hi("NERDTreeCWD",       s:gui0D, "", s:cterm0D, "", "bold", "")
