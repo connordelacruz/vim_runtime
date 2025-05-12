@@ -143,6 +143,10 @@ endif
 " Hide redundant insert/replace/visual mode message
 set noshowmode
 
+" python-syntax ==============================================================
+" enable all syntax highlighting
+let g:python_highlight_all = 1
+
 " vim-matchup ================================================================
 " Offscreen popup window
 let g:matchup_matchparen_offscreen = {'method': 'popup'}
