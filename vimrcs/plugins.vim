@@ -230,8 +230,6 @@ lua << EOF
           default = { "Keyword", "#7C3AED" },
           },
   }
-  -- symbols-outline =========================================================
-  require("symbols-outline").setup()
 EOF
 
 endif
