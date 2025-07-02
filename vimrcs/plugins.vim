@@ -207,6 +207,8 @@ lua << EOF
           -- pattern or table of patterns, used for highlighting (vim regex)
           -- (Same as default except without ':') TODO: but maybe we should use ':'
           pattern = [[.*<(KEYWORDS)\s*]], 
+          -- Only highlight subsequent lines of they are indented a little bit (3+ spaces)
+          multiline_pattern = "^%s%s+.",
           },
       -- list of named colors where we try to extract the guifg from the
       -- list of hilight groups or use the hex color if hl not found as a fallback
