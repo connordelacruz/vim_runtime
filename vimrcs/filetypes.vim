@@ -32,7 +32,7 @@ au FileType json let g:indentLine_setConceal=0
 
 " Markdown ===================================================================
 au BufNewFile,BufReadPost *.md set filetype=markdown
-au FileType markdown setlocal tw=80 fo+=t fo-=l spell
+au FileType markdown setlocal tw=80 fo-=l spell
 " Disable auto-pairs space insertion for .md
 au FileType markdown let g:AutoPairsMapSpace = 0
 
@@ -60,7 +60,7 @@ au FileType python let b:AutoPairs = AutoPairsDefine(
 " au FileType python set indentkeys-=0#
 
 " RestructuredText ===========================================================
-au FileType rst setlocal tw=80 fo+=t fo-=l nofoldenable
+au FileType rst setlocal tw=80 fo-=l nofoldenable
 " Add auto pair for double backtick (``)
 au FileType rst let b:AutoPairs = AutoPairsDefine({ '``' : '``' })
 
