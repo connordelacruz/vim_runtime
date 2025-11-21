@@ -99,7 +99,7 @@ Plug 'Yggdroot/indentLine'
 " Status line
 Plug 'itchyny/lightline.vim'
 " Fancy start screen
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 " Register preview
 Plug 'junegunn/vim-peekaboo'
 

@@ -28,7 +28,8 @@ set grepprg=/bin/grep\ -nH
 let g:indentLine_char = '▏'
 let g:indentLine_color_gui = "#343D46"
 " Excluded filetypes
-let g:indentLine_fileTypeExclude = ['startify']
+" TODO: Remove startify?
+" let g:indentLine_fileTypeExclude = ['startify']
 " Disable setting conceal for markdown
 au FileType markdown let g:indentLine_setConceal = 0
 
@@ -50,21 +51,30 @@ let NERDDefaultMinWidth=130
 let NERDDefaultMaxFiles=80
 " If opening by default, exclude these filetypes
 let noNERD = ['gitcommit', 'man']
+" TODO: move this. It disables the :intro message on new empty buffer on startup. Also probably can simplify the below nerd shit
+set shortmess+=I
 if NERDTreeOpenByDefault
     " Start NERDTree. If a file is specified, move the cursor to its window.
     " Will not start if file is in noNERD or window is too narrow or filetype
     " is in noNERD, or if the number of files in the target directory exceed
     " NERDDefaultMaxFiles.
-    " If no args are provided (and file isn't a man page), open Startify.
+    " If no args are provided (and file isn't a man page), open Startify. TODO: nope, startify gone..
     " Note: updates lightline after switching windows to fix a bug with the
     " mode not showing.
     augroup NERD
         autocmd StdinReadPre * let s:std_in=1
+        " TODO: old, does the startify shit:
+        " autocmd VimEnter * 
+        "             \ if !argc() && &ft != 'man' 
+        "             \ | Startify
+        "             \ | endif
+        "             \ | if index(noNERD, &ft) < 0 && 
+        "                 \ winwidth('%') >= NERDDefaultMinWidth &&
+        "                 \ len(split(globpath(expand('%:p:h'), '*'), '\n')) <= NERDDefaultMaxFiles
+        "             \ | NERDTree %:p:h 
+        "             \ | wincmd p | call lightline#update() 
         autocmd VimEnter * 
-                    \ if !argc() && &ft != 'man' 
-                    \ | Startify
-                    \ | endif
-                    \ | if index(noNERD, &ft) < 0 && 
+                    \ if index(noNERD, &ft) < 0 && 
                         \ winwidth('%') >= NERDDefaultMinWidth &&
                         \ len(split(globpath(expand('%:p:h'), '*'), '\n')) <= NERDDefaultMaxFiles
                     \ | NERDTree %:p:h 
@@ -161,30 +171,31 @@ let g:peekaboo_window = 'botright 25new'
 " Set default Tabmerge location to bottom
 let g:tm_default_location = 'b'
 " Startify ===================================================================
-let s:header = [
-            \ '                              ',
-            \ '            ╷ ╷               ',
-            \ '            │ │               ',
-            \ '            ║ ║               ',
-            \ '            ║ ║               ',
-            \ '           ▐███▌              ',
-            \ '           ▐███▌      │   │   ',
-            \ '           ▐███▌      ╽   ╽   ',
-            \ '          ▐█████▌     ┃   ┃   ',
-            \ '          ▐█████▌     █████   ',
-            \ '    ▄██▄  ▐█████▌     █████   ',
-            \ '    ████ ▐███████▌    █████   ',
-            \ '    ████ ▐███████▌   ▐█████▌  ',
-            \ '  ▐██████████████▌   ▐█████▌  ',
-            \ '  ▐█████████████████▌▐█████▌  ',
-            \ '  ▐█████████████████████████  ',
-            \ '██████████████████████████████',
-            \ '██████████████████████████████',
-            \ ]
+" TODO: remove startify?
+" let s:header = [
+"             \ '                              ',
+"             \ '            ╷ ╷               ',
+"             \ '            │ │               ',
+"             \ '            ║ ║               ',
+"             \ '            ║ ║               ',
+"             \ '           ▐███▌              ',
+"             \ '           ▐███▌      │   │   ',
+"             \ '           ▐███▌      ╽   ╽   ',
+"             \ '          ▐█████▌     ┃   ┃   ',
+"             \ '          ▐█████▌     █████   ',
+"             \ '    ▄██▄  ▐█████▌     █████   ',
+"             \ '    ████ ▐███████▌    █████   ',
+"             \ '    ████ ▐███████▌   ▐█████▌  ',
+"             \ '  ▐██████████████▌   ▐█████▌  ',
+"             \ '  ▐█████████████████▌▐█████▌  ',
+"             \ '  ▐█████████████████████████  ',
+"             \ '██████████████████████████████',
+"             \ '██████████████████████████████',
+"             \ ]
 
-let g:startify_custom_header = startify#center(s:header)
-" Replace paths w/ env vars (if it'd be shorter)
-let g:startify_use_env = 1
+" let g:startify_custom_header = startify#center(s:header)
+" " Replace paths w/ env vars (if it'd be shorter)
+" let g:startify_use_env = 1
 " vim-closetag ===============================================================
 " Enable closetag for React js(x) files
 let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.js,*.jsx"

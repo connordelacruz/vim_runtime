@@ -32,7 +32,9 @@ au FileType json let g:indentLine_setConceal=0
 
 " Markdown ===================================================================
 au BufNewFile,BufReadPost *.md set filetype=markdown
-au FileType markdown setlocal tw=80 fo-=l spell
+" TODO: REMOVE:
+" au FileType markdown setlocal tw=80 fo-=l spell
+au FileType markdown setlocal spell
 " Disable auto-pairs space insertion for .md
 au FileType markdown let g:AutoPairsMapSpace = 0
 
