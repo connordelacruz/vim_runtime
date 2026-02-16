@@ -28,10 +28,9 @@ set grepprg=/bin/grep\ -nH
 let g:indentLine_char = '▏'
 let g:indentLine_color_gui = "#343D46"
 " Excluded filetypes
-" TODO: Remove startify?
-" let g:indentLine_fileTypeExclude = ['startify']
-" Disable setting conceal for markdown
-au FileType markdown let g:indentLine_setConceal = 0
+" Disable setting conceal for markdown, dockerfile
+" TODO: temp fix, figure out what we wanna do long term
+au FileType markdown,dockerfile let g:indentLine_setConceal = 0
 
 " NERDTree ===================================================================
 " CORE CONFIGS ---------------------------------------------------------------
