@@ -47,6 +47,9 @@ Plug 'mechatroner/rainbow_csv'
 " Close tags
 Plug 'alvan/vim-closetag', { 'for': ['html', 'php', 'jsx', 'javascript'] }
 
+" Jekyll ---------------------------------------------------------------------
+Plug 'tpope/vim-liquid'
+
 " Jenkinsfile / Groovy -------------------------------------------------------
 Plug 'martinda/Jenkinsfile-vim-syntax'
 " Fix Groovy indentation
