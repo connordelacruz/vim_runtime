@@ -165,6 +165,10 @@ Plug 'sangdol/mintabline.vim'
 " Merge tabs into splits
 Plug 'connordelacruz/Tabmerge'
 
+" Text Generation ------------------------------------------------------------
+" Lorem Ipsum generator
+Plug 'derektata/lorem.nvim'
+
 " Misc -----------------------------------------------------------------------
 " Increase happiness
 Plug 'idanarye/vim-smile'
