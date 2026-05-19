@@ -32,6 +32,10 @@ let g:indentLine_color_gui = "#343D46"
 " TODO: temp fix, figure out what we wanna do long term
 au FileType markdown,dockerfile let g:indentLine_setConceal = 0
 
+" Markdown Fenced Languages ==================================================
+" TODO: is there a way to blanket include a bunch of syntaxes? if so, would that be bad for performance?
+let g:markdown_fenced_languages = ['yaml', 'ruby', 'bash', 'python', 'html']
+
 " NERDTree ===================================================================
 " CORE CONFIGS ---------------------------------------------------------------
 let g:NERDTreeWinPos = "right"
