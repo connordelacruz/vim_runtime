@@ -159,6 +159,9 @@ set noshowmode
 " python-syntax ==============================================================
 " enable all syntax highlighting
 let g:python_highlight_all = 1
+" vim-pydocstring ============================================================
+" Use custom templates
+let g:pydocstring_templates_path = '~/.vim_runtime/support/vim-pydocstring/templates/'
 
 " vim-matchup ================================================================
 " Offscreen popup window
